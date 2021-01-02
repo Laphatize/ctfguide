@@ -1,0 +1,381 @@
+Logs starting 11/3/2020
+[TIME: 1604456111324] [ID: fW75Aj3hvDMCBspSe2Dv] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604457012664] [ID: YFL1UmJa1YUBZ5kOwe1H] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604459910263] [ID: LKtz6o0krzdMe5t6WYQf] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604459985706] [ID: phuE0wW8NajsRfrn3nAj] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604460886686] [ID: p9yWgLejl6EfZY0sUO3q] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604461045262] [PID: phuE0wW8NajsRfrn3nAj] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604461509163] [PID: phuE0wW8NajsRfrn3nAj] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604461581586] [ID: tuNqXX6Bqehic4lmjqak] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604461971546] [ID: f2IgUa1xJLiTB2hmXrD1] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604462388059] [ID: lgxLhkjwPaVlKZSiXVph] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604462558327] [ID: WUFN2UOdZ39PE9TdchqD] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604462848368] [ID: YG63TCJzYJdZITfYNmfb] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604463017400] [ID: XbJlncVKhjsDwdq2xPfT] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604467422653] [ID: 4A13aj7sn7JIAuWIW4xn] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604467668411] [ID: vi3sA1xnGVXDdkReEfEA] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604468102204] [ID: T79ROjRkJwNSFQ9nZHOO] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604468173782] [ID: MzrofYx7v3q7X0ByPgo3] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604468292014] [ID: RohpVobmARsfcozAukrE] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604468878441] [ID: 3dueQxDhn1KJhVyvwnOd] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604495034566] [PID: p9yWgLejl6EfZY0sUO3q] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604509039313] [ID: HnbWjfGBPVaLQrBZ0FvP] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604509145147] [ID: JNAtoN556Ts67ddY4Vl0] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604509484113] [ID: J5fAMcYHO3C1PfQddqzJ] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604516029490] [PID: phuE0wW8NajsRfrn3nAj] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604546399215] [PID: 4A13aj7sn7JIAuWIW4xn] [UID: nY88hzDEF4NFM7fJXnCBxZ1E9jN2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604587374306] [ID: EIYh71cAzXqs4wwgMvNp] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604589001872] [PID: 4A13aj7sn7JIAuWIW4xn] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604589018543] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604589053928] [PID: RohpVobmARsfcozAukrE] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604589062431] [PID: T79ROjRkJwNSFQ9nZHOO] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604589113476] [PID: XbJlncVKhjsDwdq2xPfT] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604589133866] [PID: phuE0wW8NajsRfrn3nAj] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604589187511] [PID: tuNqXX6Bqehic4lmjqak] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604589758029] [PID: HnbWjfGBPVaLQrBZ0FvP] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604589824418] [PID: HnbWjfGBPVaLQrBZ0FvP] [UID: ptwiSJeAhxcQ30DSA9jbz7LwkQ62] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591615736] [ID: nEweQDS9oJCIouQX3rEv] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604591625529] [PID: nEweQDS9oJCIouQX3rEv] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591812656] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591816500] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591828929] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591846413] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591850417] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591852722] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591854269] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591855613] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591857006] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591858343] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591859618] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591861003] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591864451] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591881481] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591883249] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591886194] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591887783] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591889383] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591890873] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591892524] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591894052] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591895546] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591897110] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591898740] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591900360] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591910224] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591911781] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591916293] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591917676] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591919092] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591923448] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591924944] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591926389] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591927835] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591929294] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591930707] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591932112] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591933353] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591934664] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604591996371] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604593197634] [PID: nEweQDS9oJCIouQX3rEv] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604594709999] [PID: phuE0wW8NajsRfrn3nAj] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604594730114] [PID: nEweQDS9oJCIouQX3rEv] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604599749343] [PID: nEweQDS9oJCIouQX3rEv] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604602206122] [PID: XbJlncVKhjsDwdq2xPfT] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604602548270] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604602594901] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604602604817] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604602618566] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604602652488] [PID: vi3sA1xnGVXDdkReEfEA] [UID: MqDrwYNK78Qbt8ruj71s0QItzdD2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604602659656] [PID: XbJlncVKhjsDwdq2xPfT] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604602659970] [PID: XbJlncVKhjsDwdq2xPfT] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604602830682] [PID: XbJlncVKhjsDwdq2xPfT] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604602994820] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603014132] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603309289] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603527856] [PID: RohpVobmARsfcozAukrE] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603556352] [PID: RohpVobmARsfcozAukrE] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603556670] [PID: RohpVobmARsfcozAukrE] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603609886] [PID: T79ROjRkJwNSFQ9nZHOO] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603610202] [PID: T79ROjRkJwNSFQ9nZHOO] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603623733] [PID: T79ROjRkJwNSFQ9nZHOO] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603673258] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603677370] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603685878] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603689935] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603695242] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603698706] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603702303] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603705874] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603722748] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603729209] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603732722] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603736027] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603738942] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603742695] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603745684] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603750416] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603755963] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603760915] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603763987] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603767341] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603770664] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603774094] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603778658] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603783196] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603816805] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603832169] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603853607] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603857435] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603861749] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603866444] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603869215] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603872207] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604603964184] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604002277] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604007573] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604009741] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604011558] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604013223] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604014812] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604016459] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604018059] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604019622] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604021171] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604022942] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604024616] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604026085] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604031886] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604033672] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604035313] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604036891] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604038410] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604039905] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604041457] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604043198] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604044724] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604046338] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604047815] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604049210] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604050557] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604051942] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604053537] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604054987] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604056364] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604057714] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604059090] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604060606] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604061882] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604064121] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604065458] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604066985] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604068223] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604069533] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604071051] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604072561] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604073880] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604075330] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604076788] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604077954] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604079382] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604080546] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604081721] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604083142] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604084518] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604085877] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604087164] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604088916] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604090286] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604091678] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604096840] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604098926] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604100707] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604102083] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604103420] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604107715] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604109728] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604110890] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604112117] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604115507] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604117376] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604418146] [PID: phuE0wW8NajsRfrn3nAj] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604422073] [PID: phuE0wW8NajsRfrn3nAj] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604425842] [PID: phuE0wW8NajsRfrn3nAj] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604427929] [PID: phuE0wW8NajsRfrn3nAj] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604464719] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604910305] [PID: HnbWjfGBPVaLQrBZ0FvP] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604604984516] [PID: T79ROjRkJwNSFQ9nZHOO] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604605047152] [PID: tuNqXX6Bqehic4lmjqak] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604605098353] [PID: nEweQDS9oJCIouQX3rEv] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604605101539] [PID: nEweQDS9oJCIouQX3rEv] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604605109965] [PID: nEweQDS9oJCIouQX3rEv] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604605359920] [PID: phuE0wW8NajsRfrn3nAj] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604605384675] [PID: vi3sA1xnGVXDdkReEfEA] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604605408534] [PID: vi3sA1xnGVXDdkReEfEA] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604605408791] [PID: vi3sA1xnGVXDdkReEfEA] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604605423329] [PID: MzrofYx7v3q7X0ByPgo3] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604605431458] [PID: MzrofYx7v3q7X0ByPgo3] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604605941226] [PID: nEweQDS9oJCIouQX3rEv] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604605960327] [PID: nEweQDS9oJCIouQX3rEv] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604607405728] [PID: phuE0wW8NajsRfrn3nAj] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604622981316] [PID: phuE0wW8NajsRfrn3nAj] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604622981625] [PID: phuE0wW8NajsRfrn3nAj] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604622981891] [PID: phuE0wW8NajsRfrn3nAj] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604623106369] [PID: phuE0wW8NajsRfrn3nAj] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604623311753] [ID: 4pXETiYlkeqYJoiNEPEV] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604623316231] [PID: 4pXETiYlkeqYJoiNEPEV] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604623341475] [PID: 4pXETiYlkeqYJoiNEPEV] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604625832485] [ID: g1CwBHzZmfGrZZBF9HiY] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604626187201] [PID: 4pXETiYlkeqYJoiNEPEV] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604626296494] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604626373275] [PID: T79ROjRkJwNSFQ9nZHOO] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604626384500] [PID: MzrofYx7v3q7X0ByPgo3] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604626396762] [PID: nEweQDS9oJCIouQX3rEv] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604626424300] [PID: phuE0wW8NajsRfrn3nAj] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604626432969] [PID: 4pXETiYlkeqYJoiNEPEV] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604626517442] [PID: XbJlncVKhjsDwdq2xPfT] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604626561516] [PID: g1CwBHzZmfGrZZBF9HiY] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604626618273] [ID: U1TIsX5SghkCCW1RsxBT] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604626991579] [PID: HnbWjfGBPVaLQrBZ0FvP] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604627502953] [PID: U1TIsX5SghkCCW1RsxBT] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604628044474] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604632654003] [PID: 4pXETiYlkeqYJoiNEPEV] [UID: qId5HHgLsIN4cdVeGQUAWUTfAz43] A problem was solved on the CTFGuide Platform.
+[TIME: 1604633988062] [PID: 4pXETiYlkeqYJoiNEPEV] [UID: I4nk04SEvuNwSAQ2G52rNyLk7sP2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604634104084] [PID: T79ROjRkJwNSFQ9nZHOO] [UID: qId5HHgLsIN4cdVeGQUAWUTfAz43] A problem was solved on the CTFGuide Platform.
+[TIME: 1604645415833] [PID: nEweQDS9oJCIouQX3rEv] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604645466939] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604693964863] [PID: U1TIsX5SghkCCW1RsxBT] [UID: nTx1uIZVPCfl3kEUvSGA7xU36oC3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604694231084] [PID: U1TIsX5SghkCCW1RsxBT] [UID: 89tvk2KZeZcUW7NlcbLUf27b8FH3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604699760548] [ID: 9h3cbAvAFDiHyyEhkK7K] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604701142255] [PID: tuNqXX6Bqehic4lmjqak] [UID: 89tvk2KZeZcUW7NlcbLUf27b8FH3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604707767539] [PID: tuNqXX6Bqehic4lmjqak] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604707897097] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604708045245] [PID: HnbWjfGBPVaLQrBZ0FvP] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604708069834] [PID: phuE0wW8NajsRfrn3nAj] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604708096491] [PID: MzrofYx7v3q7X0ByPgo3] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604711671929] [PID: f2IgUa1xJLiTB2hmXrD1] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604711816933] [PID: WUFN2UOdZ39PE9TdchqD] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604714516940] [PID: nEweQDS9oJCIouQX3rEv] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604726638470] [PID: U1TIsX5SghkCCW1RsxBT] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604727016241] [PID: RohpVobmARsfcozAukrE] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604732722946] [ID: eplx2K9xz1Gsndivuf9Z] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604732766506] [PID: eplx2K9xz1Gsndivuf9Z] [UID: nY88hzDEF4NFM7fJXnCBxZ1E9jN2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604743419843] [ID: yE3LLJGk5leVG2dof7n0] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604744089063] [PID: eplx2K9xz1Gsndivuf9Z] [UID: Z6Ze05dWNacwOvpmZkpTwgLQW8i2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604744295947] [PID: nEweQDS9oJCIouQX3rEv] [UID: Z6Ze05dWNacwOvpmZkpTwgLQW8i2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604744446830] [PID: HnbWjfGBPVaLQrBZ0FvP] [UID: Z6Ze05dWNacwOvpmZkpTwgLQW8i2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604744549272] [PID: MzrofYx7v3q7X0ByPgo3] [UID: Z6Ze05dWNacwOvpmZkpTwgLQW8i2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604744594936] [PID: RohpVobmARsfcozAukrE] [UID: Z6Ze05dWNacwOvpmZkpTwgLQW8i2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604744789747] [PID: tuNqXX6Bqehic4lmjqak] [UID: Z6Ze05dWNacwOvpmZkpTwgLQW8i2] A problem was solved on the CTFGuide Platform.
+[TIME: 1604767338916] [PID: XbJlncVKhjsDwdq2xPfT] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604767366964] [PID: eplx2K9xz1Gsndivuf9Z] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604767508558] [PID: yE3LLJGk5leVG2dof7n0] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604778315900] [PID: HnbWjfGBPVaLQrBZ0FvP] [UID: nTx1uIZVPCfl3kEUvSGA7xU36oC3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604778328943] [PID: eplx2K9xz1Gsndivuf9Z] [UID: nTx1uIZVPCfl3kEUvSGA7xU36oC3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604778943000] [PID: yE3LLJGk5leVG2dof7n0] [UID: nTx1uIZVPCfl3kEUvSGA7xU36oC3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604782669228] [PID: eplx2K9xz1Gsndivuf9Z] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604782707207] [PID: phuE0wW8NajsRfrn3nAj] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604782820019] [PID: XbJlncVKhjsDwdq2xPfT] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604782902259] [PID: eplx2K9xz1Gsndivuf9Z] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604782947825] [PID: eplx2K9xz1Gsndivuf9Z] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1604787161252] [PID: vi3sA1xnGVXDdkReEfEA] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604848791852] [PID: eplx2K9xz1Gsndivuf9Z] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1604969691191] [ID: HRNZMVE8dpiPF3YAcPpq] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604969787473] [ID: 2VhLO4CABZYTabV732lG] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604969872497] [ID: OTCl5tuaCmR1WLvxrPb0] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604971438390] [ID: WJZ8k7jUhd6n2Hlnbx8w] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1604971536986] [PID: WJZ8k7jUhd6n2Hlnbx8w] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1604972330342] [ID: mOIsIpI90R1KAnjSdmvV] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1605149474195] [PID: mOIsIpI90R1KAnjSdmvV] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1605185604869] [ID: yC22iarXvd9zvv6vy1Nw] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1605206174534] [PID: eplx2K9xz1Gsndivuf9Z] [UID: qId5HHgLsIN4cdVeGQUAWUTfAz43] A problem was solved on the CTFGuide Platform.
+[TIME: 1605206252858] [PID: mOIsIpI90R1KAnjSdmvV] [UID: qId5HHgLsIN4cdVeGQUAWUTfAz43] A problem was solved on the CTFGuide Platform.
+[TIME: 1605207159144] [PID: mOIsIpI90R1KAnjSdmvV] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1605207328765] [PID: mOIsIpI90R1KAnjSdmvV] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1605207672190] [ID: 9Y1MQAp7UcFcbAw8FIoe] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1605208130874] [PID: eplx2K9xz1Gsndivuf9Z] [UID: zrEd13rhbKPvDa0rDGiCQ7bky7L2] A problem was solved on the CTFGuide Platform.
+[TIME: 1605208179104] [PID: yC22iarXvd9zvv6vy1Nw] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1605208226070] [PID: 9Y1MQAp7UcFcbAw8FIoe] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1605208307476] [PID: 9Y1MQAp7UcFcbAw8FIoe] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1605214569083] [ID: P5ed4qbbMglfj0SKvsSU] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1605214714709] [PID: P5ed4qbbMglfj0SKvsSU] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1605216168223] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1605226940324] [ID: c938J2uJM0AMZMiWSPgd] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1605226961282] [PID: c938J2uJM0AMZMiWSPgd] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1605811760345] [PID: vi3sA1xnGVXDdkReEfEA] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1605811974780] [PID: vi3sA1xnGVXDdkReEfEA] [UID: NhVhmSjkK9hvz5N3oM5nLLU5sVK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1605812260284] [PID: mOIsIpI90R1KAnjSdmvV] [UID: GB7oSMz91pQaZbNWU7GPGGOQNGg2] A problem was solved on the CTFGuide Platform.
+[TIME: 1605812411454] [PID: eplx2K9xz1Gsndivuf9Z] [UID: GB7oSMz91pQaZbNWU7GPGGOQNGg2] A problem was solved on the CTFGuide Platform.
+[TIME: 1605812868677] [PID: 3dueQxDhn1KJhVyvwnOd] [UID: NhVhmSjkK9hvz5N3oM5nLLU5sVK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1605812903367] [PID: P5ed4qbbMglfj0SKvsSU] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1605812945918] [PID: RohpVobmARsfcozAukrE] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1605812958364] [PID: mOIsIpI90R1KAnjSdmvV] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1605813177232] [PID: 9Y1MQAp7UcFcbAw8FIoe] [UID: NhVhmSjkK9hvz5N3oM5nLLU5sVK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1605813388216] [PID: tuNqXX6Bqehic4lmjqak] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1605813887521] [PID: HnbWjfGBPVaLQrBZ0FvP] [UID: NhVhmSjkK9hvz5N3oM5nLLU5sVK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1605814050562] [PID: nEweQDS9oJCIouQX3rEv] [UID: NhVhmSjkK9hvz5N3oM5nLLU5sVK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1605814082284] [PID: eplx2K9xz1Gsndivuf9Z] [UID: NhVhmSjkK9hvz5N3oM5nLLU5sVK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1605814239828] [PID: tuNqXX6Bqehic4lmjqak] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1605815026381] [PID: XbJlncVKhjsDwdq2xPfT] [UID: NhVhmSjkK9hvz5N3oM5nLLU5sVK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1605815045463] [PID: nEweQDS9oJCIouQX3rEv] [UID: qId5HHgLsIN4cdVeGQUAWUTfAz43] A problem was solved on the CTFGuide Platform.
+[TIME: 1605830270425] [ID: 68C9YoG2AIs2o8fPfIO9] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1605832063975] [PID: 68C9YoG2AIs2o8fPfIO9] [UID: AkNjfHoWtCXgYMCIm4gLvHPa0Qq2] A problem was solved on the CTFGuide Platform.
+[TIME: 1605980284466] [ID: k182vcdNzuQNmxw9DlqO] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1605980294485] [PID: k182vcdNzuQNmxw9DlqO] [UID: AkNjfHoWtCXgYMCIm4gLvHPa0Qq2] A problem was solved on the CTFGuide Platform.
+[TIME: 1606005033941] [PID: k182vcdNzuQNmxw9DlqO] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1606106840059] [ID: iq8GrqghwSrC8ZFBxaRR] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1606106873152] [PID: iq8GrqghwSrC8ZFBxaRR] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1606107391784] [PID: iq8GrqghwSrC8ZFBxaRR] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1606228761915] [PID: nEweQDS9oJCIouQX3rEv] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1606269995278] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1606270096295] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1606270165126] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1606270234532] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1606276638011] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1606276800699] [PID: c84Mj0N4hMXlQ8euiC0s] [UID: AkNjfHoWtCXgYMCIm4gLvHPa0Qq2] A problem was solved on the CTFGuide Platform.
+[TIME: 1606278016575] [PID: c84Mj0N4hMXlQ8euiC0s] [UID: 5dHqGCFjyuazg1BNmzA76M4fjOj1] A problem was solved on the CTFGuide Platform.
+[TIME: 1606280439704] [PID: c84Mj0N4hMXlQ8euiC0s] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1606284926180] [PID: 9Y1MQAp7UcFcbAw8FIoe] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1606322043576] [PID: c84Mj0N4hMXlQ8euiC0s] [UID: MSZsBV5KskOlRS1d9P3CFp7lfLn1] A problem was solved on the CTFGuide Platform.
+[TIME: 1606373874013] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1606374841119] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1606374857384] [PID: K5ZApCKdAo8O55dO8AoG] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1606482484771] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1606534045598] [PID: c938J2uJM0AMZMiWSPgd] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1607022263642] [PID: c84Mj0N4hMXlQ8euiC0s] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1607022299168] [PID: c84Mj0N4hMXlQ8euiC0s] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1607022377474] [PID: c84Mj0N4hMXlQ8euiC0s] [UID: GB7oSMz91pQaZbNWU7GPGGOQNGg2] A problem was solved on the CTFGuide Platform.
+[TIME: 1607022821925] [PID: P5ed4qbbMglfj0SKvsSU] [UID: tES1TLlAliMCWScZZn2vbaQQm3D3] A problem was solved on the CTFGuide Platform.
+[TIME: 1607023003211] [PID: P5ed4qbbMglfj0SKvsSU] [UID: BecQ15Cn5rVULJG0AWmSYfZZPWK2] A problem was solved on the CTFGuide Platform.
+[TIME: 1607023022675] [PID: P5ed4qbbMglfj0SKvsSU] [UID: GB7oSMz91pQaZbNWU7GPGGOQNGg2] A problem was solved on the CTFGuide Platform.
+[TIME: 1607023023232] [PID: P5ed4qbbMglfj0SKvsSU] [UID: 2qDwSzSsj5hJLq4DOXxzAltWtb72] A problem was solved on the CTFGuide Platform.
+[TIME: 1607909170554] [PID: MzrofYx7v3q7X0ByPgo3] [UID: MR64ePRWdhTvByFSyTvD2UN0XUS2] A problem was solved on the CTFGuide Platform.
+[TIME: 1608342564451] [PID: HnbWjfGBPVaLQrBZ0FvP] [UID: Y8GaveV0a5ad25vmMmGf4hNatol1] A problem was solved on the CTFGuide Platform.
+[TIME: 1608343704293] [PID: c938J2uJM0AMZMiWSPgd] [UID: Y8GaveV0a5ad25vmMmGf4hNatol1] A problem was solved on the CTFGuide Platform.
+[TIME: 1608344631272] [PID: XbJlncVKhjsDwdq2xPfT] [UID: Y8GaveV0a5ad25vmMmGf4hNatol1] A problem was solved on the CTFGuide Platform.
+[TIME: 1608344677549] [PID: phuE0wW8NajsRfrn3nAj] [UID: Y8GaveV0a5ad25vmMmGf4hNatol1] A problem was solved on the CTFGuide Platform.
+[TIME: 1608344735976] [PID: nEweQDS9oJCIouQX3rEv] [UID: Y8GaveV0a5ad25vmMmGf4hNatol1] A problem was solved on the CTFGuide Platform.
+[TIME: 1608345014779] [PID: tuNqXX6Bqehic4lmjqak] [UID: Y8GaveV0a5ad25vmMmGf4hNatol1] A problem was solved on the CTFGuide Platform.
+[TIME: 1608345049110] [PID: 9Y1MQAp7UcFcbAw8FIoe] [UID: Y8GaveV0a5ad25vmMmGf4hNatol1] A problem was solved on the CTFGuide Platform.
+[TIME: 1608345219089] [PID: MzrofYx7v3q7X0ByPgo3] [UID: Y8GaveV0a5ad25vmMmGf4hNatol1] A problem was solved on the CTFGuide Platform.
+[TIME: 1608487044925] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1608487621622] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1608488916502] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1608507015595] [PID: J5fAMcYHO3C1PfQddqzJ] [UID: Y8GaveV0a5ad25vmMmGf4hNatol1] A problem was solved on the CTFGuide Platform.
+[TIME: 1608511466437] [PID: P5ed4qbbMglfj0SKvsSU] [UID: AkNjfHoWtCXgYMCIm4gLvHPa0Qq2] A problem was solved on the CTFGuide Platform.
+[TIME: 1608558136404] [PID: 9Y1MQAp7UcFcbAw8FIoe] [UID: 93P9AvlmQYdigPzOuudjJh3FLaG3] A problem was solved on the CTFGuide Platform.
+[TIME: 1608785942040] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1608785958399] [PID: 3entwSW7JpJhqokbVvaA] [UID: YrOAFil6kfQrqMhczsdGoaHnobP2] A problem was solved on the CTFGuide Platform.
+[TIME: 1608965596315] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1608965724374] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1609069175976] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1609106755941] [PID: xCU3HsMAEMd069pJ9fe3] [UID: T4tbW5ltNoXhoBlbGT5jUX1Rj7s2] A problem was solved on the CTFGuide Platform.
+[TIME: 1609106839242] [PID: tuNqXX6Bqehic4lmjqak] [UID: T4tbW5ltNoXhoBlbGT5jUX1Rj7s2] A problem was solved on the CTFGuide Platform.
+[TIME: 1609121425539] [PID: nEweQDS9oJCIouQX3rEv] [UID: T4tbW5ltNoXhoBlbGT5jUX1Rj7s2] A problem was solved on the CTFGuide Platform.
+[TIME: 1609205550595] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1609283581670] [PID: 9Y1MQAp7UcFcbAw8FIoe] [UID: PKTrxZC9PRXd6istvazyIDBFhhr2] A problem was solved on the CTFGuide Platform.
+[TIME: 1609363042992] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1609363749518] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1609364399362] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1609364604601] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1609364872928] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 
+[TIME: 1609365614333] [ID: undefined] A new problem was uploaded to the CTFGuide Platform. 

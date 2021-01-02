@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<head>
+    <title>CTFGuide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://kit.fontawesome.com/13433183d5.js" crossorigin="anonymous"></script>
+    <script async src="https://arc.io/widget.min.js#7JTQkWpx"></script>
+    <script src="https://ctfguide.tech/socket.io.min.js"></script>
+
+</head>
+<body > 
+
+
+  <nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex justify-between h-16">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button -->
+          <button id="menubtn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Main menu" aria-expanded="false">
+            <!-- Icon when menu is closed. -->
+            <!--
+              Heroicon name: menu
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg  id="openm" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!-- Icon when menu is open. -->
+            <!--
+              Heroicon name: x
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg  id="closem"  class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex-shrink-0 flex items-center">
+            <img class="block lg:hidden h-8 w-auto" src="https://ctfguide.tech/logo.svg">
+            <img class="hidden lg:block h-8 w-auto" src="https://ctfguide.tech/logo.svg">
+          </div>
+        
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div class="hidden sm:ml-6 sm:flex">
+            <a href="/dashboard" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+               Dashboard
+              </a>
+            <a href="/challenges" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              Challenges
+            </a>
+            <a href="/ctflive/join" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+             CTFLive
+            </a>
+            <a href="/login" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              Duels
+            </a>
+            <a  id="logout" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                Logout
+              </a>
+              <a href="/settings" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700  focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                <i class="fas fa-cog"></i>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!--
+      Mobile menu, toggle classes based on menu state.
+  
+      Menu open: "block", Menu closed: "hidden"
+    -->
+    <div id="mobile" class="hidden sm:hidden">
+      <div class="pt-2 pb-4">
+       
+        <a href="./dashboard" class="block pl-3 pr-4 py-2 border-l-4 border-gray-500 text-base font-medium text-gray-700 bg-gray-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-gray-700 transition duration-150 ease-in-out">Dashboard</a>
+        
+  
+        <a href="./challenges" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Challenges</a>
+        
+        <!--
+        <a href="#" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">CTFLive</a>
+        -->
+       
+        <a onclick="logout()" id="logout" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Logout</a>
+     </div>
+    </div>
+  </nav>
+ 
+  <div  >
+    <br><div class="max-w-7xl my-auto mx-auto px-6 sm:px-6 lg:px-8">
+    <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
+
+    <div class="bg-white">
+        <div id="gamelobby"   class="max-w-screen-xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+          <div  class="bg-gray-700 rounded-lg shadow-xl overflow-hidden lg:grid lg:gap-4">
+          <div class="lg:self-center text-center">
+
+
+<br><br><br>
+                <h2 class="text-3xl leading-9 text-white sm:text-4xl sm:leading-10">
+                  <span class="block">You're in! The game will start soon.</span>
+                </h2>
+                <br>
+                <p class="text-white">
+
+                        This game is hosted by <b><i class="fas fa-user-cog"></i> <%= creator %></b>
+
+                </p>
+           <br><br><br>
+           
+            </div>
+          </div>
+          
+
+          <BR>
+
+          <div class="bg-gray-700 rounded-lg shadow-lg">
+            <div class="px-4 py-6 sm:p-12 text-white">
+                <h2 class="text-3xl text-white text-center">
+                    <span class="block">How does CTFLive work?</span>
+                  </h2>
+
+                  <br>
+                <div class="mt-1 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+                    <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                
+                      <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                        <div class="flex-1">
+                          <p class="text-sm leading-5 font-medium text-gray-600">
+                            <a href="#" class="hover:underline">
+                             Step 1
+                            </a>
+                          </p>
+                          <a href="#" class="block">
+                            <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                            A problem is released to participants.
+                            </h3>
+                            <p class="mt-3 text-base leading-6 text-gray-500">
+
+                                Users will all be given the same challenges. The problem is set by the game creator at the very start by submitting a challenge id.
+
+                            </p>
+                          </a>
+                        </div>
+                     
+                      </div>
+                    </div>
+                    <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                   
+                      <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                        <div class="flex-1">
+                          <p class="text-sm leading-5 font-medium text-gray-600">
+                            <a href="#" class="hover:underline">
+                            Step 2
+                            </a>
+                          </p>
+                          <a href="#" class="block">
+                            <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                            A checkpoint survey is started.
+                            </h3>
+                            <p class="mt-3 text-base leading-6 text-gray-500">
+                                The game automatically adjusts the timer depending on where participants are in the challenge. The progress of everyone is shown live on the game leaderboards. 
+                            </p>
+                          </a>
+                        </div>
+                      
+                      </div>
+                    </div>
+                    <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+           
+                      <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                        <div class="flex-1">
+                          <p class="text-sm leading-5 font-medium text-gray-600">
+                            <a href="#" class="hover:underline"> Step 3</a>
+                          </p>
+                          <a href="#" class="block">
+                            <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                            The game concludes.
+                            </h3>
+                            <p class="mt-3 text-base leading-6 text-gray-500">
+
+                                Once the timer runs out, you can see a how participants did and get the final leaderboard data. Your position on the leaderboard is dependent upon on what time you submitted the correct flag.
+
+                            </p>
+                          </a>
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+  <br> <br> 
+</div>
+
+
+<div id="challenge" style="display:none;" class="max-w-7xl mx-auto bg-gray-100  shadow-lg py-4" >
+  <div class="grid grid-cols-6 gap-4">
+    <div class="col-span-3 px-6">
+
+      <h1 style="font-size:2rem;"><b>Challenge Instructions:</b></h1>
+  <div id="cd" style="font-size:1.5rem;white-space: pre-line;">
+  </div>
+
+  </div>
+
+
+
+
+    </div>
+  </div>
+  
+
+
+</div>
+
+
+<div class="max-w-7xl  mx-auto py-4">
+  <h2 class="text-gray-500 text-xs font-medium uppercase tracking-wide">Checkpoints</h2>
+  <ul class="mt-3 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <li class="col-span-1 flex shadow-lg rounded-md ">
+      <div class="flex-1 flex items-center justify-between bg-gray-100 truncate">
+        <div style="text-align:center;" class="flex-1 px-4 py-2 text-sm leading-5 truncate">
+          <br>
+          <i class="far fa-star" style="color:rgb(255, 179, 0);font-size:5rem;"></i>
+          <h1 style="text-align:center;font-size:1.5rem;margin-top:10px;"><b>Checkpoint 1</b></h1>
+          <br>
+          <div class="mt-1 relative rounded-md shadow-sm">
+            <input id="email" class="form-input block w-full sm:text-sm sm:leading-5" placeholder="Flag">
+          </div>
+          <br>
+        </div>
+
+    <li class="col-span-1 flex shadow-lg rounded-md">
+      <div class="flex-1 flex items-center justify-between bg-gray-100 truncate">
+        <div style="text-align:center;" class="flex-1 px-4 py-2 text-sm leading-5 truncate">
+          <br>
+          <i class="fas fa-star-half-alt" style="color:rgb(255, 179, 0);font-size:5rem;"></i>
+          <h1 style="text-align:center;font-size:1.5rem;margin-top:10px;"><b>Checkpoint 2</b></h1>
+          <br>
+          <div class="mt-1 relative rounded-md shadow-sm">
+            <input id="email" class="form-input block w-full sm:text-sm sm:leading-5" placeholder="Flag">
+          </div>
+          <br>
+        </div>
+
+
+    <li class="col-span-1 flex shadow-lg rounded-md">
+      <div class="flex-1 flex items-center justify-between  bg-gray-100 truncate">
+        <div style="text-align:center;" class="flex-1 px-4 py-2 text-sm leading-5 truncate">
+          <br>
+          <i class="fas fa-star" style="color:rgb(255, 179, 0);font-size:5rem;"></i>
+          <h1 style="text-align:center;font-size:1.5rem;margin-top:10px;"><b>Checkpoint 3</b></h1> <br>
+          <div class="mt-1 relative rounded-md shadow-sm">
+            <input id="email" class="form-input block w-full sm:text-sm sm:leading-5" placeholder="Flag">
+          </div>
+          
+  <br>
+        </div>
+</li>
+
+  </ul>
+<br>
+
+<div class="max-w-7xl mx-auto bg-gray-100 shadow-lg px-6 py-4" >
+
+  <h1 style="font-size:2rem;"><b>Participant Progress:</b></h1>
+    
+  <div class="flex flex-col m-2">
+    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="py-2 align-middle inline-block w-full sm:px-6 lg:px-8">
+        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+          <table class="min-w-full divide-y divide-gray-200">
+            <thead>
+              <tr>
+                <th class="px-6 py-3 bg-gray-900 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
+                  Name
+                </th>
+                <th class="px-6 py-3 bg-gray-900 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
+                  Stage
+                </th>
+                <th class="px-6 py-3 bg-gray-900 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
+                 Current Placement
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Odd row -->
+              <tr class="bg-white">
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+     this
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+doesn't                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                 work yet
+                </td>
+        
+
+              </tr>
+  
+       
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+  
+</div>
+
+
+
+
+  <!-- FOOTER -->
+
+<footer class="bg-white">
+    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+      <div class="flex justify-center space-x-6 md:order-2">
+
+        <a href="https://twitter.com/laphatize2" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">Twitter</span>
+          <svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+          </svg>
+        </a>
+        <a href="https://github.com/laphatize" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">GitHub</span>
+          <svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      
+      </div>
+      <div class="mt-8 md:mt-0 md:order-1">
+        <p class="text-center text-base leading-6 text-gray-400">
+          &copy; 2020 Pranav Ramesh. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+  <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyBLAN84VP3jSA5dqhrU6Bjmfu5NiUDuNw4",
+          authDomain: "cyberjags-8b081.firebaseapp.com",
+          databaseURL: "https://cyberjags-8b081.firebaseio.com",
+          projectId: "cyberjags-8b081",
+          storageBucket: "cyberjags-8b081.appspot.com",
+          messagingSenderId: "166652277588",
+          appId: "1:166652277588:web:e08b9e19916451e14dcec1"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+  </script>
+ <script src="./js/dashboard.js?9"></script>
+ 
+<script>
+    
+var db = firebase.firestore();  
+  var open1 = false;
+
+  function toggleMenu() {
+    // closem openm
+    if (open1 == false) {
+    document.getElementById("mobile").classList.add("block")
+    document.getElementById("mobile").classList.remove("hidden")
+    document.getElementById("closem").classList.remove("hidden")
+    document.getElementById("closem").classList.add("block")
+    document.getElementById("openm").classList.add("hidden")
+    document.getElementById("openm").classList.remove("block")
+
+
+      open1 = true;
+    } else {
+      document.getElementById("mobile").classList.add("hidden")
+    document.getElementById("mobile").classList.remove("block")
+    open1 = false;
+    document.getElementById("openm").classList.remove("hidden")
+    document.getElementById("openm").classList.add("block")
+    document.getElementById("closem").classList.add("hidden")
+    document.getElementById("closem").classList.remove("block")
+    }
+
+  }
+  document.getElementById("menubtn").addEventListener("click", toggleMenu);
+
+
+  function start() {
+    window.open("https://ctfguide.tech/ctflive/client", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=300,left=500,width=1000,height=400");
+  }
+
+
+  const socket = io("https://ctfguide.tech");
+  var username = "";
+  firebase.auth().onAuthStateChanged(function(user) {
+
+
+if (user) {
+    userid = user.uid;
+    useremail = user.email;
+    if (user.displayName) {
+    } else {
+        var docRef = db.collection("users").doc(userid);
+
+docRef.get().then(function(doc) {
+    if (doc.exists) {
+        if (!doc.data().username) {
+         username = (useremail).split("@")[0].substring(0, 5)
+         
+ socket.emit("connected", {
+    username: username,
+    userID: userid
+ });
+    } else {
+        username = doc.data().username
+        
+ socket.emit("connected", {
+    username: username,
+    userID: userid
+ });
+    }
+} 
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+});
+    }
+}
+  });
+
+  
+ socket.emit("gamestart", {
+    gameID: "skuUtu2"
+ });
+  socket.on('gamestart', function(data){
+
+
+    if (data.gameID == window.location.href.split("/")[3]) {
+    
+    var fade= document.getElementById("gamelobby"); 
+      
+    var intervalID = setInterval(function () { 
+          
+        if (!fade.style.opacity) { 
+            fade.style.opacity = 1; 
+        } 
+          
+          
+        if (fade.style.opacity > 0) { 
+            fade.style.opacity -= 0.1; 
+        }  
+          
+        else { 
+            clearInterval(intervalID); 
+            
+    document.getElementById("gamelobby").style.display = "none"; 
+
+    document.getElementById("challenge").style.display = "block"; 
+    document.getElementById("cd").innerHTML = data.challenge;
+
+
+
+        } 
+          
+    }, 40); 
+  } 
+
+    
+ });
+  
+
+  
+  
+
+</script>
+</body>

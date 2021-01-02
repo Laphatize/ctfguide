@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Game</title>
+    <style>
+        .container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+    </style>
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <audio src="./lobbymusic.mp3" autoplay="autoplay" loop="loop"></audio>
+    <script src="./js/duels.js?sync3"></script>
+</head>
+<body style="background-color: black;color:white;">
+    <div id="loader" class="container animated">
+        <div><img class="loader animate__heartBeat" src="duels1.svg">
+            <div class="animate__animated animate__fadeIn animate__delay-1s">
+        <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;text-align: center;">Connecting to USA-EAST1</p></div>
+        </div>
+      </div>
+
+      <div class="container">
+      <div class="animate__fadeIn" style="display:none; " id="rules">
+        <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;text-align: center;">
+          Cheating is strictly prohibited. You will be banned if you do.</p></div>
+    
+      </div>
+    </div>
+</body>
