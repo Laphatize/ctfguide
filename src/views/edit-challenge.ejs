@@ -391,7 +391,7 @@
 
        <div class="flex items-center">
         <!-- On: "bg-indigo-600", Off: "bg-gray-200" -->
-        <button type="button" aria-pressed="false" aria-labelledby="toggleLabel" class="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <button id="ctf_enabled" type="button" aria-pressed="false" aria-labelledby="toggleLabel" class="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
           <span class="sr-only">Use setting</span>
           <!-- On: "translate-x-5", Off: "translate-x-0" -->
           <span aria-hidden="true" class="translate-x-0 inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"></span>
@@ -466,7 +466,7 @@
       </div>
       <div class="mt-8 md:mt-0 md:order-1">
         <p class="text-center text-base leading-6 text-gray-400">
-          &copy; 2020 Pranav Ramesh. All rights reserved.
+          &copy; 2021 Pranav Ramesh. All rights reserved.
         </p>
       </div>
     </div>
@@ -516,7 +516,14 @@ firebase.auth().onAuthStateChanged(function(user) {
 
    
 function saveChanges() {
-  
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+
+      }
+    };
+  xhttp.open("GET", "https://ctfguide.tech/api/ctflive/config", true);
+  xhttp.send();
 }
 
     async function deleteChallenge() {

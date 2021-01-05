@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
     <title>CTFGuide</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
@@ -13,7 +12,6 @@
     <script async src="https://arc.io/widget.min.js#7JTQkWpx"></script>
 
 </head>
-
 <body>
 
 
@@ -65,7 +63,7 @@
               Duels
             </a>
         
-            <a  id="logout"  style="cursor:pointer;" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+            <a onclick="logout()" style="cursor:pointer;" id="logout" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                 Logout
               </a>
 
@@ -182,22 +180,9 @@ We'll let you know when we find someone.            </p>
     <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
       <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
       
-      Hey, <span id="name">Loading...</span>.
-        <br>
-        <span class="text-gray-600">Did you practice today?</span>
+            Account Settings
       </h2>
-      <div class="mt-8 flex lg:flex-shrink-0 lg:mt-0">
-        <div class="inline-flex rounded-md shadow">
-          <a id="findGame" href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-600 hover:bg-gray-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-           Join a Duel
-          </a>
-        </div>
-        <div class="ml-3 inline-flex rounded-md shadow">
-          <a href="./challenges" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-gray-600 bg-white hover:text-gray-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-          Practice
-          </a>
-        </div>
-      </div>
+  
     </div>
   </div>
 
@@ -208,204 +193,178 @@ We'll let you know when we find someone.            </p>
 
 
 <div>
-   <!--
-  Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
-  Read the documentation to get started: https://tailwindui.com/documentation
--->
-<div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
-  <div class="flex">
-    <div class="flex-shrink-0">
-      <!-- Heroicon name: exclamation -->
-      <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
-      </svg>
-    </div>
-    <div class="ml-3">
-      <p class="text-sm leading-5 text-yellow-700">
-        CTF.Guide is still in beta. Things may not work as expected. Please report bugs by shooting me an email at <a href="mailto:laphatize@protonmail.com">laphatize@protonmail.com</a>.
-      </p>
-    </div>
-  </div>
-</div>
-<br>
+
   
 <div class="mt-10 pb-12 sm:pb-16">
-  <div class="relative">
-    <div class="absolute inset-0 h-1/2"></div>
-    <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-4xl mx-auto">
-        <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3 border">
-          <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
-            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500" id="item-1">
-                Points
-            </dt>
-            <dd id="points" class="order-1 text-5xl leading-none font-extrabold text-yellow-400" aria-describedby="item-1">
-            ...
-            </dd>
-          </div>
-          <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
-            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-             Duel Victories
-            </dt>
-            <dd id="duelvictories" class="order-1 text-5xl leading-none font-extrabold text-gray-600">
-             ...
-            </dd>
-          </div>
-          <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
-            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-              Rank
-            </dt>
-            <dd id="rank" class="order-1 text-5xl leading-none font-extrabold text-orange-800">
-          ...
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-  </div>
-  </div>
 
-
-    <h2 class="text-3xl leading-9d tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-        Challenge History <button style="float:right;" id="hidech" class="bg-gray-200 rounded px-5 text-sm text-black">Hide</button>
-        </h2> <br>
-    <div id="historyDIV" class="  flex flex-col">
-        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-              <table class="min-w-full divide-y divide-gray-200">
-                <thead>
-                  <tr>
-                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                Problem ID
-                    </th>
-                    <th class=" px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                        Challenge Name
-
-                    </th>
-                 
-                    <th  class="px-6 py-3 bg-gray-50 font-medium"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- Odd row -->
-                  <tr style="display:none;" id="history" class="bg-white">
-                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
-            .  
-                    </td>
-                    <td class=" px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                      .
-                    </td>
-                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-             .
-                    </td>
-                  
-              
-                  </tr>
+    <div class="lg:grid lg:grid-cols-12 lg:gap-x-5">
+        <aside class="py-6 px-2 sm:px-6 lg:py-0 lg:px-0 lg:col-span-3">
+          <nav class="space-y-1">
+            <a onclick="account()" class="pointer account group bg-gray-50 rounded-md px-3 py-2 flex items-center text-sm font-medium text-gray-700 hover:text-gray-700 hover:bg-white" aria-current="page">
+              <!-- Heroicon name: user-circle -->
+              <svg class="flex-shrink-0 -ml-1 mr-3 h-6 w-6 text-gray-500 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="truncate">
+                Account
+              </span>
+            </a>
       
-                  <!-- Even row -->
-                  <tr class="bg-gray-50">
-                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
-                     
-                    </td>
-                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+           
+      
+            <a href="#" class=" group rounded-md px-3 py-2 flex items-center text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50">
+              <!-- Heroicon name: user-group -->
+              <svg class="flex-shrink-0 -ml-1 mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <span class="truncate">
+               Classes <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-red-100 text-red-800">
+                Coming Soon
+              </span>
+              </span>
+            </a>
+      
+            <a onclick="integrations()" class="pointer integrations group rounded-md px-3 py-2 flex items-center text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50">
+              <!-- Heroicon name: view-grid-add -->
+              <svg class="flex-shrink-0 -ml-1 mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z" />
+              </svg>
+              <span class="truncate">
+                Integrations <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                   New
+                  </span>
+              </span>
+            </a>
+          </nav>
+        </aside>
+      
+        <div class=" sm:px-6 lg:px-0 lg:col-span-9">
+     
+      
+          <div id="account">
+            <div class="shadow sm:rounded-md sm:overflow-hidden">
+              <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
+                <div>
+                  <h3 class="text-lg leading-6 font-medium text-gray-900">Account Settings</h3>
+                  <p class="mt-1 text-sm text-gray-500"></p>
+                </div>
+      
+                <div class="grid grid-cols-6 gap-6">
                
-                    </td>
-                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                  
-                    </td>
-             
-                  </tr>
       
-                  <!-- More rows... -->
-                </tbody>
-              </table>
+                  <div class="col-span-6 sm:col-span-4">
+                    <label for="email_address" class="block text-sm font-medium text-gray-700">Username</label>
+                    <input type="text" id="username" autocomplete="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  </div>
+      
+                 
+      
+                  <div class="col-span-6 sm:col-span-4">
+                    <button onclick="reset()"  id="resetbutton" type="submit" class="bg-gray-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                      Send Password Reset Email
+                      </button>
+                    </div>
+      
+                </div>
+              </div>
+              <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                <button onclick="go()" type="submit" class="bg-green-400 border border-transparent rounded-md shadow-sm py-2 px-12 inline-flex justify-center text-sm font-medium text-white hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                    Save
+                </button>
+              </div>
+            </div>
+        </div>
+     
+      
+
+
+        <div style="display:none;" id="integrations">
+          <div class="shadow sm:rounded-md sm:overflow-hidden">
+            <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
+              <div>
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Integrations</h3>
+                <p class="mt-1 text-sm text-gray-500"></p>
+              </div>
+    
+              <div class="grid grid-cols-6 gap-6">
+             
+
+<ul class="">
+  <div class="grid grid-cols-3 gap-2" >
+<div  class="col-span-3" style="display:none;" >
+  <li class="py-4 flex space-x-6">
+    <span class="h-10 w-10 rounded-full" ><i style="font-size:3rem;" class="fab fa-discord"></i></span>
+    <div class="flex flex-col">
+      <span class="text-sm leading-5 font-medium text-gray-900">Discord</span>
+      <span class="text-sm leading-5 text-gray-500">Unlinked</span>
+    </div>
+    <span class="inline-flex rounded-md shadow-sm">
+      <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 text-xs leading-4 font-medium rounded text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150">
+        <i class="fas fa-link"></i>
+      </button>
+    </span>
+  </li>
+</div>
+<div  class="col-span-3">
+  <li class="py-4 flex space-x-6">
+    <img src="https://team.stibarc.com/assets/social_stibarc.png" class="h-10 w-10 rounded-full" >
+    <div class="flex flex-col">
+      <span class="text-sm leading-5 font-medium text-gray-900">STiBaRC</span>
+      <span id="stibarc_username" class="text-sm leading-5 text-gray-500">Unlinked</span>
+    </div>
+    <span class="inline-flex rounded-md shadow-sm">
+      <button id="stibarc_usernamebtn" onclick="window.open(`https://stibarc.com/oauth/?id=379da01ea73b704e9a64&perms=viewprivate`);" type="button" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 text-xs leading-4 font-medium rounded text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150">
+        <i class="fas fa-link"></i>
+      </button>
+    </span>
+  </li>
+</div>
+<div class="col-span-3" style="display:none;">
+  <li class="py-4 flex space-x-6">
+    <span class="h-10 w-10 rounded-full" ><i style="font-size:3rem;" class="fab fa-google"></i></span>
+    <div class="flex flex-col">
+      <span class="text-sm leading-5 font-medium text-gray-900">Google</span>
+      <span class="text-sm leading-5 text-gray-500">Unlinked</span>
+    </div>
+    <span class="inline-flex rounded-md shadow-sm">
+      <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 text-xs leading-4 font-medium rounded text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150" disabled>
+        <i class="fas fa-link"></i>
+      </button>
+    </span>
+  </li>
+
+  </div>
+</div>
+</ul>
+
+     
+                
+    
+              </div>
+              
+  <p>More authentication methods coming soon!</p>
+            </div>
+            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+              <button onclick="go()" type="submit" class="bg-green-400 border border-transparent rounded-md shadow-sm py-2 px-12 inline-flex justify-center text-sm font-medium text-white hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                  Save
+              </button>
             </div>
           </div>
+      </div>
+
+
         </div>
-      </div>
-  </div>
 
-<br><br>
-<div  id="reminders" >
-<div class="bg-gray-700 rounded">
-  <div class="max-w-1xl mx-auto text-center py-16 px-4 sm:py-10 sm:px-6 lg:px-5">
-    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
-      <span class="block">Keep forgetting to practice?</span>
-    </h2>
-    <p class="mt-4 text-lg leading-6 text-gray-200">
-      We can send you an email to remind you!</p>
-    <button id="register4email" class="mt-8 w-full inline-flex items-center justify-center px-10 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white hover:bg-gray-50 sm:w-auto">
-      Sign me up
-    </button>
-    <button id="nothx" class="mt-8 w-full inline-flex items-center justify-center px-10 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white hover:bg-gray-50 sm:w-auto">
-      No thanks!
-    </button>
-  </div>
-</div>
-<Br><br>
-</div>
-  <h2 class="text-3xl leading-9d tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-   Your Challenges
-    </h2> <br>
-<div class="  flex flex-col">
-  <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-      <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-        <table class="min-w-full divide-y divide-gray-200">
-          <thead>
-            <tr>
-              <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-          Problem ID
-              </th>
-                <th class=" px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                    Challenge Name
-
-              </th>
-           
-              <th  class="px-6 py-3 bg-gray-50 font-medium"> </th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Odd row -->
-            <tr style="display:none;" id="mc" class="bg-white">
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
-      .  
-              </td>
-              <td class=" px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                .
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-       .
-              </td>
-            
         
-            </tr>
-
-            <!-- Even row -->
-            <tr class="bg-gray-50">
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
-               
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-         
-              </td>
-              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-            
-              </td>
-       
-            </tr>
-
-            <!-- More rows... -->
-          </tbody>
-        </table>
       </div>
-    </div>
-  </div>
-</div>
-  </div>
+
 </div>
 
+
+
+
+
+</div>
   
   <!-- FOOTER -->
 
@@ -429,7 +388,7 @@ We'll let you know when we find someone.            </p>
       </div>
       <div class="mt-8 md:mt-0 md:order-1">
         <p class="text-center text-base leading-6 text-gray-400">
-          &copy; 2020 Pranav Ramesh. All rights reserved.
+          &copy; 2021 Pranav Ramesh. All rights reserved.
         </p>
       </div>
     </div>
@@ -452,37 +411,117 @@ We'll let you know when we find someone.            </p>
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
   </script>
- <script src="./js/dashboard.js?1"></script>
- 
+
 <script>
-  var open = false;
+const db = firebase.firestore();
+function account() {
+  document.getElementById("account").style.display = "block";
+    document.getElementById("integrations").style.display = "none";
+    document.getElementsByClassName("account")[0].classList.add("bg-gray-50");
+    document.getElementsByClassName("integrations")[0].classList.remove("bg-gray-50");
+}
+  function integrations() {
+    document.getElementById("account").style.display = "none";
+    document.getElementById("integrations").style.display = "block";
+    document.getElementsByClassName("account")[0].classList.remove("bg-gray-50");
+    document.getElementsByClassName("integrations")[0].classList.add("bg-gray-50");
+    document.getElementsByClassName("account")[0].classList.add("hover:bg-gray-50");
 
-
-  function toggleMenu() {
-    // closem openm
-    if (open == false) {
-    document.getElementById("mobile").classList.add("block")
-    document.getElementById("mobile").classList.remove("hidden")
-    document.getElementById("closem").classList.remove("hidden")
-    document.getElementById("closem").classList.add("block")
-    document.getElementById("openm").classList.add("hidden")
-    document.getElementById("openm").classList.remove("block")
-
-
-      open = true;
-    } else {
-      document.getElementById("mobile").classList.add("hidden")
-    document.getElementById("mobile").classList.remove("block")
-    open = false;
-    document.getElementById("openm").classList.remove("hidden")
-    document.getElementById("openm").classList.add("block")
-    document.getElementById("closem").classList.add("hidden")
-    document.getElementById("closem").classList.remove("block")
-    }
 
   }
-  document.getElementById("menubtn").addEventListener("click", toggleMenu);
+
+
+  var userid = ""
+  var email = ""
+firebase.auth().onAuthStateChanged(function(user) {
+
+userid = user.uid
+email = user.email;
+var docRef = db.collection("users").doc(userid);
+
+docRef.get().then(function(doc) {
+    if (doc.exists) {
+
+          username = doc.data().username
+          if (doc.data().stibarc_username) {
+
+            document.getElementById("stibarc_username").innerHTML = "Linked"
+            document.getElementById("stibarc_usernamebtn").style.display = "none";
+          } 
+
+          document.getElementById("username").value = username;
+    } 
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+    
+});
+});
+
+var open1 = false;
+
+
+function toggleMenu() {
+  // closem openm
+  if (open1 == false) {
+  document.getElementById("mobile").classList.add("block")
+  document.getElementById("mobile").classList.remove("hidden")
+  document.getElementById("closem").classList.remove("hidden")
+  document.getElementById("closem").classList.add("block")
+  document.getElementById("openm").classList.add("hidden")
+  document.getElementById("openm").classList.remove("block")
+
+
+    open1 = true;
+  } else {
+    document.getElementById("mobile").classList.add("hidden")
+  document.getElementById("mobile").classList.remove("block")
+  open1 = false;
+  document.getElementById("openm").classList.remove("hidden")
+  document.getElementById("openm").classList.add("block")
+  document.getElementById("closem").classList.add("hidden")
+  document.getElementById("closem").classList.remove("block")
+  }
+
+}
+document.getElementById("menubtn").addEventListener("click", toggleMenu);
+
+
+
+function go() {
+    
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      window.location.reload();
+    }
+  }
+  xhttp.open("GET", `./api/setusername?uid=${userid}&username=${document.getElementById("username").value}`, true);
+xhttp.send();
+}
+
+
+function reset() {
+var auth = firebase.auth();
+auth.sendPasswordResetEmail(email).then(function() {
+document.getElementById("resetbutton").innerHTML = "Check your email!"
+}).catch(function(error) {
+  // An error happened.
+  console.log(error)
+});
+}
+
+
+function logout() {
+    firebase.auth().signOut().then(function() {
+        window.location.href = "./login"
+    })
+}
+
 
 
 </script>
+<style>
+  .pointer {cursor: pointer;}
+
+</style>
 </body>
