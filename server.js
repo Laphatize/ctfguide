@@ -92,11 +92,14 @@ http.listen(process.env.PORT, () => {
   if (os.hostname() == "LAPTOP-S4BMA3PQ") {
     console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Locally | http://localhost:88")
   }  else {
-    console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Live | https://ctfguide.tech")
+
     if (args[2] == "gh") {
+      // If github is running tests here.
        console.log('\x1b[33m%s\x1b[0m', "[GITHUB] All tests passed");
        process.exit(0);
     }
+    console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Live | https://ctfguide.tech")
+
   }
 
 
