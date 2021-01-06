@@ -34,3 +34,5 @@ jobs:
       - name: run it
         run:  npm start
         timeout-minutes: 1
+        continue-on-error: true
+        
