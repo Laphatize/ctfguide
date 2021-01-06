@@ -314,13 +314,13 @@ This feature isn't ready yet. It will be in the future though!
          }
         }
     };
-    xhttp.open("GET", `https://ctfguide.tech/create-game?cid=${cid}&uid=${userid}`, true);
+    xhttp.open("GET", `https://ctfguide.tech/ctflive/create-game?cid=${cid}&uid=${userid}`, true);
     xhttp.send();
   }
 
   function joingame() {
     var code = document.getElementById("gamecode").value;
-    window.location.href = `https://ctfguide.tech/${code}/game`
+    window.location.href = `https://ctfguide.tech/ctflive/${code}/game`
   }
 
 </script>
