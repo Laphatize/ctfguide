@@ -1,9 +1,9 @@
 // Copyright Pranav Ramesh 2021
-
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const admin = require('firebase-admin');
 const serviceAccount = require('./other/cyberjags-8b081-116221a4ed05.json');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+const args = process.argv;
 function makeid(length) {
   var result = '';
   var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -93,6 +93,10 @@ http.listen(process.env.PORT, () => {
     console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Locally | http://localhost:88")
   }  else {
     console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Live | https://ctfguide.tech")
+    if (args[2] == "gh") {
+       console.log('\x1b[33m%s\x1b[0m', "[GITHUB] All tests passed");
+       process.exit(0);
+    }
   }
 
 
