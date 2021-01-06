@@ -33,6 +33,6 @@ jobs:
         
       - name: run it
         run:  npm start
-        timeout-minutes: 1
+        timeout-minutes: .3
         continue-on-error: true
         
