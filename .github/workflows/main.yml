@@ -32,4 +32,4 @@ jobs:
         run: npm install
         
       - name: run it
-        run: node server.js
+        run: npm test
