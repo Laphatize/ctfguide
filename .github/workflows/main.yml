@@ -32,4 +32,4 @@ jobs:
         run: npm install
         
       - name: run it
-        run: npm start --testTimeout=10000
+        run: timeout 10s npm start
