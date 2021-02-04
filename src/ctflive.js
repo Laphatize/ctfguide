@@ -87,7 +87,7 @@ router.get("/create-game", async (request, response) => {
     const docRef = db.collection('users').doc(request.query.uid);
     const doc = await docRef.get();
     if (!doc.exists) {
-      console.log('No such document!');
+    //  console.log('No such document!');
     } else {
   
       if (doc.data().challenges.includes(request.query.id)) {
