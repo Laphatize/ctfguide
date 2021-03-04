@@ -17,7 +17,7 @@ router.get("/", (request, response) => {
 
 
 router.get("/con", (request, response) => {
-    response.sendFile(__dirname + "/views/con.html");
+    response.sendFile(__dirname + "/views/connecting.html");
   });
   
   
