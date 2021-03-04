@@ -11,8 +11,6 @@ const bcrypt = require('bcrypt');
 var urlencodedParser = bodyParser.urlencoded({
     extended: false
 })
-const fetch = require('node-fetch');
-
   
 ////////////////////////////////////////////////////////
 
@@ -216,13 +214,18 @@ router.get("/checksolution", async (request, response) => {
               rank: "Gold"
             });
           }
-          fetch("https://discord.com/api/webhooks/817088125414146058/jcAFERsOhqYspWWQzKurMSE8c26lgWXAdX8Ewp9qjOa8KeoOEXvta029CYzy31t320AF", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({"username": request.query.username, "content": `Completed the challenge: ` +  doc.data().title})
-        });
+          var request1 = new XMLHttpRequest();
+          request1.open("POST", "https://discord.com/api/webhooks/774735758182449193/hHJqdokRkUTWeqJHaAeoJQ3Ztu68rIH8JPGNCpyBDxmKz7S_eb43bv0SeL60gQHIe6tT");
+  
+          request1.setRequestHeader('Content-type', 'routerlication/json');
+  
+          var params = {
+            username: `${request.query.username} completed a challenge!`,
+            content: "GG!"
+          }
+  
+          request1.send(JSON.stringify(params));
+  
   
           updateLog(`[TIME: ${Date.now()}] [PID: ${request.query.id}] [UID: ${request.query.uid}] A problem was solved on the CTFGuide Platform.`)
           return response.send("good");
