@@ -101,7 +101,7 @@ socket.emit("connected", {
 
 
 socket.on('connected', function(data){
-
+  
   if (data.gameID == window.location.href.split("/")[4]) {
     addPlayer(data.username);
     console.log(data)
