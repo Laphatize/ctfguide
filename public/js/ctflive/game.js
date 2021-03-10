@@ -53,7 +53,7 @@ docRef.get().then(function(doc) {
 socket.emit("connected", {
   username: username,
   userID: userid,
-  gameID: window.location.href.split("/")[3]
+  gameID: window.location.href.split("/")[4]
 });
   } else {
       username = doc.data().username
@@ -61,7 +61,7 @@ socket.emit("connected", {
 socket.emit("connected", {
   username: username,
   userID: userid,
-  gameID: window.location.href.split("/")[3]
+  gameID: window.location.href.split("/")[4]
 });
   }
 } 
