@@ -97,7 +97,7 @@ router.get("/create-game", async (request, response) => {
           "ctf_flag1": flags.flag1,
           "ctf_flag2": flags.flag2,
           "ctf_flag3": flags.flag3,
-          "ctflive_enabled": request.query.cte
+          "ctflive_enabled": true
   
         })
       }
