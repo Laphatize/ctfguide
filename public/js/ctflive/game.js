@@ -41,8 +41,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 if (user) {
   userid = user.uid;
   useremail = user.email;
-  if (user.displayName) {
-  } else {
+
       var docRef = db.collection("users").doc(userid);
 
 docRef.get().then(function(doc) {
@@ -69,7 +68,7 @@ socket.emit("connected", {
   console.log("Error getting document:", error);
 });
   }
-}
+
 });
 
 
