@@ -46,7 +46,7 @@ router.get("/con", (request, response) => {
               .auth()
               .createCustomToken(doc.id)
               .then((customToken) => {
-                response2.redirect("https://ctfguide.tech/con?ct=" + customToken + "&uid=" + doc.id)
+                response2.redirect("/con?ct=" + customToken + "&uid=" + doc.id)
               })
               .catch((error) => {
                 console.log('Error creating custom token:', error);
