@@ -1,0 +1,17 @@
+TODO 
+
+👩‍🎓 CTFLive Participant Perspective
+    - Create UI to submit challenge checkpoints.
+    - Make API endpoint to check, validate, award checkpoint completion.
+    - Make socket that tells client to update information for X user.
+    - (Optional) Have scoreboard table sort participants based of progress.
+    - End game screen showing results.
+    - (Optional) Timer
+
+🏫 CTFLive Teacher/Host Perspective
+    - Create interface that allows them to track student progress.
+    - Ability to broadcast messages.
+
+🔒 Security
+    - Upon starting a CTFLive game - confirm that the socket is being emitted from the host.
+        - Why? It is currently possible for the event to be emitted straight from console.

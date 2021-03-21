@@ -243,27 +243,7 @@ This feature isn't ready yet. It will be in the future though!
               useremail = user.email;
               if (user.displayName) {
               } else {
-                  var docRef = db.collection("users").doc(userid);
-
-          docRef.get().then(function(doc) {
-              if (doc.exists) {
-                  if (!doc.data().username) {
-                  username = (useremail).split("@")[0].substring(0, 5)
-                  
-          socket.emit("connected", {
-              username: username
-          });
-              } else {
-                  username = doc.data().username
-                  
-          socket.emit("connected", {
-              username: username
-          });
-              }
-          } 
-          }).catch(function(error) {
-              console.log("Error getting document:", error);
-          });
+                 
               }
             }
   });
@@ -311,17 +291,17 @@ This feature isn't ready yet. It will be in the future though!
          if (xhttp.responseText == "error") {
             document.getElementById("cerror").style.display = "block";
          } else {
-            window.location.href = `https://ctfguide.tech/ctflive/${xhttp.responseText}/client`
+            window.location.href = `./${xhttp.responseText}/client`
          }
         }
     };
-    xhttp.open("GET", `https://ctfguide.tech/ctflive/create-game?cid=${cid}&uid=${userid}`, true);
+    xhttp.open("GET", `./create-game?cid=${cid}&uid=${userid}`, true);
     xhttp.send();
   }
 
   function joingame() {
     var code = document.getElementById("gamecode").value;
-    window.location.href = `https://ctfguide.tech/ctflive/${code}/game`
+    window.location.href = `./${code}/game`
   }
 
 </script>

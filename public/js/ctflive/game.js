@@ -33,7 +33,7 @@ function start() {
 }
 
 
-const socket = io("https://ctfguide.tech");
+const socket = io(window.location.href.split("/ctflive")[0]);
 var username = "";
 firebase.auth().onAuthStateChanged(function(user) {
 
@@ -71,11 +71,11 @@ socket.emit("connected", {
 
 });
 
-
+var participants;
 socket.on('gamestart', function(data){
 
 
-  if (data.gameID == window.location.href.split("/")[3]) {
+  if (data.gameID == window.location.href.split("/")[4]) {
   
   var fade= document.getElementById("gamelobby"); 
     
@@ -93,12 +93,34 @@ socket.on('gamestart', function(data){
       else { 
           clearInterval(intervalID); 
           
-  document.getElementById("gamelobby").style.display = "none"; 
+          document.getElementById("gamelobby").style.display = "none"; 
+          document.getElementById("challenge").style.display = "block"; 
+          document.getElementById("challenge_etc").style.display = "block"; 
+          // document.getElementById("cd").innerHTML = data.gameID;
 
-  document.getElementById("challenge").style.display = "block"; 
+          document.getElementById("cd").innerHTML = data.challenge;
+          window.alert(data.participants)
+          
+          participants = JSON.parse(data.participants);
+          console.log(participants)
 
-  document.getElementById("challenge_etc").style.display = "block"; 
-  document.getElementById("cd").innerHTML = data.challenge;
+          for (var i = 0; i < participants.participants.length; i++) {
+            document.querySelector('#egg').insertAdjacentHTML(
+              'afterbegin', `            <tr class="bg-white">
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+${participants.participants[i]}
+              </td>
+              <td id="${participants.participants[i]}_checkpoint" class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+0              </td>
+              <td id="${participants.participants[i]}_checkpoint" class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+              <i class="fas fa-circle-notch fa-spin"></i>
+              Checkpoint 1
+              </td>
+      
+
+            </tr>`)
+          }
+      
 
 
 
@@ -110,6 +132,18 @@ socket.on('gamestart', function(data){
   
 });
 
+
+function checkFlag(flag) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange() = function() {
+    if (this.readState == 4 && this.status == 200) {
+
+    }
+  }
+
+  var gamecode;
+  xhttp.open("POST", `../../ctflive/checkFlag?gameCode=${gamecode}&token=${userid}`)
+}
 
 
 

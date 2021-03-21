@@ -42,13 +42,12 @@ function addPlayer(username) {
             <div class="text-1xl leading-5 font-medium text-black truncate">
              ${username}
             </div>
-            <!--
             <div class="ml-2 flex-shrink-0 flex">
-              <span class="inline-flex rounded-md shadow-sm">
+          <!--    <span class="inline-flex rounded-md shadow-sm">
                   <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 text-xs leading-4 font-medium rounded text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150">
                 Rename
                   </button>
-                </span>
+                </span> -->
                 &nbsp;&nbsp;
 
                 <span class="inline-flex rounded-md shadow-sm">
@@ -57,14 +56,14 @@ function addPlayer(username) {
           </button>
                 </span>
             </div>
-            -->
+            
           </div>
         </div>
       </a>
     </li>`)
 }
 
-const socket = io("https://ctfguide.tech");
+const socket = io(window.location.href.split("/ctflive")[0]);
 var username = "";
 firebase.auth().onAuthStateChanged(function(user) {
 
