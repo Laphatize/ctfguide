@@ -83,7 +83,14 @@ router.get("/create-game", async (request, response) => {
   
   
   
-  
+  router.get("/checkFlag", async (request, response) => {
+
+    console.log("DEBUG:\n" + 
+    `${request.query.userid}, ${request.query.gameid}, ${request.query.flag}, ${request.query.flagfor}`)
+
+
+    return response.send("OK")
+  })
   
   router.get("/config", async (request, response) => {
   
