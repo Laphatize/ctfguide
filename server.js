@@ -66,28 +66,88 @@ io.on("connection", socket => {
       const localDoc = await localDocRef.get();
       console.log(localDoc.data())
       var tempJSONObj = JSON.parse(localDoc.data().participants);
-      tempJSONObj.participants.push(doc.data().username)
 
+      if (!tempJSONObj.participants.includes(doc.data().username)) {
+        tempJSONObj.participants.push(doc.data().username)
+      }
+      
+      
+      console.log(tempJSONObj)
       localDocRef.update({
         'participants': JSON.stringify(tempJSONObj)
       })
 
 
+      io.emit("connected", {
+        username: player.username,
+        gameID: player.gameID,
+        participants: JSON.stringify(tempJSONObj),
+        userID: "removed"
+      });     
+
     }
+    
 
-
-    io.emit("connected", player);
   });
 
-  socket.on("gamestart", info => {
-    io.emit("gamestart", info);
+  socket.on("gamestart", async info => {
+    
+    const docRef2 = db.collection('ctflive').doc(info.gameID);
+    const doc2 = await docRef2.get();
+  
+    if (!doc2.exists) {
+      console.log('No such document!');
+      return response.send("error")
+    } else {
+
+      // Fetch challenge details from db
+      const docRef3 = db.collection('challenges').doc(doc2.data().challengeid);
+      const doc3 = await docRef3.get();
+      info.challenge = doc3.data().problem;
+      info.participants = doc2.data().participants;
+      console.log(info)
+
+      io.emit("gamestart", info);
+  
+    }
   });
 
 
+    socket.on("ssbroadcast", async info => {
+    
+      const docRef2 = db.collection('ctflive').doc(info.gameid);
+      const doc2 = await docRef2.get();
+      io.emit("sstransit", {
+        
+       leaderboards: doc2.data().leaderboards,
+       participants: doc2.data().participants
+        
+      })
 
+      /*
+      if (!doc2.exists) {
+        console.log('No such document!');
+        return response.send("error")
+      } else {
+  
+        // Fetch challenge details from db
+        const docRef3 = db.collection('challenges').doc(doc2.data().challengeid);
+        const doc3 = await docRef3.get();
+        info.challenge = doc3.data().problem;
+        info.participants = doc2.data().participants;
+        console.log(info)
+  
+        io.emit("gamestart", info);
+    
+      }
+      */
+
+  });
 
 });
-http.listen(process.env.PORT, () => {
+
+
+http.listen(88, () => {
   console.log('\x1b[36m%s\x1b[0m', "[SERVER] CTFGuide is deployed on port 88.");
   if (os.hostname() == "LAPTOP-S4BMA3PQ") {
     console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Locally | http://localhost:88")

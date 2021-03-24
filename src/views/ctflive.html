@@ -97,85 +97,213 @@
   </nav>
  
   <div  >
-    <br> <br><div class="max-w-7xl my-auto mx-auto px-6 sm:px-6 lg:px-8">
-    <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
 
-    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
-      <div class="flex">
-        <div class="flex-shrink-0">
-          <!-- Heroicon name: exclamation -->
-          <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
-          </svg>
+    <div class="bg-gray-800">
+      <div class="max-w-screen-xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:flex lg:justify-between">
+        <div class="max-w-xl">
+          <h2 class="text-4xl leading-10 font-extrabold text-white sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl">CTFLive</h2>
+          <p class="mt-5 text-xl leading-7 text-gray-400">A fun competitive game mode to practice CTF in a group based environment.</p>
         </div>
-        <div class="ml-3">
-          <p class="text-sm leading-5 text-yellow-700">
-This feature isn't ready yet. It will be in the future though!
-          </p>
+        <div class="mt-5 w-full max-w-md">
+          <label class="block text-base leading-6 font-large text-gray-300">Joining a game?</label>
+          <div>
+            <input id="gamecode" class="mt-1.5 appearance-none block w-full bg-gray-700 border border-transparent rounded-md pl-3 pr-10 py-3 text-base leading-6 text-white focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
+            <button onclick="joingame()" class="appearance-none  bg-gray-700 border border-transparent rounded-md px-8 py-2 mt-3 text-white focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">Join</button>
+      
+       
+          </div>
         </div>
       </div>
     </div>
-<br>
-
-    <div class="max-w-3xl mx-auto my-auto">
-        <div class="bg-gray-100 rounded-lg shadow-lg">
-            <div class="px-4 py-6 sm:p-12">
-                <h1><b style="font-size:2rem;">Enter Game Code</b></h1>
-                <div>
-     <div class="mt-1 relative rounded-md shadow-sm">
-                      <input id="gamecode" class="form-input py-4 font-lg block w-full sm:text-lg sm:leading-5" placeholder="A213AS">
-                    </div>
-                   
-                    <span class="inline-flex rounded-md shadow-sm">
-           
-                   <button onclick="joingame()" type="button" style="margin-top:10px;" class="inline-flex items-center px-6 py-3 border border-white-300 text-base leading-6 font-medium rounded-md text-white bg-green-400 hover:text-white-500 hover:bg-green-500 focus:outline-none   transition ease-in-out duration-150">
-                        Join Game
-                      </button>
-                      
-                    </span>
-                  </div>
+    <div class="bg-indigo-50">
+      <div class="max-w-screen-xl  py-12 px-4 sm:px-6 lg:py-12 lg:px-8 lg:flex lg:items-center lg:justify-between">
+        <h2 class="ml-4 text-3xl leading-9 font-extrabold tracking-tight text-gray-900 md:text-4xl md:leading-10">
+          <span class="block">Hosting a game?</span>
+          <span class="block text-gray-600">Here are some challenges that support CTFLive!</span>
+        </h2>
+     
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto">
+ 
+        <div id="create" style="display:none;" class="fixed z-10 inset-0 overflow-y-auto w-auto">
+          <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <!--
+              Background overlay, show/hide based on modal state.
+        
+              Entering: "ease-out duration-300"
+                From: "opacity-0"
+                To: "opacity-100"
+              Leaving: "ease-in duration-200"
+                From: "opacity-100"
+                To: "opacity-0"
+            -->
+            <div class="fixed inset-0 transition-opacity">
+              <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+        
+            <!-- This element is to trick the browser into centering the modal contents. -->
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span>&#8203;
+            <!--
+              Modal panel, show/hide based on modal state.
+        
+              Entering: "ease-out duration-300"
+                From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                To: "opacity-100 translate-y-0 sm:scale-100"
+              Leaving: "ease-in duration-200"
+                From: "opacity-100 translate-y-0 sm:scale-100"
+                To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            -->
+            <div class="inline-block align-bottom bg-white rounded-lg text-center overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+              <div class=" bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 text-center">
+  
+  
+  
+                <div class="sm:flex sm:items-start">
+  
+                </div>
+              </div>
+              <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+  
+                <span class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto">
+                  <button id="createlisting2" type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-red transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                   Submit
+                  </button>
+                </span>
+                <span class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto">
+                  <button id="cancel" type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                    Cancel
+                  </button>
+                </span>
+              </div>
             </div>
           </div>
-
-          <br>
-          <div class="bg-gray-100 rounded-lg shadow-lg">
-            <div class="px-4 py-6 sm:p-12">
-                <h1><b style="font-size:2rem;">Create a Game</b></h1>
-                
-              
-                <div>
-
-     <div class="mt-1 relative rounded-md shadow-sm">
-
-                      <input id="cid" class="form-input py-4 font-lg block w-full sm:text-lg sm:leading-5" placeholder="Challenge ID">
-                    </div>
-             
-                    <b id="cerror" style="display:none;margin-top:10px;color:#ed6f6f;background-color:rgb(238, 238, 238);padding:7px;border-color:lightgray;border-width:2px;"><i class="fas fa-times-circle"></i> That challenge doesn't support CTFLive!</b> 
-
-                    <span class="inline-flex rounded-md shadow-sm">
-           
-                   <button onclick="creategame()" type="button" style="margin-top:10px;" class="inline-flex items-center px-6 py-3 border border-white-300 text-base leading-6 font-medium rounded-md text-white bg-green-400 hover:text-white-500 hover:bg-green-500 focus:outline-none   transition ease-in-out duration-150">
-                      Create Game
-                      </button>
-                      
-                      
-                    </span>
-                  </div>
-
-                  <br>
-                <div class="bg-gray-200 border-l-4 border-gray-200 p-4">
-            
-                    <div class="ml-3">
-                      <p class="text-sm leading-5 text-black">
-                        CTFLive only supports certain challenges. Make sure the challenge has a
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium leading-5 bg-green-100 text-green-800">
-                          CTFLive Compatible
-                        </span>  badge.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+        </div>
+  
+  
+        <div id="setup" style="display:none;" class="fixed z-10 inset-0 overflow-y-auto w-auto">
+          <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <!--
+              Background overlay, show/hide based on modal state.
+        
+              Entering: "ease-out duration-300"
+                From: "opacity-0"
+                To: "opacity-100"
+              Leaving: "ease-in duration-200"
+                From: "opacity-100"
+                To: "opacity-0"
+            -->
+            <div class="fixed inset-0 transition-opacity">
+              <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
             </div>
+        
+            <!-- This element is to trick the browser into centering the modal contents. -->
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span>&#8203;
+            <!--
+              Modal panel, show/hide based on modal state.
+        
+              Entering: "ease-out duration-300"
+                From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                To: "opacity-100 translate-y-0 sm:scale-100"
+              Leaving: "ease-in duration-200"
+                From: "opacity-100 translate-y-0 sm:scale-100"
+                To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            -->
+   
+          </div>
+        </div>
+
+     
+<br>
+  <ul id="orgin-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ml-4">
+  
+              
+      <li style="display:none;" id="challenge-grid" class="col-span-1 bg-white border   shadow-lg">
+          <div class="w-full flex items-center justify-between  p-6 space-x-6">
+            <div class="flex-1 truncate">
+              <div class="flex items-center space-x-3">
+              </div>
+         </div>
+        </li>
+  
+      
+    
+  
+      </ul>
+    </div>
+    <br> <br><div class="max-w-7xl my-auto mx-auto px-6 sm:px-6 lg:px-8">
+    <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
+
+<br>
+
+<div id="ctflivemodal" style="display:none;" class="fixed z-10 inset-0 overflow-y-auto">
+  <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+    <!--
+      Background overlay, show/hide based on modal state.
+
+      Entering: "ease-out duration-300"
+        From: "opacity-0"
+        To: "opacity-100"
+      Leaving: "ease-in duration-200"
+        From: "opacity-100"
+        To: "opacity-0"
+    -->
+    <div class="fixed inset-0 transition-opacity">
+      <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+    </div>
+
+    <!-- This element is to trick the browser into centering the modal contents. -->
+    <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span>&#8203;
+    <!--
+      Modal panel, show/hide based on modal state.
+
+      Entering: "ease-out duration-300"
+        From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+        To: "opacity-100 translate-y-0 sm:scale-100"
+      Leaving: "ease-in duration-200"
+        From: "opacity-100 translate-y-0 sm:scale-100"
+        To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+    -->
+    
+    <div class="inline-block align-bottom bg-gray-800 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle w-1/2" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+      <div>
+  
+        <div class="mt-3 text-center sm:mt-5">
+          <div class="flex-1 flex flex-col justify-between">
+            <div class="px-4 divide-y divide-white-200 sm:px-6">
+              <div class="space-y-6 pt-6 pb-5">
+                <div class="space-y-1">
+                  <h1 class="text-white font-large leading-5 text-lg" style="font-size:2rem;text-align:center;"><b>Start a CTFLive</b></h1>
+<br>
+                  <label  class="block text-sm font-medium leading-5 text-white">
+                  Challenge ID
+                  </label>
+                  <div class="relative rounded-md shadow-sm">
+                    <input id="cid" class="appearance-none block w-full bg-gray-700 border border-transparent rounded-md pl-3 pr-10 py-3 text-base leading-6 text-white focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
+                  </div>
+                
+                        <br>
+                          <button onclick="creategame()" class="appearance-none  hover:bg-green-600 bg-green-700 border border-transparent rounded-md px-8 py-2 mt-3 text-white focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">Start Game</button>
+                          <button onclick="closectflivemodal()" class="appearance-none hover:bg-red-700  bg-red-800 border border-transparent rounded-md px-8 py-2 mt-3 text-white focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">Close</button>
+
+                          <br><br>
+                </div>
+       
+             </div>
+             </div>
+             </div>
+        </div>
+      </div>
+   
+    </div>
+  </div>
+</div>
+
+<!-------------->
+
+  
+          <br>
+        
           </div>
     </div>
 
@@ -235,35 +363,20 @@ This feature isn't ready yet. It will be in the future though!
 <script>
   var open1 = false;
 
-
   var db = firebase.firestore();
   firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
               userid = user.uid;
               useremail = user.email;
-              if (user.displayName) {
-              } else {
-                  var docRef = db.collection("users").doc(userid);
+              
+  loadChallenges("easy");
+  
 
-          docRef.get().then(function(doc) {
-              if (doc.exists) {
-                  if (!doc.data().username) {
-                  username = (useremail).split("@")[0].substring(0, 5)
-                  
-          socket.emit("connected", {
-              username: username
-          });
+              if (user.displayName) {
+
+                
               } else {
-                  username = doc.data().username
-                  
-          socket.emit("connected", {
-              username: username
-          });
-              }
-          } 
-          }).catch(function(error) {
-              console.log("Error getting document:", error);
-          });
+                 
               }
             }
   });
@@ -303,6 +416,135 @@ This feature isn't ready yet. It will be in the future though!
     window.location.href = "https://ctfguide.tech/ctflive/client";
   }
 
+  
+
+  function add(name, category, difficulty, id, solved) {
+  
+  if (difficulty == "hard") {
+  document.querySelector('#challenge-grid').insertAdjacentHTML(
+      'beforebegin', `
+      
+      <li id="${id}" class="col-span-1 bg-white border   shadow-lg">
+      <div class="w-full flex items-center justify-between p-6 space-x-6">
+        <div class="flex-1 truncate">
+          <div class="flex items-center space-x-3">
+            <h3 class="text-gray-900 text-sm leading-5 font-medium truncate">${name}</h3>
+            <span class="flex-shrink-0 inline-block px-2 py-0.5 text-white text-xs leading-4 font-medium bg-red-400 rounded-full">HARD</span>
+          </div>
+          <p class="mt-1 text-gray-500 text-sm leading-5 truncate">${category}</p>
+      
+          </div>
+          <button onclick="showctflivemodal('${id}')" class="bg-gray-800 px-3 py-1 text-white">Create Game</button>
+          </div>
+    
+    </li>
+
+      
+      
+      `);
+  }
+
+  
+  if (difficulty == "medium") {
+      document.querySelector('#challenge-grid').insertAdjacentHTML(
+          'beforebegin', `
+          
+          <li  id="${id}" class="col-span-1 bg-white border   shadow-lg">
+          <div class="w-full flex items-center justify-between p-6 space-x-6">
+            <div class="flex-1 truncate">
+              <div class="flex items-center space-x-3">
+                <h3 class="text-gray-900 text-sm leading-5 font-medium truncate">${name}</h3>
+                <span class="flex-shrink-0 inline-block px-2 py-0.5 text-white text-xs leading-4 font-medium bg-yellow-400 rounded-full">MED</span>
+              </div>
+              <p class="mt-1 text-gray-500 text-sm leading-5 truncate">${category}</p>
+            </div>
+            <button onclick="showctflivemodal('${id}')" class="bg-gray-800 px-3 py-1 text-white">Create Game</button>
+         </div>
+        </li>
+    
+          
+          
+          `);
+      }
+
+      if (difficulty == "easy") {
+          document.querySelector('#challenge-grid').insertAdjacentHTML(
+              'beforebegin', `
+              
+              <li  id="${id}" class="col-span-1 bg-white border   shadow-lg">
+              <div class="w-full flex items-center justify-between p-6 space-x-6">
+                <div class="flex-1 truncate">
+                  <div class="flex items-center space-x-3">
+                    <h3 class="text-gray-900 text-sm leading-5 font-medium truncate">${name}</h3>
+                    <span class="flex-shrink-0 inline-block px-2 py-0.5 text-white text-xs leading-4 font-medium bg-green-400 rounded-full">EASY</span>
+                  </div>
+                  <p class="mt-1 text-gray-500 text-sm leading-5 truncate">${category}</p>
+                </div>
+                <button onclick="showctflivemodal('${id}')" class="bg-gray-800 px-3 py-1 text-white">Create Game</button>
+             </div>
+            </li>
+        
+              
+              
+              `);
+          }
+
+          if (solved) {
+            document.getElementById(id).classList.remove("bg-white");
+            document.getElementById(id).classList.add("bg-green-100");
+
+          }
+
+  }
+
+
+  
+  function loadChallenges(difficulty) {
+      
+      document.getElementById("orgin-grid").innerHTML = `<li style="display:none;" id="challenge-grid" class="col-span-1 bg-white border   shadow-lg ml-4">
+          <div class="w-full flex items-center justify-between p-6 space-x-6">
+            <div class="flex-1 truncate">
+              <div class="flex items-center space-x-3">
+              </div>
+         </div>
+        </li>`
+
+        // get challenges we completed
+      
+
+    var docRef3 = db.collection("users").doc(userid);
+
+    docRef3.get().then(function(doc3) {
+
+      db.collection("challenges")
+      .get()
+      .then(function(querySnapshot) {
+          querySnapshot.forEach(function(doc) {
+              // doc.data() is never undefined for query doc snapshots
+             
+           
+                if (doc.data().ctflive_enabled == "true") {
+                  console.log(doc.data().title)
+              add(doc.data().title, doc.data().category, doc.data().difficulty, doc.id)
+                }
+              
+          });
+      })
+      .catch(function(error) {
+          console.log("Error getting documents: ", error);
+      });
+
+    });
+
+    }
+
+
+
+    function update() {
+      loadChallenges(document.getElementById("difficulty").value.toLowerCase())
+      localStorage.setItem("difficulty", document.getElementById("difficulty").value.toLowerCase());
+    }
+
   function creategame() {
     var cid = document.getElementById("cid").value;
     var xhttp = new XMLHttpRequest();
@@ -311,17 +553,28 @@ This feature isn't ready yet. It will be in the future though!
          if (xhttp.responseText == "error") {
             document.getElementById("cerror").style.display = "block";
          } else {
-            window.location.href = `https://ctfguide.tech/ctflive/${xhttp.responseText}/client`
+            window.location.href = `./${xhttp.responseText}/client`
          }
         }
     };
-    xhttp.open("GET", `https://ctfguide.tech/ctflive/create-game?cid=${cid}&uid=${userid}`, true);
+    xhttp.open("GET", `./create-game?cid=${cid}&uid=${userid}`, true);
     xhttp.send();
   }
 
   function joingame() {
     var code = document.getElementById("gamecode").value;
-    window.location.href = `https://ctfguide.tech/ctflive/${code}/game`
+    window.location.href = `./${code}/game`
+  }
+
+
+  function showctflivemodal(id) {
+    document.getElementById("ctflivemodal").style.display = "block";
+    document.getElementById("cid").value = id;
+  }
+
+  function closectflivemodal() {
+    document.getElementById("ctflivemodal").style.display = "none";
+
   }
 
 </script>
