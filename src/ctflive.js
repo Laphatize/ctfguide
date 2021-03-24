@@ -132,17 +132,17 @@ router.get("/create-game", async (request, response) => {
     const docRef4 = db.collection('challenges').doc(challengeID);
     const doc4 = await docRef4.get();
     var correctFlag = "";
-    
+    var newPos = 0
     if (request.query.flagfor == "1") {
       correctFlag = doc4.data().ctf_flag1;
-      oldLB.leaderboard[`${doc2.data().username}`] = 1;
+      newPos = 1;
     } else if (request.query.flagfor == "2") {
       correctFlag = doc4.data().ctf_flag2;
-      oldLB.leaderboard[`${doc2.data().username}`] = 2;
+      newPos = 2;
 
     } else  {
       correctFlag = doc4.data().ctf_flag3;
-      oldLB.leaderboard[`${doc2.data().username}`] = 3;
+      newPos = 3;
 
     }
 
@@ -151,6 +151,7 @@ router.get("/create-game", async (request, response) => {
       const doc = await docRef.get();
       var oldLB = doc.data().leaderboards;
       oldLB = JSON.parse(oldLB);
+      oldLB.leaderboard[`${doc2.data().username}`] = newPos;
       const docRef2 = db.collection('users').doc(request.query.userid);
 
       const doc2 = await docRef2.get();
