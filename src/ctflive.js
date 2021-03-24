@@ -55,7 +55,8 @@ router.get("/create-game", async (request, response) => {
             code: gamecode,
             participants: `{"participants" : []}`,
             creator: doc.data().username,
-            challengeid: cid
+            challengeid: cid,
+            leaderboards: `{"leaderboard": {}}`
           })
   
           return response.send(gamecode);
@@ -83,13 +84,93 @@ router.get("/create-game", async (request, response) => {
   
   
   
+  
+  
+  router.get("/initPlayer", async (request, response) => {
+      // initialize player on leaderboard
+      const docRef = db.collection('ctflive').doc(request.query.gameid);
+      const doc = await docRef.get();
+      var oldLB = doc.data().leaderboards;
+      oldLB = JSON.parse(oldLB);
+      
+      var tempJSONObj = JSON.parse(doc.data().participants);
+
+      // Get username from ID
+      const docRef2 = db.collection('users').doc(request.query.userid);
+      const doc2 = await docRef2.get();
+
+      // Set their score to 0 on JSON object.
+    //  console.log(doc2.data())
+    //  console.log(doc2.data().username)
+    if (!tempJSONObj.participants.includes(doc.data().username)) {
+      oldLB.leaderboard[`${doc2.data().username}`] = 0
+    }
+
+
+      // Push JSON to database
+      db.collection("ctflive").doc(request.query.gameid).update({
+  
+        "leaderboards" : JSON.stringify(oldLB)
+
+      })
+
+      console.log(request.query.userid)
+      return response.send("OK");
+
+  });
   router.get("/checkFlag", async (request, response) => {
 
     console.log("DEBUG:\n" + 
     `${request.query.userid}, ${request.query.gameid}, ${request.query.flag}, ${request.query.flagfor}`)
+  
+    // Get challenge id
+    const docRef3 = db.collection('ctflive').doc(request.query.gameid);
+    const doc3 = await docRef3.get();
+    var challengeID = doc3.data().challengeid;
 
+    // Get flag
+    const docRef4 = db.collection('challenges').doc(challengeID);
+    const doc4 = await docRef4.get();
+    var correctFlag = "";
+    
+    if (request.query.flagfor == "1") {
+      correctFlag = doc4.data().ctf_flag1;
+      oldLB.leaderboard[`${doc2.data().username}`] = 1;
+    } else if (request.query.flagfor == "2") {
+      correctFlag = doc4.data().ctf_flag2;
+      oldLB.leaderboard[`${doc2.data().username}`] = 2;
 
-    return response.send("OK")
+    } else  {
+      correctFlag = doc4.data().ctf_flag3;
+      oldLB.leaderboard[`${doc2.data().username}`] = 3;
+
+    }
+
+    if (correctFlag == request.query.flag) {
+      const docRef = db.collection('ctflive').doc(request.query.gameid);
+      const doc = await docRef.get();
+      var oldLB = doc.data().leaderboards;
+      oldLB = JSON.parse(oldLB);
+      const docRef2 = db.collection('users').doc(request.query.userid);
+
+      const doc2 = await docRef2.get();
+
+      // Set their score to 0 on JSON object.
+    //  console.log(doc2.data())
+    //  console.log(doc2.data().username)
+
+  
+      // Push JSON to database
+      db.collection("ctflive").doc(request.query.gameid).update({
+  
+        "leaderboards" : JSON.stringify(oldLB)
+
+      })
+
+     return response.send("OK")
+    } else {
+      return response.send("BAD")
+    }
   })
   
   router.get("/config", async (request, response) => {

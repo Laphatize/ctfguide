@@ -59,6 +59,26 @@ if (user) {
 
 docRef.get().then(function(doc) {
   if (doc.exists) {
+
+    
+// Intialize playaer upon page load
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+      if (xhttp.responseText == "OK") {
+        console.log("%c DO NOT SHARE THIS INFORMATION WITH ANYONE EVER AND DO NOT TYPE IN CODE HERE THAT YOU DON'T UNDERSTAND!", "font-weight: bold; font-size: 50px;color: red;")
+        console.log("User ID: " + userid)
+        console.log("[DEBUG] User intialized onto leaderboards.")
+      }
+
+    }
+};
+xhttp.open("GET", `../../ctflive/initPlayer?userid=${userid}&gameid=${window.location.href.split("/")[4]}`, true);
+xhttp.send();
+
+
+
       if (!doc.data().username) {
        username = (useremail).split("@")[0].substring(0, 5)
        
@@ -112,8 +132,7 @@ socket.on('gamestart', function(data){
           // document.getElementById("cd").innerHTML = data.gameID;
 
           document.getElementById("cd").innerHTML = data.challenge;
-          window.alert(data.participants)
-          
+     
           participants = JSON.parse(data.participants);
           console.log(participants)
 
@@ -123,11 +142,10 @@ socket.on('gamestart', function(data){
               <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
 ${participants.participants[i]}
               </td>
-              <td id="${participants.participants[i]}_checkpoint" class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-0              </td>
+    
               <td id="${participants.participants[i]}_checkpoint" class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
               <i class="fas fa-circle-notch fa-spin"></i>
-              Checkpoint 1
+              Checkpoint 0
               </td>
       
 
@@ -150,7 +168,7 @@ function checkFlag(flag, flagFor) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        window.alert(xhttp.responseText);
+     
 
         if (xhttp.responseText == "OK") {
           var duration = 4 * 1000;
@@ -173,14 +191,16 @@ function checkFlag(flag, flagFor) {
             confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
             confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
           }, 250);
+
+          document.getElementById("cs" + flagFor).innerHTML = "👏 Solved!"
+
+          socket.emit("ssbroadcast", {
+            gameid: window.location.href.split("/")[4]
+          });
+
         }
 
 
-        document.getElementById("cs" + flagFor).innerHTML = "👏 Solved!"
-
-        socket.emit("ssbroadcast", {
-          userid: userid
-        });
       }
   };
   xhttp.open("GET", `../../ctflive/checkFlag?userid=${userid}&flag=${flag}&gameid=${window.location.href.split("/")[4]}&flagfor=${flagFor}`, true);
@@ -194,5 +214,59 @@ function checkFlag(flag, flagFor) {
    
 
 socket.on('sstransit', function(data){
-console.log(data)
+console.log(data.leaderboards)
+var leaderboards = JSON.parse(data.leaderboards).leaderboard
+var participants = JSON.parse(data.participants).participants;
+document.getElementById("egg").innerHTML = `
+<thead>
+              <tr>
+                <th class="px-6 py-3 bg-gray-900 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
+                  Name
+                </th>
+      
+                <th class="px-6 py-3 bg-gray-900 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
+                 Status
+                </th>
+              </tr>
+            </thead>
+            
+            <tbody>
+              <!-- Odd row -->
+              <tr style="display:none;" class="bg-white egg">
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+     this
+                </td>
+           
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                 work yet
+                </td>
+        
+
+              </tr>
+  
+       
+            </tbody>`
+
+            for (var i = 0; i < participants.length; i++) {
+
+            document.querySelector('#egg').insertAdjacentHTML(
+              'afterbegin', `            <tr class="bg-white">
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+${participants[i]}
+              </td>
+      
+              <td id="checkpoint" class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+              <i class="fas fa-circle-notch fa-spin"></i>
+              Checkpoint ${leaderboards[participants[i]]}
+
+              </td>
+      
+
+            </tr>`)
+            }
+
+
+console.log(participants.length)
 });
+
+

@@ -100,9 +100,15 @@ socket.emit("connected", {
 
 
 socket.on('connected', function(data){
-  
+  console.log(data)
   if (data.gameID == window.location.href.split("/")[4]) {
-    addPlayer(data.username);
+    var participants = JSON.parse(data.participants).participants;
+    console.log(participants)
+    document.getElementById("egg").innerHTML = "";
+    for (var i = 0; i < participants.length; i++) {
+      console.log(participants[i])
+    addPlayer(participants[i]); 
+    }
     console.log(data)
   }
 

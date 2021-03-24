@@ -66,17 +66,28 @@ io.on("connection", socket => {
       const localDoc = await localDocRef.get();
       console.log(localDoc.data())
       var tempJSONObj = JSON.parse(localDoc.data().participants);
-      tempJSONObj.participants.push(doc.data().username)
+
+      if (!tempJSONObj.participants.includes(doc.data().username)) {
+        tempJSONObj.participants.push(doc.data().username)
+      }
+      
+      
       console.log(tempJSONObj)
       localDocRef.update({
         'participants': JSON.stringify(tempJSONObj)
       })
 
 
+      io.emit("connected", {
+        username: player.username,
+        gameID: player.gameID,
+        participants: JSON.stringify(tempJSONObj),
+        userID: "removed"
+      });     
+
     }
+    
 
-
-    io.emit("connected", player);
   });
 
   socket.on("gamestart", async info => {
@@ -104,9 +115,14 @@ io.on("connection", socket => {
 
     socket.on("ssbroadcast", async info => {
     
-      const docRef2 = db.collection('users').doc(info.userid);
+      const docRef2 = db.collection('ctflive').doc(info.gameid);
       const doc2 = await docRef2.get();
-      io.emit("sstransit", doc2.data().username)
+      io.emit("sstransit", {
+        
+       leaderboards: doc2.data().leaderboards,
+       participants: doc2.data().participants
+        
+      })
 
       /*
       if (!doc2.exists) {
