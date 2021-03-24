@@ -151,10 +151,10 @@ router.get("/create-game", async (request, response) => {
       const doc = await docRef.get();
       var oldLB = doc.data().leaderboards;
       oldLB = JSON.parse(oldLB);
-      oldLB.leaderboard[`${doc2.data().username}`] = newPos;
       const docRef2 = db.collection('users').doc(request.query.userid);
 
       const doc2 = await docRef2.get();
+      oldLB.leaderboard[`${doc2.data().username}`] = newPos;
 
       // Set their score to 0 on JSON object.
     //  console.log(doc2.data())
