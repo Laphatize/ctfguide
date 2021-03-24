@@ -38,7 +38,7 @@ function saveChanges() {
 
       }
     };
-  xhttp.open("GET", `https://ctfguide.tech/api/ctflive/config?flag1=${flag1}&flag2=${flag2}&flag3=${flag3}`, true);
+  xhttp.open("GET", `https://ctfguide.tech/ctflive/config?flag1=${flag1}&flag2=${flag2}&flag3=${flag3}`, true);
   xhttp.send();
 }
 
