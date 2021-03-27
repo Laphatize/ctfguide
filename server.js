@@ -129,7 +129,7 @@ io.on("connection", socket => {
 });
 
 
-http.listen(88, () => {
+http.listen(process.env.PORT, () => {
   console.log('\x1b[36m%s\x1b[0m', "[SERVER] CTFGuide is deployed on port 88.");
   if (os.hostname() == "LAPTOP-S4BMA3PQ") {
     console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Locally | http://localhost:88")
