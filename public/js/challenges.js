@@ -43,7 +43,7 @@ function logout() {
         window.location.href = "./login"
     })
 }
-async function createlisting() {
+function createlisting() {
   var challengeName = document.getElementById("cname").value;
   var challengeInstructions = document.getElementById("cid").value;
   var challengeDifficulty = document.getElementById("cdifficulty").value.toLowerCase();
@@ -52,7 +52,7 @@ async function createlisting() {
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "https://ctfguide.tech/api/createchallenge")
   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-  await xhr.send(`uid=${userid}&solution=${document.getElementById("solution").value}&category=${category}&difficulty=${challengeDifficulty}&title=${challengeName}&problem=${challengeInstructions}&challenge_author=${username}`)
+  xhr.send(`uid=${userid}&solution=${document.getElementById("solution").value}&category=${category}&difficulty=${challengeDifficulty}&title=${challengeName}&problem=${challengeInstructions}&challenge_author=${username}`)
     
     hidemodal()
    // window.location.href = "./challenges";
