@@ -95,7 +95,7 @@ router.post("/createchallenge", urlencodedParser, (request, response) => {
       challenge_author: request.body.challenge_author
     }).then((docRef) => {
   
-      updateLog(`[TIME: ${Date.now()}] [ID: ${request.query.id}] A new problem was uploaded to the CTFGuide Platform. `)
+     // updateLog(`[TIME: ${Date.now()}] [ID: ${request.query.id}] A new problem was uploaded to the CTFGuide Platform. `)
   
       console.log(docRef.id)
       db.collection('users').doc(request.body.uid).update({
