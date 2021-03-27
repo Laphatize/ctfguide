@@ -169,7 +169,6 @@ function checkFlag(flag, flagFor) {
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
      
-
         if (xhttp.responseText == "OK") {
           var duration = 4 * 1000;
           var animationEnd = Date.now() + duration;
@@ -198,6 +197,14 @@ function checkFlag(flag, flagFor) {
             gameid: window.location.href.split("/")[4]
           });
 
+        } else {
+
+          function clearNotif() {
+            document.getElementById("notification").style.display = "none"
+          }
+          document.getElementById("notification").style.display = "block";
+          setTimeout(clearNotif, 2000);
+          
         }
 
 

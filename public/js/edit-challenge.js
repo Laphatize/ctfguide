@@ -31,14 +31,14 @@ function saveChanges() {
   var flag2 = document.getElementById("f2").value;
   var flag3 = document.getElementById("f3").value;
 
-
+  
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
 
       }
     };
-  xhttp.open("GET", `https://ctfguide.tech/ctflive/config?flag1=${flag1}&flag2=${flag2}&flag3=${flag3}`, true);
+  xhttp.open("GET", `../../ctflive/config?flag1=${flag1}&flag2=${flag2}&flag3=${flag3}&uid=${userid}&id=${window.location.href.split("/")[4]}`, true);
   xhttp.send();
 }
 
@@ -60,7 +60,7 @@ async function editProblem() {
     var authorid = userid;
     var xhr = new XMLHttpRequest();
 
-    xhr.open("POST", "https://ctfguide.tech/api/editchallenge")
+    xhr.open("POST", "../../api/editchallenge")
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
  xhr.send(`category=${category}&problem=${challengeDesc}` +

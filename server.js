@@ -124,30 +124,12 @@ io.on("connection", socket => {
         
       })
 
-      /*
-      if (!doc2.exists) {
-        console.log('No such document!');
-        return response.send("error")
-      } else {
-  
-        // Fetch challenge details from db
-        const docRef3 = db.collection('challenges').doc(doc2.data().challengeid);
-        const doc3 = await docRef3.get();
-        info.challenge = doc3.data().problem;
-        info.participants = doc2.data().participants;
-        console.log(info)
-  
-        io.emit("gamestart", info);
-    
-      }
-      */
-
   });
 
 });
 
 
-http.listen(process.env.PORT, () => {
+http.listen(88, () => {
   console.log('\x1b[36m%s\x1b[0m', "[SERVER] CTFGuide is deployed on port 88.");
   if (os.hostname() == "LAPTOP-S4BMA3PQ") {
     console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Locally | http://localhost:88")

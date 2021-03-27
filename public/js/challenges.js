@@ -239,7 +239,7 @@ function add(name, category, difficulty, id, solved) {
       
       
       } else {
-          window.location.href = "./login"
+          //window.location.href = "./login"
       }
       });
       

@@ -170,17 +170,20 @@ router.get("/create-game", async (request, response) => {
 
      return response.send("OK")
     } else {
+      console.log("bad")
       return response.send("BAD")
     }
   })
   
   router.get("/config", async (request, response) => {
-  
+    console.log("hit!")
     var flags = {
       "flag1": request.query.flag1,
       "flag2": request.query.flag2,
       "flag3": request.query.flag3
     }
+
+    console.log(flags)
   
     const docRef = db.collection('users').doc(request.query.uid);
     const doc = await docRef.get();
@@ -192,9 +195,9 @@ router.get("/create-game", async (request, response) => {
         // This is their challenge.
         db.collection("challenges").doc(request.query.id).update({
   
-          "ctf_flag1": flags.flag1,
-          "ctf_flag2": flags.flag2,
-          "ctf_flag3": flags.flag3,
+          "ctf_flag1": request.query.flag1,
+          "ctf_flag2": request.query.flag2,
+          "ctf_flag3": request.query.flag3,
           "ctflive_enabled": true
   
         })

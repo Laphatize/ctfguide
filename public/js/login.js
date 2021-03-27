@@ -20,7 +20,13 @@ function login() {
 firebase.auth().onAuthStateChanged(function(user) {
 
     if (user) {
-        window.location.href = "./dashboard"
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        if ( urlParams.get('returnTo'))  {
+            window.location.href =  urlParams.get('returnTo');
+        } else {
+            window.location.href = "./dashboard"
+        }
     }
 
 });
