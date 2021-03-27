@@ -55,7 +55,7 @@ function createlisting() {
   xhr.send(`uid=${userid}&solution=${document.getElementById("solution").value}&category=${category}&difficulty=${challengeDifficulty}&title=${challengeName}&problem=${challengeInstructions}&challenge_author=${username}`)
     
     hidemodal()
-   // window.location.href = "./challenges";
+   window.location.href = "./challenges";
 
   /*
 dnu because of security concerns
