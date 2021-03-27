@@ -55,8 +55,15 @@ function createlisting() {
   xhr.send(`uid=${userid}&solution=${document.getElementById("solution").value}&category=${category}&difficulty=${challengeDifficulty}&title=${challengeName}&problem=${challengeInstructions}&challenge_author=${username}`)
     
     hidemodal()
-   window.location.href = "./challenges";
+    if (localStorage.getItem("difficulty")) {
+      document.getElementById("difficulty").value = localStorage.getItem("difficulty").charAt(0).toUpperCase() + localStorage.getItem("difficulty").slice(1);
+      loadChallenges(localStorage.getItem("difficulty"))
 
+    } else {
+
+    
+    loadChallenges("easy")
+    }
   /*
 dnu because of security concerns
   db.collection("challenges").add({
