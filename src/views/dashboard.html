@@ -212,13 +212,12 @@ We'll let you know when we find someone.            </p>
 
   <!-- Dashboard main-->
 
-  <div class="bg-gray-50">
+  <div class="bg-gray-800">
     <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-      <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+      <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
       
-      Hey, <span id="name">Loading...</span>.
+     Dashboard
         <br>
-        <span class="text-gray-600">Did you practice today?</span>
       </h2>
       <div class="mt-8 flex lg:flex-shrink-0 lg:mt-0">
         <div class="inline-flex rounded-md shadow">
@@ -236,14 +235,40 @@ We'll let you know when we find someone.            </p>
   </div>
 
 
+  <div class="bg-gray-700">
+    <div class="max-w-screen-xl mx-auto py-5 px-4 sm:px-6 lg:py-2 lg:px-8 lg:flex lg:items-center lg:justify-between">
+      <h2 class=" text-white">
+      
+You were last working on:  <b>Some sick challenge probably</b>
+        <br>
+      </h2>
+ 
+
+      <div class="mt-8 flex lg:flex-shrink-0 lg:mt-0">
+        <div class="inline-flex rounded-md shadow">
+          <a  href="./ctflive/join" class="inline-flex items-center justify-center px-3 py-1 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-600 hover:bg-gray-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+           Continue Working
+          </a>
+        </div>
+</div>
+    </div>
+  </div>
 
 <br>
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
 
 <div>
-
   
+<div class="mt-10 pb-12 sm:pb-16">
+  <div class="relative items-center" style="text-align: center;">
+    <div class="absolute inset-0 h-1/2"></div>  <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class=" mx-auto">
+<img src="../../cdn/pfp.svg" width="100" style="border-radius: 100%;" class="centered mx-auto"></div>
+<h1 style="font-size:2rem;">Pranav Ramesh</h1>
+</div>
+  </div>
+
 <div class="mt-10 pb-12 sm:pb-16">
   <div class="relative">
     <div class="absolute inset-0 h-1/2"></div>
@@ -282,13 +307,13 @@ We'll let you know when we find someone.            </p>
 
 
     <h2>
-      <span class="text-3xl leading-9d  text-gray-900 sm:text-4xl sm:leading-10" style="font-family: 'Josefin Sans', sans-serif;"><b>Challenge History</b> </span>  <button style="float:right;" id="hidech" class="bg-gray-200 rounded px-3 px-4 mt-2 text-sm text-black">Hide</button>
+      <span class="text-3xl leading-9d  text-gray-900 sm:text-4xl sm:leading-10"><b>Challenge History</b> </span>  <button style="float:right;" id="hidech" class="bg-gray-200 rounded px-3 px-4 mt-2 text-sm text-black">Hide</button>
         </h2> <br>
     <div id="historyDIV" class="  flex flex-col">
         <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-              <table class="min-w-full divide-y divide-gray-200">
+              <table class="min-w-full divide-y divide-gray-200 table-fixed">
                 <thead>
                   <tr>
                     <th class="px-6 py-3  text-left text-xs leading-4 font-medium text-white bg-gray-800 uppercase tracking-wider">
@@ -361,7 +386,7 @@ We'll let you know when we find someone.            </p>
 <Br><br>
 </div>
 
-  <h2 style="font-family: 'Josefin Sans', sans-serif;" class="text-3xl leading-9d tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+  <h2 class="text-3xl leading-9d tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
 <b>   Your Challenges</b>
     </h2> <br>
 
@@ -369,20 +394,20 @@ We'll let you know when we find someone.            </p>
       <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
           <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-            <table class="min-w-full divide-y divide-gray-200">
+            <table class="min-w-full divide-y divide-gray-200 table-fixed">
               <thead>
                 <tr>
-                  <th class="px-6 py-3  text-left text-xs leading-4 font-medium text-white bg-gray-800 uppercase tracking-wider">
+                  <th class=" whitespace-no-wrap  px-6 py-3  text-left text-xs leading-4 font-medium text-white bg-gray-800 uppercase tracking-wider">
               Problem ID
                   </th>
-                  <th class=" px-6 py-3c text-left bg-gray-800 text-xs leading-4 font-medium text-white uppercase tracking-wider">
+                  <th class="  whitespace-no-wrap  px-6 py-3c text-left bg-gray-800 text-xs leading-4 font-medium text-white uppercase tracking-wider">
                       Challenge Name
 
                   </th>
                
-                  <th  class="px-6 py-3 bg-gray-800 text-white font-medium"></th>
+                  <th  class="whitespace-no-wrap  px-6 py-3 bg-gray-800 text-white font-medium"></th>
                 </tr>
-              </thead>
+              </thead>  
               <tbody>
                 <!-- Odd row -->
                 <tr style="display:none;" id="mc" class="bg-white">

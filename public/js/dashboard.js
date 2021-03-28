@@ -107,16 +107,16 @@ docRef.get().then(function(doc) {
                             document.querySelector('#mc').insertAdjacentHTML(
                                 'beforebegin', `
                                 
-                                <tr  id="mc" class="bg-white">
+                                <tr  id="mc" class="bg-white hover:bg-gray-100">
                              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                ${id}
                         </td>
-                        <td class="px-6 py-4  text-sm leading-5 text-gray-500">
+                        <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900 px-6 py-4  text-sm leading-5 text-gray-500">
                    ${doc.data().title}
                         </td>
-                        <td class="px-6 py-4 text-sm leading-5 text-gray-500">
-                      <a href="./challenges/${id}" class="bg-gray-100 hover:bg-gray-200 px-10 py-2 rounded">View Challenge</a>
-                      <a href="./challenges/${id}/edit" class="bg-gray-100 hover:bg-gray-200 px-10 py-2 rounded">Edit Challenge</a>
+                        <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 px-6 py-4 text-sm leading-5 text-white  w-10">
+                      <a href="./challenges/${id}" class="bg-gray-600 hover:bg-gray-700 px-10 py-2 rounded">View Challenge</a>
+                      <a href="./challenges/${id}/edit" class="bg-gray-600 hover:bg-gray-700 px-10 py-2 rounded">Edit Challenge</a>
 
                         </td>
                               
@@ -147,15 +147,15 @@ docRef.get().then(function(doc) {
 
                     document.querySelector('#history').insertAdjacentHTML(
                         'beforebegin', `
-                        <tr id="history" class="bg-white">
+                        <tr id="history" class="bg-white hover:bg-gray-100">
                         <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                ${id}
                         </td>
                         <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
                    ${doc.data().title}
                         </td>
-                        <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                      <a href="./challenges/${id}" class="bg-gray-100 hover:bg-gray-200 px-10 py-2 rounded" >View Challenge</a>
+                        <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-white w-10">
+                      <a href="./challenges/${id}" class="bg-gray-600 hover:bg-gray-700 px-10 py-2 rounded" >View Challenge</a>
                         </td>
                       
                   
