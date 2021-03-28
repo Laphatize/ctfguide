@@ -27,7 +27,7 @@ docRef.get().then(function(doc) {
             if (doc.data().challenges.includes(  window.location.href.split("/")[4] )) {
             document.getElementById("creator").style.display = "block";
             document.getElementById("adminlink").href = 
-            `https://ctfguide.tech/challenges/${window.location.href.split("/")[4]}/edit`
+            `./${window.location.href.split("/")[4]}/edit`
             }
         });
 

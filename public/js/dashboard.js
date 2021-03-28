@@ -7,7 +7,7 @@ var userid = ""
 var useremail = ""
 var isHistoryHidden = false;
 document.getElementById("cancelButton").addEventListener("click", cancelGame);
-document.getElementById("findGame").addEventListener("click", gameFound);
+//document.getElementById("findGame").addEventListener("click", gameFound);
 document.getElementById("logout").addEventListener("click", logout);
 document.getElementById("hidech").addEventListener("click", hidech);
 document.getElementById("nothx").addEventListener("click", removeReminder)
@@ -107,15 +107,17 @@ docRef.get().then(function(doc) {
                             document.querySelector('#mc').insertAdjacentHTML(
                                 'beforebegin', `
                                 
-                                <tr  class="bg-white">
+                                <tr  id="mc" class="bg-white">
                              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                ${id}
                         </td>
-                        <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                        <td class="px-6 py-4  text-sm leading-5 text-gray-500">
                    ${doc.data().title}
                         </td>
-                        <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                      <a href="./challenges/${id}">View Challenge</a>
+                        <td class="px-6 py-4 text-sm leading-5 text-gray-500">
+                      <a href="./challenges/${id}" class="bg-gray-100 hover:bg-gray-200 px-10 py-2 rounded">View Challenge</a>
+                      <a href="./challenges/${id}/edit" class="bg-gray-100 hover:bg-gray-200 px-10 py-2 rounded">Edit Challenge</a>
+
                         </td>
                               
                           
@@ -130,7 +132,7 @@ docRef.get().then(function(doc) {
 
                 })
             })
-
+           var challenges = new Promise((resolve, reject) => {
             doc.data().solved.forEach(id => {
 
                 
@@ -153,7 +155,7 @@ docRef.get().then(function(doc) {
                    ${doc.data().title}
                         </td>
                         <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                      <a href="./challenges/${id}">View Challenge</a>
+                      <a href="./challenges/${id}" class="bg-gray-100 hover:bg-gray-200 px-10 py-2 rounded" >View Challenge</a>
                         </td>
                       
                   
@@ -172,6 +174,16 @@ docRef.get().then(function(doc) {
 
 
             })
+            resolve('okay')
+        })
+        
+        
+        challenges.then(value => {
+            showStuff()
+        })
+
+ 
+            
 
         } else {
       
@@ -207,4 +219,11 @@ function gameFound() {
 function cancelGame() {
     document.getElementById("gameFound").style.display = "none";
 
+}
+
+
+function showStuff() {
+    
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("page_content").style.display = "block";
 }

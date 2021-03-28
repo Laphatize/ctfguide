@@ -14,19 +14,20 @@
 <body>
 
 
+
   <nav class="bg-white shadow">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button -->
-          <button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Main menu" aria-expanded="false">
+          <button id="menubtn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Main menu" aria-expanded="false">
             <!-- Icon when menu is closed. -->
             <!--
               Heroicon name: menu
   
               Menu open: "hidden", Menu closed: "block"
             -->
-            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg  id="openm" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
             <!-- Icon when menu is open. -->
@@ -35,15 +36,15 @@
   
               Menu open: "block", Menu closed: "hidden"
             -->
-            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg  id="closem"  class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex-shrink-0 flex items-center">
-            <img class="block lg:hidden h-8 w-auto" src="https://ctfguide.tech/logo.svg">
-            <img class="hidden lg:block h-8 w-auto" src="https://ctfguide.tech/logo.svg">
+            <img class="block lg:hidden h-8 w-auto" src="../../logo.svg">
+            <img class="hidden lg:block h-8 w-auto" src="../../logo.svg">
           </div>
         
         </div>
@@ -61,8 +62,13 @@
             <a href="/login" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
               Duels
             </a>
-            <a id="logout" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+        
+            <a  id="logout"  style="cursor:pointer;" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                 Logout
+              </a>
+
+              <a href="/settings" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700  focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                <i class="fas fa-cog"></i>
               </a>
           </div>
         </div>
@@ -74,13 +80,20 @@
   
       Menu open: "block", Menu closed: "hidden"
     -->
-    <div class="hidden sm:hidden">
+    <div id="mobile" class="hidden sm:hidden">
       <div class="pt-2 pb-4">
-        <a href="#" class="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out">Challenges</a>
+       
+        <a href="./dashboard" class="block pl-3 pr-4 py-2 border-l-4 border-gray-500 text-base font-medium text-gray-700 bg-gray-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-gray-700 transition duration-150 ease-in-out">Dashboard</a>
+        
+  
+        <a href="./challenges" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Challenges</a>
+        
+        <!--
         <a href="#" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">CTFLive</a>
-        <a href="#" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Login</a>
-        <a href="#" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Create an account</a>
-      </div>
+        -->
+       
+        <a onclick="logout()" id="logout" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Logout</a>
+     </div>
     </div>
   </nav>
 
@@ -205,7 +218,7 @@
     <ol class="bg-white rounded-md shadow px-6 flex space-x-4">
       <li class="flex">
         <div class="flex items-center">
-          <a href="https://ctfguide.tech/dashboard" class="text-gray-400 hover:text-gray-500">
+          <a href="../../dashboard" class="text-gray-400 hover:text-gray-500">
             <!-- Heroicon name: home -->
             <svg class="flex-shrink-0 h-5 w-5 transition duration-150 ease-in-out" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
               <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
@@ -219,7 +232,7 @@
           <svg class="flex-shrink-0 w-6 h-full text-gray-200" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
           </svg>
-          <a href="https://ctfguide.tech/challenges" class="text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 transition duration-150 ease-in-out">Challenges</a>
+          <a href="../../challenges" class="text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 transition duration-150 ease-in-out">Challenges</a>
         </div>
       </li>
       <li class="flex">
@@ -227,7 +240,7 @@
           <svg class="flex-shrink-0 w-6 h-full text-gray-200" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
           </svg>
-          <a href="https://ctfguide.tech/challenges/<%= CHALLENGE_ID %>" aria-current="page" class="text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 transition duration-150 ease-in-out"><%= CHALLENGE_NAME %></a>
+          <a href="../<%= CHALLENGE_ID %>" aria-current="page" class="text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 transition duration-150 ease-in-out"><%= CHALLENGE_NAME %></a>
         </div>
       </li>
       <li class="flex">
@@ -537,5 +550,8 @@
         firebase.initializeApp(firebaseConfig);
   </script>
   <script src="../../js/edit-challenge.js">
+
   </script>
+      <script src="../../js/guard.js">
+      </script>
 </body>

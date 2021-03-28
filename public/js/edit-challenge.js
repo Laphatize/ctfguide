@@ -4,6 +4,11 @@ var userid = "";
 document.getElementById("schanges").addEventListener("click", editProblem)
 document.getElementById("ctflivechanges").addEventListener("click", saveChanges)
 
+document.getElementById("logout").addEventListener("click", logout);
+function logout() {
+  firebase.auth().signOut();
+
+}
 
 
 firebase.auth().onAuthStateChanged(function (user) {
@@ -16,8 +21,6 @@ firebase.auth().onAuthStateChanged(function (user) {
         window.location.href = "../../dashboard"
       }
     });
-  } else {
-    window.location.href = "../../dashboard"
   }
 });
 

@@ -350,7 +350,7 @@ We're noticing elevated errors with our CTFLive service. We are actively working
 
   
 
-  function add(name, category, difficulty, id, solved) {
+  function add(name, category, difficulty, id) {
   
   if (difficulty == "hard") {
   document.querySelector('#challenge-grid').insertAdjacentHTML(
@@ -446,8 +446,8 @@ We're noticing elevated errors with our CTFLive service. We are actively working
           querySnapshot.forEach(function(doc) {
               // doc.data() is never undefined for query doc snapshots
              
-           
-                if (doc.data().ctflive_enabled == "true") {
+           // console.log(doc.data())
+                if (doc.data().ctflive_enabled == true) {
                   console.log(doc.data().title)
               add(doc.data().title, doc.data().category, doc.data().difficulty, doc.id)
                 }
