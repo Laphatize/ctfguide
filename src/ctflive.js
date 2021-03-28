@@ -40,7 +40,7 @@ router.get("/create-game", async (request, response) => {
       console.log('No such document!');
       return response.send("error")
     } else {
-      if (doc2.data().ctflive_enabled == "true") {
+      if (doc2.data().ctflive_enabled == true) {
   
         const docRef = db.collection('users').doc(authorID);
         const doc = await docRef.get();

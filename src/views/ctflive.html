@@ -475,7 +475,7 @@ We're noticing elevated errors with our CTFLive service. We are actively working
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
          if (xhttp.responseText == "error") {
-            document.getElementById("cerror").style.display = "block";
+          window.alert("error")
          } else {
             window.location.href = `./${xhttp.responseText}/client`
          }
