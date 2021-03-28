@@ -35,7 +35,8 @@ router.post("/deletechallenge", urlencodedParser, async (request, response) => {
         const res = await db.collection("challenges").doc(request.body.id).delete();
       }
     }
-  
+    return response.send("OK")
+
   });
 
 
@@ -74,6 +75,8 @@ router.post("/editchallenge", urlencodedParser, async (request, response) => {
           })
         })
       }
+
+      return response.send("OK")
 
     } else {
       return response.send("unauthorized")
