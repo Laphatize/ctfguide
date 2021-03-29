@@ -92,8 +92,8 @@ docRef.get().then(function(doc) {
 
             console.log("Document data:", doc.data());
             document.getElementById("points").innerHTML = doc.data().points;
-            document.getElementById("duelvictories").innerHTML = doc.data().victories;
-            document.getElementById("rank").innerHTML = doc.data().rank;
+         //   document.getElementById("duelvictories").innerHTML = doc.data().victories;
+         //   document.getElementById("rank").innerHTML = doc.data().rank;
         
             var usersRef = db.collection("users").doc(userid)
             usersRef.get(userid).then(function(doc) {

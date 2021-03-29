@@ -221,12 +221,12 @@ We'll let you know when we find someone.            </p>
       </h2>
       <div class="mt-8 flex lg:flex-shrink-0 lg:mt-0">
         <div class="inline-flex rounded-md shadow">
-          <a  href="./ctflive/join" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-600 hover:bg-gray-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+          <a  href="./ctflive/join" class="inline-flex items-center justify-center px-5 py-3 border border-white text-base leading-6 font-medium rounded-md text-white  hover:bg-gray-900 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
            Join a CTFLive
           </a>
         </div>
         <div class="ml-3 inline-flex rounded-md shadow">
-          <a href="./challenges" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-gray-600 bg-white hover:text-gray-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+          <a href="./challenges" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-black bg-white hover:bg-gray-100 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
           Practice
           </a>
         </div>
@@ -246,7 +246,7 @@ You were last working on:  <b>Some sick challenge probably</b>
 
       <div class="mt-8 flex lg:flex-shrink-0 lg:mt-0">
         <div class="inline-flex rounded-md shadow">
-          <a  href="./ctflive/join" class="inline-flex items-center justify-center px-3 py-1 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-600 hover:bg-gray-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+          <a  href="./ctflive/join" class="inline-flex items-center justify-center px-3 py-1 border border-transparent text-base leading-6 font-medium rounded-md text-black bg-white hover:bg-gray-100 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
            Continue Working
           </a>
         </div>
@@ -254,58 +254,182 @@ You were last working on:  <b>Some sick challenge probably</b>
     </div>
   </div>
 
-<br>
-  <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
 
-<div>
+
+
+
+
+
+
+
+
+  <div class="h-screen flex overflow-hidden bg-gray-100">
+    <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+    <div class="md:hidden">
+      <div class="fixed inset-0 flex z-40">
+        <!--
+          Off-canvas menu overlay, show/hide based on off-canvas menu state.
   
-<div class="mt-10 pb-12 sm:pb-16">
-  <div class="relative items-center" style="text-align: center;">
-    <div class="absolute inset-0 h-1/2"></div>  <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class=" mx-auto">
-<img src="../../cdn/pfp.svg" width="100" style="border-radius: 100%;" class="centered mx-auto"></div>
-<h1 style="font-size:2rem;">Pranav Ramesh</h1>
-</div>
-  </div>
-
-<div class="mt-10 pb-12 sm:pb-16">
-  <div class="relative">
-    <div class="absolute inset-0 h-1/2"></div>
-    <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-4xl mx-auto">
-        <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3 border">
-          <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
-            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500" id="item-1">
-                Points
-            </dt>
-            <dd id="points" class="order-1 text-5xl leading-none font-extrabold text-yellow-400" aria-describedby="item-1">
-            ...
-            </dd>
+          Entering: "transition-opacity ease-linear duration-300"
+            From: "opacity-0"
+            To: "opacity-100"
+          Leaving: "transition-opacity ease-linear duration-300"
+            From: "opacity-100"
+            To: "opacity-0"
+        -->
+        <div class="fixed inset-0">
+          <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
+        </div>
+        <!--
+          Off-canvas menu, show/hide based on off-canvas menu state.
+  
+          Entering: "transition ease-in-out duration-300 transform"
+            From: "-translate-x-full"
+            To: "translate-x-0"
+          Leaving: "transition ease-in-out duration-300 transform"
+            From: "translate-x-0"
+            To: "-translate-x-full"
+        -->
+        <div class="relative flex-1 flex flex-col max-w-xs w-full bg-white">
+          <div class="absolute top-0 right-0 -mr-14 p-1">
+            <button class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600" aria-label="Close sidebar">
+              <svg class="h-6 w-6 text-white" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
-          <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
-            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-             Duel Victories
-            </dt>
-            <dd id="duelvictories" class="order-1 text-5xl leading-none font-extrabold text-gray-600">
-             ...
-            </dd>
+          <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+            <div class="flex-shrink-0 flex items-center px-4">
+              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/v1/workflow-logo-on-white.svg" alt="Workflow">
+            </div>
+            <nav class="mt-5 px-2 space-y-1">
+              <a href="#" class="group flex items-center px-2 py-2 text-base leading-6 font-medium text-gray-900 rounded-md bg-gray-100 focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150">
+                <!-- Heroicon name: home -->
+                <svg class="mr-4 h-6 w-6 text-gray-500 group-hover:text-gray-500 group-focus:text-gray-600 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                Dashboard
+              </a>
+  
+              <a href="#" class="group flex items-center px-2 py-2 text-base leading-6 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition ease-in-out duration-150">
+                <!-- Heroicon name: users -->
+                <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                Team
+              </a>
+  
+              <a href="#" class="group flex items-center px-2 py-2 text-base leading-6 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition ease-in-out duration-150">
+                <!-- Heroicon name: folder -->
+                <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                </svg>
+                Projects
+              </a>
+  
+              <a href="#" class="group flex items-center px-2 py-2 text-base leading-6 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition ease-in-out duration-150">
+                <!-- Heroicon name: calendar -->
+                <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Calendar
+              </a>
+  
+              <a href="#" class="group flex items-center px-2 py-2 text-base leading-6 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition ease-in-out duration-150">
+                <!-- Heroicon name: inbox -->
+                <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                </svg>
+                Documents
+              </a>
+  
+              <a href="#" class="group flex items-center px-2 py-2 text-base leading-6 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition ease-in-out duration-150">
+                <!-- Heroicon name: chart-bar -->
+                <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                Reports
+              </a>
+            </nav>
           </div>
-          <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
-            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-              Rank
-            </dt>
-            <dd id="rank" class="order-1 text-5xl leading-none font-extrabold text-orange-800">
-          ...
-            </dd>
+          <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
+            <a href="#" class="flex-shrink-0 group block">
+              <div class="flex items-center">
+                <div>
+                  <img class="inline-block h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixqx=bCQeXxFyM3&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                </div>
+                <div class="ml-3">
+                  <p class="text-base leading-6 font-medium text-gray-700 group-hover:text-gray-900">
+                    Tom Cook
+                  </p>
+                  <p class="text-sm leading-5 font-medium text-gray-500 group-hover:text-gray-700 transition ease-in-out duration-150">
+                    View profile
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
-        </dl>
+        </div>
+        <div class="flex-shrink-0 w-14">
+          <!-- Force sidebar to shrink to fit close icon -->
+        </div>
       </div>
     </div>
-  </div>
-  </div>
+  
+    <!-- Static sidebar for desktop -->
+    <div class="hidden md:flex md:flex-shrink-0">
+      <div class="flex flex-col w-64">
+        <!-- Sidebar component, swap this element with another sidebar if you like -->
+        <div class="flex flex-col h-0 flex-1 border-r border-gray-200 bg-white">
+          <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
+      
+            <nav class="flex-1 px-2 bg-white space-y-1">
+              <a href="#" class="group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-900 rounded-md bg-gray-100 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150">
+                <!-- Heroicon name: home -->
+                <svg class="mr-3 h-6 w-6 text-gray-500 group-hover:text-gray-500 group-focus:text-gray-600 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                Dashboard
+              </a>
+  
+              <a href="#" class="group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition ease-in-out duration-150">
+                <!-- Heroicon name: users -->
+                <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+               Classes
+              </a>
+  
+              <a href="#" class="group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition ease-in-out duration-150">
+                <!-- Heroicon name: folder -->
+                <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                </svg>
+                Profile
+              </a>
+  
+            </nav>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col w-0 flex-1 overflow-hidden">
+      <div class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
+        <button class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150" aria-label="Open sidebar">
+          <!-- Heroicon name: menu -->
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <main class="flex-1 relative z-0 overflow-y-auto focus:outline-none" tabindex="0">
+        <div class="pt-2 pb-6 md:py-6">
 
-
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <!-- Replace with your content -->
+         
     <h2>
       <span class="text-3xl leading-9d  text-gray-900 sm:text-4xl sm:leading-10"><b>Challenge History</b> </span>  <button style="float:right;" id="hidech" class="bg-gray-200 rounded px-3 px-4 mt-2 text-sm text-black">Hide</button>
         </h2> <br>
@@ -385,8 +509,8 @@ You were last working on:  <b>Some sick challenge probably</b>
 </div>
 <Br><br>
 </div>
-
-  <h2 class="text-3xl leading-9d tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+  <h2 class ="text-3xl leading-9d tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
 <b>   Your Challenges</b>
     </h2> <br>
 
@@ -445,12 +569,69 @@ You were last working on:  <b>Some sick challenge probably</b>
         </div>
       </div>
     </div>
-
+</div>
 
 
 
 
   </div>
+
+            <!-- /End replace -->
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+<br>
+  <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+
+<div>
+  
+<div class="hidden">
+      <div class="absolute inset-0 h-1/2"></div>  <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class=" mx-auto">
+<img src="../../cdn/pfp.svg" width="100" style="border-radius: 100%;" ></div>
+<h1 style="font-size:2rem;"><b>Pranav Ramesh</b></h1>
+
+<div>
+  <div >
+    <div class="relative max-w-screen-xl  ">
+      <div class="w-48">
+        <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-1 border">
+
+          <div class="flex flex-col border-t border-gray-100 text-center sm:border-0 sm:border-l">
+            <img class="mx-auto mt-3" src="../../cdn/BRONZE.png" width="140">
+
+            <dt class="order-2  mb-3 text-lg leading-6 font-medium text-gray-500" id="item-1">
+              Points
+          </dt>
+          <dd id="points" style="font-size:2rem;" class="order-1 text-5xl leading-none font-extrabold text-yellow-400 " aria-describedby="item-1">
+          ...
+          </dd>
+          </div>
+
+          
+        </dl>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</div>
+  </div>
+
 
   
   <!-- FOOTER -->
