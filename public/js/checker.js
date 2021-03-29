@@ -33,6 +33,7 @@ docRef.get().then(function(doc) {
 
 
 
+        statusUpdate();
 
 
 
@@ -46,6 +47,25 @@ document.getElementById("cd").innerHTML = document.getElementById("cd").innerHTM
 document.getElementById("check").addEventListener("click", submit)
 document.getElementById("cancel").addEventListener("click", hide)
 document.getElementById("submitreport").addEventListener("click", submitr)
+
+
+function statusUpdate() {
+var request = new XMLHttpRequest();
+request.open("POST", "../../api/lastviewed")
+request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+console.log(userid)
+request.send(`uid=${userid}&id=${window.location.href.split("/")[4]}`);
+
+request.onreadystatechange = function () {
+  if (request.readyState == 4 && request.status == 200) {
+
+        console.log("synced with server")
+  }
+}
+}
+
+
+
 
 
 
@@ -99,4 +119,3 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", `../api/checksolution?username=${username}&id=${window.location.href.split("/")[4]}&solution=${document.getElementById("solution").value}&uid=${userid}`, true);
 xhttp.send();
 }
-

@@ -204,7 +204,10 @@ router.get("/challenges/:id", async (request, response) => {
   });
   
   router.get("/dashboard", (request, response) => {
-    response.sendFile(__dirname + "/views/dashboard.html");
+   
+    response.render(__dirname + "/views/dashboard.ejs", {
+
+    });
   });
 
 ////////////////////////////////////////////////////////

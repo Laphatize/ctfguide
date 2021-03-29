@@ -39,6 +39,23 @@ router.post("/deletechallenge", urlencodedParser, async (request, response) => {
 
   });
 
+// Sets last known viewed challenge
+router.post("/lastviewed", urlencodedParser, async (request, response) => {
+  const docRef = db.collection('users').doc(request.body.uid);
+  const doc = await docRef.get();
+  if (!doc.exists) {
+    console.log('No such document!');
+  } else {
+    // Checking if this user actually owns that challenge.
+    console.log(request.body.id)
+    db.collection("users").doc(request.body.uid).update({
+     viewing: request.body.id,
+
+    })
+  }
+  return response.send("OK")
+
+});
 
 
 // Edit CTFGuide Challenges

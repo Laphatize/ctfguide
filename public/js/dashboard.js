@@ -97,6 +97,34 @@ docRef.get().then(function(doc) {
         
             var usersRef = db.collection("users").doc(userid)
             usersRef.get(userid).then(function(doc) {
+
+               
+                if (doc.data().viewing) {
+                    console.log(doc.data().viewing)
+                    var id = doc.data().viewing
+                    var docRef2 = db.collection("challenges").doc(id);
+
+                    docRef2.get().then(function(doc) {
+                        console.log(doc.data().title)
+                        document.getElementById("challenge_name").innerHTML = doc.data().title
+                        document.getElementById("challenge_link").href = "../../challenges/" + id;
+                    });
+                
+                } else {
+                    document.getElementById("lastworkingon").style.display = "none";
+                }
+
+
+
+
+
+
+
+
+
+
+
+
                 doc.data().challenges.forEach(id => {
 
                     var docRef2 = db.collection("challenges").doc(id);
