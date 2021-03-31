@@ -11,6 +11,16 @@
     />
     <script src="https://kit.fontawesome.com/13433183d5.js" crossorigin="anonymous"></script>
     <script async src="https://arc.io/widget.min.js#7JTQkWpx"></script>
+<<<<<<< Updated upstream
+=======
+    <link rel="icon" 
+  type="image/ico" 
+  href="../../cdn/favicon.ico">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+>>>>>>> Stashed changes
   <style>
 
     
@@ -264,18 +274,26 @@ You were last working on:  <b id="challenge_name">nothing, zilch, nada.</b>
 
 
 
+<<<<<<< Updated upstream
   <div class="h-screen flex overflow-hidden bg-gray-100">
   
   
     <!-- Static sidebar for desktop -->
     <div class="hidden md:flex md:flex-shrink-0  ml-20">
+=======
+  <div style="overflow-x: hidden;" class="flex overflow-hidden bg-gray-100">
+  
+  
+    <!-- Static sidebar for desktop -->
+    <div class="hidden md:flex md:flex-shrink-0 animate__animated animate__fadeInLeftBig animate__faster ">
+>>>>>>> Stashed changes
       <div class="flex flex-col w-64">
         <!-- Sidebar component, swap this element with another sidebar if you like -->
         <div class="flex flex-col h-0 flex-1 border-r border-gray-200 bg-white">
           <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
       
             <nav class="flex-1 px-2 bg-white space-y-1">
-              <a href="#" class="group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-900 rounded-md bg-gray-100 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150">
+              <a style="cursor:pointer;" id="overviewbutton" onclick="showOverview()" class="group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-900 rounded-md bg-gray-100 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150">
                 <div class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" >
                   <i style="font-size:1.5rem;" class="far fa-compass fa-fw"></i>
                 </div>
@@ -288,7 +306,7 @@ You were last working on:  <b id="challenge_name">nothing, zilch, nada.</b>
                 </div>
                 <span style="Font-size:1rem;"> Classes </span>
               </a>
-              <a href="#" class="hidden group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition ease-in-out duration-150">
+              <a style="cursor:pointer;"  id="socialbutton" onclick="showSocial()" class=" group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition ease-in-out duration-150">
                 <!-- Heroicon name: folder -->
             
                 <div class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" >
@@ -313,7 +331,7 @@ You were last working on:  <b id="challenge_name">nothing, zilch, nada.</b>
         </button>
       </div>
       <main class="flex-1 relative z-0 overflow-y-auto focus:outline-none" tabindex="0">
-        <div class="pt-2 pb-6 md:py-6">
+        <div id="overview" class=" pt-2 pb-6 md:py-6 animate__animated  animate__fadeInRightBig animate__faster">
 
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
             <!-- Replace with your content -->
@@ -397,7 +415,7 @@ You were last working on:  <b id="challenge_name">nothing, zilch, nada.</b>
 </div>
 <Br><br>
 </div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 mb-20">
   <h2 class ="text-3xl leading-9d tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
 <b>   Your Challenges</b>
     </h2> <br>
@@ -464,6 +482,137 @@ You were last working on:  <b id="challenge_name">nothing, zilch, nada.</b>
 
   </div>
 
+
+
+
+
+<div id="social" style="display:none;    overflow-x: hidden;"  class="animate__animated  animate__fadeInLeftBig animate__faster mb-20">
+
+  <div class="mt-10 pb-12 sm:pb-16">
+    <div class="relative">
+      <div class="absolute inset-0 h-1/2"></div>
+      <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="mx-auto text-center mb-5">
+            <h2 class ="text-3xl leading-9d text-gray-900 sm:text-4xl sm:leading-10">
+              <b>  laphatize</b><span style="font-size: 1rem;">#1010</span>
+                  </h2> 
+                </div>
+          <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3 border">
+            <div class="flex flex-col p-6 text-center ">
+              <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500" id="item-1">
+                  Points
+              </dt>
+              <dd id="points" class="order-1 text-5xl leading-none font-extrabold text-yellow-400 mt-5" aria-describedby="item-1">
+              ...
+              </dd>
+            </div>
+            <div class="flex flex-col   p-6 text-center ">
+              <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+                Rank
+              </dt>
+              <dd id="rank" class="order-1 text-5xl leading-none font-extrabold text-orange-800 mx-auto">
+            <img width="120" src="../../cdn/BRONZE.png">
+              </dd>
+            </div>
+            <div class="flex flex-col p-6 text-center ">
+           
+              <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+               Challenges Solved
+               </dt>
+               <dd id="duelvictories" class="order-1 text-5xl leading-none font-extrabold text-gray-600 mt-5">
+                ...
+               </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+  
+
+
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 mb-20">
+
+      <div style="text-align:right; position:relative;">    
+        
+        <h2>        <span style="position:absolute; left:0;" class="text-3xl leading-9d  text-gray-900 sm:text-4xl sm:leading-10"><b>Your Friends</b></span>    </h2>
+
+      <input placeholder="username#0000" class="px-5 py-2 mr-0">  <button class="ml-0 px-5 py-2 bg-green-400 text-white hover:bg-green-300 content-end" >Add Friend</button>
+      </div>
+        <br>
+        <div class="bg-white shadow overflow-hidden sm:rounded-md">
+          <ul>
+        
+            <li class="border-t border-gray-200">
+              <a href="#" class="block hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-150 ease-in-out">
+                <div class="px-4 py-6 sm:px-6">
+                  <div class="flex items-center justify-between">
+                    <div style="font-size: 1.4rem;" class="text-sm leading-5 font-medium text-black ">
+                      <i class="fas fa-trophy bg-gray-100 px-2 py-2 rounded-full" style="color:brown;"></i>  <span class="ml-3">laphatize</span> <span style="color:rgb(54, 143, 13);" title="offline">●</span>
+                    </div>
+                   
+                    <div class="ml-2 flex-shrink-0 flex">
+                      <button class="px-2 py-1 inline-flex rounded-lg bg-red-500 text-white">
+                        Remove Friend
+                      </button>
+                    </div>
+                  </div>
+                
+                </div>
+              </a>
+            </li>
+             
+            <li class="border-t border-gray-200">
+              <a href="#" class="block hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-150 ease-in-out">
+                <div class="px-4 py-6 sm:px-6">
+                  <div class="flex items-center justify-between">
+                    <div style="font-size: 1.4rem;" class="text-sm leading-5 font-medium text-black ">
+                      <i  class="fas fa-trophy bg-gray-100 px-2 py-2 rounded-full"  style="color:brown;"></i>  <span class="ml-3">herronjo</span> <span style="color:red;" title="offline">●</span>
+                    </div>
+                   
+                    <div class="ml-2 flex-shrink-0 flex">
+                      <button class="px-2 py-1 inline-flex rounded-lg bg-red-500 text-white">
+                        Remove Friend
+                      </button>
+                    </div>
+                  </div>
+                
+                </div>
+              </a>
+            </li>
+          </ul>
+
+
+        </div>
+        <div style="text-align:right; position:relative;" class="mt-10">    
+        
+        <h2>        <span style="position:absolute; left:0;" class="text-3xl leading-9d  text-gray-900 sm:text-4xl sm:leading-10"><b>Friend Requests</b></span>    </h2>
+</div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <!-- /End replace -->
           </div>
         </div>
@@ -487,38 +636,7 @@ You were last working on:  <b id="challenge_name">nothing, zilch, nada.</b>
 
 <div>
   
-<div class="hidden">
-      <div class="absolute inset-0 h-1/2"></div>  <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class=" mx-auto">
-<img src="../../cdn/pfp.svg" width="100" style="border-radius: 100%;" ></div>
-<h1 style="font-size:2rem;"><b>Pranav Ramesh</b></h1>
 
-<div>
-  <div >
-    <div class="relative max-w-screen-xl  ">
-      <div class="w-48">
-        <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-1 border">
-
-          <div class="flex flex-col border-t border-gray-100 text-center sm:border-0 sm:border-l">
-            <img class="mx-auto mt-3" src="../../cdn/BRONZE.png" width="140">
-
-            <dt class="order-2  mb-3 text-lg leading-6 font-medium text-gray-500" id="item-1">
-              Points
-          </dt>
-          <dd id="points" style="font-size:2rem;" class="order-1 text-5xl leading-none font-extrabold text-yellow-400 " aria-describedby="item-1">
-          ...
-          </dd>
-          </div>
-
-          
-        </dl>
-      </div>
-    </div>
-  </div>
-  </div>
-
-</div>
-  </div>
 
 
   

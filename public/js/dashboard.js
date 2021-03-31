@@ -255,3 +255,18 @@ function showStuff() {
     document.getElementById("loader").style.display = "none";
     document.getElementById("page_content").style.display = "block";
 }
+
+function showOverview() {
+    document.getElementById("overview").style.display = "block";
+    document.getElementById("social").style.display = "none"
+    document.getElementById("overviewbutton").classList = "group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-900 rounded-md bg-gray-100 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150"
+    document.getElementById("socialbutton").classList = "group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition ease-in-out duration-150"
+
+}
+
+function showSocial() {
+    document.getElementById("overview").style.display = "none";
+    document.getElementById("social").style.display = "block";
+    document.getElementById("socialbutton").classList = "group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-900 rounded-md bg-gray-100 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150"
+    document.getElementById("overviewbutton").classList = "group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition ease-in-out duration-150"
+}
