@@ -15,6 +15,34 @@ var urlencodedParser = bodyParser.urlencoded({
 ////////////////////////////////////////////////////////
 
 
+// Convert Legacy Accounts to 2.0
+router.post("/setidentifier", urlencodedParser, async (request, response) => {
+  var result = '';
+  var characters = '0123456789';
+  var charactersLength = characters.length;
+  for (var i = 0; i < 4; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  const docRef = db.collection('users').doc(request.body.uid);
+
+
+  console.log(`Setting identifier for ${request.body.uid}`)
+  const doc = await docRef.get();
+  if (!doc.exists) {
+    console.log('No such document!');
+  } else {
+    if (doc.data().identifier) return response.send("id already exists")
+    db.collection('users').doc(request.body.uid).update({
+      identifier: doc.data().username + "#" + result
+    })
+  }
+
+  response.send("okay")
+});
+
+
+
+
 // Link STiBaRC accounts to CTFGuide
 router.get("/link-account", (request, response) => {
     db.collection('users').doc(request.query.uid).update({
@@ -134,8 +162,16 @@ router.post("/createchallenge", urlencodedParser, (request, response) => {
 
 // Set user's username (This would be done via intial setup or settings page.)
 router.get("/setusername", (request, response) => {
+  var result = '';
+  var characters = '0123456789';
+  var charactersLength = characters.length;
+  for (var i = 0; i < 4; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+
   db.collection('users').doc(request.query.uid).update({
-    username: request.query.username
+    username: request.query.username,
+    identifier: request.query.username + "#" + result
   })
   response.send("okay")
 });

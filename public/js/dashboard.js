@@ -97,7 +97,13 @@ docRef.get().then(function(doc) {
         
             var usersRef = db.collection("users").doc(userid)
             usersRef.get(userid).then(function(doc) {
-
+                if(!doc.data().identifier) {
+                    console.log("Legacy Account Detected! Now updating...")
+                    setIdenitifier();
+                } else  {
+                    document.getElementById("usernameBig").innerHTML = doc.data().username
+                    document.getElementById("tag").innerHTML = doc.data().identifier.split("#")[1]
+                }
                
                 if (doc.data().viewing) {
                     console.log(doc.data().viewing)
@@ -256,6 +262,12 @@ function showStuff() {
     document.getElementById("page_content").style.display = "block";
 }
 
+
+/* 
+
+    Code for the Side Bar
+
+*/
 function showOverview() {
     document.getElementById("overview").style.display = "block";
     document.getElementById("social").style.display = "none"
@@ -270,3 +282,39 @@ function showSocial() {
     document.getElementById("socialbutton").classList = "group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-900 rounded-md bg-gray-100 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150"
     document.getElementById("overviewbutton").classList = "group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition ease-in-out duration-150"
 }
+
+
+/*
+
+    This is for accounts made before the social features were introduced.
+    These accounts don't have identifiers, so we have to set it for them when 
+    they login.
+
+    To the clever people looking at the code. No this will not allow you to 
+    change your ID again if you've already gotten one. 
+
+    The reason we don't make it so you can change your ID, is it will essentially
+    wipe your friends list.
+
+    Your identifier is essentially your public tracking id. 
+    Your user id is your private tracking id.
+
+
+*/
+function setIdenitifier(uid) {
+    var request = new XMLHttpRequest();
+    request.open("POST", "../../api/setidentifier")
+    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+    console.log(userid)
+    request.send(`uid=${userid}`);
+    
+    request.onreadystatechange = function () {
+      if (request.readyState == 4 && request.status == 200) {
+    
+            console.log(request.responseText);
+      }
+    }
+}
+
+
+
