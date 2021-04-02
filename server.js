@@ -128,7 +128,7 @@ io.on("connection", socket => {
 
 });
 
-if (os.hostname() == "LAPTOP-GB7K1GNH") {
+
 
 http.listen(88, () => {
   console.log('\x1b[36m%s\x1b[0m', "[SERVER] CTFGuide is deployed on port 88.");
@@ -148,24 +148,3 @@ http.listen(88, () => {
 
 
 });
-
-} else {
-  http.listen(process.env.PORT, () => {
-    console.log('\x1b[36m%s\x1b[0m', "[SERVER] CTFGuide is deployed on port 88.");
-    if (os.hostname() == "LAPTOP-S4BMA3PQ") {
-      console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Locally | http://localhost:88")
-    }  else {
-  
-      if (args[2] == "gh") {
-        // If github is running tests here.
-         console.log('\x1b[33m%s\x1b[0m', "[GITHUB] All tests passed");
-         process.exit(0);
-      }
-      console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Live | https://ctfguide.tech")
-  
-    }
-  
-  
-  
-  });
-}
