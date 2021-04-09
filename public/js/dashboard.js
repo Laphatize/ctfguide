@@ -124,7 +124,7 @@ docRef.get().then(function(doc) {
 
 
 
-
+                if (doc.data().challenges){
                 doc.data().challenges.forEach(id => {
 
                     var docRef2 = db.collection("challenges").doc(id);
@@ -159,7 +159,11 @@ docRef.get().then(function(doc) {
                     });
 
                 })
+            }
+               
             })
+
+            if (doc.data().challenges){
            var challenges = new Promise((resolve, reject) => {
             doc.data().solved.forEach(id => {
 
@@ -203,14 +207,19 @@ docRef.get().then(function(doc) {
 
             })
             resolve('okay')
+        
+            
         })
         
-        
+   
         challenges.then(value => {
             showStuff()
         })
 
- 
+    } else {
+        showStuff();
+        newUser();
+    }
             
 
         } else {
@@ -254,4 +263,8 @@ function showStuff() {
     
     document.getElementById("loader").style.display = "none";
     document.getElementById("page_content").style.display = "block";
+}
+
+function newUser() {
+    
 }
