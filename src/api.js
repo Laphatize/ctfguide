@@ -57,13 +57,15 @@ router.post("/friendrequest", urlencodedParser, async (request, response) => {
   snapshot.forEach(async doc => {
     console.log(doc.id)
      db.collection('users').doc(doc.id).update({
-      friend_requests : admin.firestore.FieldValue.arrayUnion(request.body.identifier)
+      friend_requests : admin.firestore.FieldValue.arrayUnion(doc.data().identifier)
     })
     return response.send("okay");
   });
   
 
 });
+
+
 
 
 // Link STiBaRC accounts to CTFGuide
@@ -199,6 +201,14 @@ router.get("/setusername", (request, response) => {
   response.send("okay")
 });
 
+
+router.get("/beta", (request, response) => {
+
+  db.collection('users').doc(request.query.uid).update({
+    beta: request.query.join
+  })
+  response.send("okay")
+});
 
 // Intialize a new user in our database.
 router.get("/inituser", (request, response) => {

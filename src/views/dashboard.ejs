@@ -18,6 +18,7 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
+<link rel="stylesheet" href="../../css/dashboard.css" type="text/css"/>
   <style>
 
     
@@ -295,13 +296,13 @@ You were last working on:  <b id="challenge_name">nothing, zilch, nada.</b>
                 </div>
                 <span style="Font-size:1rem;"> Classes </span>
               </a>
-              <a style="cursor:pointer;"  id="socialbutton" onclick="showSocial()" class=" group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition ease-in-out duration-150">
+              <a style="cursor:pointer;"  id="socialbutton" onclick="showSocial()" class="hidden group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition ease-in-out duration-150">
                 <!-- Heroicon name: folder -->
             
                 <div class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" >
                   <i style="font-size:1.5rem;"  class="fas fa-users"></i> 
                 </div>
-              <span style="Font-size:1rem;">  Social </span>
+              <span style="Font-size:1rem;">  Social <b style="color:red;font-family: Consolas;">alpha</b></span>
               </a>
   
             </nav>
@@ -576,9 +577,40 @@ You were last working on:  <b id="challenge_name">nothing, zilch, nada.</b>
 
 
         </div>
-        <div style="text-align:right; position:relative;" class="mt-10">    
+        <div class="mt-10">    
         
-        <h2>        <span style="position:absolute; left:0;" class="text-3xl leading-9d  text-gray-900 sm:text-4xl sm:leading-10"><b>Friend Requests</b></span>    </h2>
+        <h2 class="text-3xl leading-9d  text-gray-900 sm:text-4xl sm:leading-10"><b>Friend Requests</b></span>    </h2>
+          <br>
+
+        <div class="bg-white shadow overflow-hidden sm:rounded-md">
+          <ul>
+        
+            <li id="requests" class="border-t border-gray-200 requests hidden">
+              <a href="#" class="block hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-150 ease-in-out">
+                <div class="px-4 py-6 sm:px-6">
+                  <div class="flex items-center justify-between">
+                    <div style="font-size: 1.4rem;" class="text-sm leading-5 font-medium text-black ">
+                    <span class="tooltip">   <span class="tooltiptext">You can see this persons rank once you add them.</span> <i class="fas fa-question bg-gray-100 px-2 py-2 rounded-full" style="color:gray;"></i> </span>  <span class="ml-3">laphatize</span> <span style="color:rgb(54, 143, 13);" title="offline">●</span>
+                    </div>
+                   
+                    <div class="ml-2 flex-shrink-0 flex">
+                      <button class="px-2 py-1 inline-flex rounded-lg bg-red-500 text-white">
+                        Remove Friend
+                      </button>
+                    </div>
+                  </div>
+                
+                </div>
+              </a>
+            </li>
+             
+         
+          </ul>
+
+
+        </div>
+
+
 </div>
   </div>
 

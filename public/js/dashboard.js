@@ -98,12 +98,48 @@ docRef.get().then(function(doc) {
         
             var usersRef = db.collection("users").doc(userid)
             usersRef.get(userid).then(function(doc) {
+                if (doc.data().beta == "true") {
+                    document.getElementById("socialbutton").classList.remove("hidden")
+                }
                 if(!doc.data().identifier) {
                     console.log("Legacy Account Detected! Now updating...")
                     setIdenitifier();
                 } else  {
                     document.getElementById("usernameBig").innerHTML = doc.data().username
                     document.getElementById("tag").innerHTML = doc.data().identifier.split("#")[1]
+
+                    for (var i = 0; i < doc.data().friend_requests.length; i++) {
+                        document.querySelector('#requests').insertAdjacentHTML(
+                            'beforebegin', `
+                            
+                      
+            <li class="border-t border-gray-200">
+            <a href="#" class="block hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-150 ease-in-out">
+              <div class="px-4 py-6 sm:px-6">
+                <div class="flex items-center justify-between">
+                  <div style="font-size: 1.4rem;" class="text-sm leading-5 font-medium text-black ">
+                    <i title="You won't be able to see info about this user until you accept their friend request." class="fas fa-question bg-gray-100 px-3 py-2 rounded-full" style="color:darkgray;"></i>  <span class="ml-3">laphatize</span> <span style="color:gray;" title="Private">●</span>
+                  </div>
+                 
+                  <div class="ml-2 flex-shrink-0 flex">
+                  <button class="px-4 py-1 inline-flex rounded-lg bg-green-500 hover:bg-green-600 text-white">
+              Accept 
+                 </button>
+                    <button class="ml-4 px-4 py-1 inline-flex rounded-lg bg-red-500 hover:bg-red-600 text-white">
+                     Decline
+                    </button>
+                  </div>
+                </div>
+              
+              </div>
+            </a>
+          </li>
+              
+                      
+                            
+                            
+                            `);
+                    }
                 }
                
                 if (doc.data().viewing) {

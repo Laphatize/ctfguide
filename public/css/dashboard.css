@@ -1,0 +1,24 @@
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* tt text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+  
+
+    margin: 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
