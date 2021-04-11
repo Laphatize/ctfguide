@@ -118,7 +118,7 @@ docRef.get().then(function(doc) {
               <div class="px-4 py-6 sm:px-6">
                 <div class="flex items-center justify-between">
                   <div style="font-size: 1.4rem;" class="text-sm leading-5 font-medium text-black ">
-                    <i title="You won't be able to see info about this user until you accept their friend request." class="fas fa-question bg-gray-100 px-3 py-2 rounded-full" style="color:darkgray;"></i>  <span class="ml-3">laphatize</span> <span style="color:gray;" title="Private">●</span>
+                    <i title="You won't be able to see info about this user until you accept their friend request." class="fas fa-question bg-gray-100 px-3 py-2 rounded-full" style="color:darkgray;"></i>  <span class="ml-3">${ doc.data().friend_requests[i]}</span> <span style="color:gray;" title="Private">●</span>
                   </div>
                  
                   <div class="ml-2 flex-shrink-0 flex">
