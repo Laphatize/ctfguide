@@ -107,7 +107,7 @@ docRef.get().then(function(doc) {
                 } else  {
                     document.getElementById("usernameBig").innerHTML = doc.data().username
                     document.getElementById("tag").innerHTML = doc.data().identifier.split("#")[1]
-
+                        if (doc.data().friend_requests) {
                     for (var i = 0; i < doc.data().friend_requests.length; i++) {
                         document.querySelector('#requests').insertAdjacentHTML(
                             'beforebegin', `
@@ -140,6 +140,7 @@ docRef.get().then(function(doc) {
                             
                             `);
                     }
+                        }
                 }
                
                 if (doc.data().viewing) {
