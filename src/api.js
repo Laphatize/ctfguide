@@ -42,6 +42,29 @@ router.post("/setidentifier", urlencodedParser, async (request, response) => {
 
 
 
+// Send a friend request
+router.post("/friendrequest", urlencodedParser, async (request, response) => {
+  const orginDoc = db.collection('users')
+
+  
+  console.log(`Incoming Friend Request for ${request.body.identifier}`)
+  const snapshot = await orginDoc.where('identifier', '==', request.body.identifier).get();
+  if (snapshot.empty) {
+    console.log('No matching documents.');
+    return response.send("no");
+  }  
+  
+  snapshot.forEach(async doc => {
+    console.log(doc.id)
+     db.collection('users').doc(doc.id).update({
+      friend_requests : admin.firestore.FieldValue.arrayUnion(request.body.identifier)
+    })
+    return response.send("okay");
+  });
+  
+
+});
+
 
 // Link STiBaRC accounts to CTFGuide
 router.get("/link-account", (request, response) => {
@@ -270,20 +293,7 @@ router.get("/checksolution", async (request, response) => {
               rank: "Gold"
             });
           }
-          var request1 = new XMLHttpRequest();
-          request1.open("POST", "https://discord.com/api/webhooks/774735758182449193/hHJqdokRkUTWeqJHaAeoJQ3Ztu68rIH8JPGNCpyBDxmKz7S_eb43bv0SeL60gQHIe6tT");
-  
-          request1.setRequestHeader('Content-type', 'routerlication/json');
-  
-          var params = {
-            username: `${request.query.username} completed a challenge!`,
-            content: "GG!"
-          }
-  
-          request1.send(JSON.stringify(params));
-  
-  
-          updateLog(`[TIME: ${Date.now()}] [PID: ${request.query.id}] [UID: ${request.query.uid}] A problem was solved on the CTFGuide Platform.`)
+      
           return response.send("good");
         } else {
           return response.send("bad");

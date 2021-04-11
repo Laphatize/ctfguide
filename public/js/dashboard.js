@@ -2,6 +2,7 @@
   Copyright Pranav Ramesh 2020
 */
 
+
 var db = firebase.firestore();
 var userid = ""
 var useremail = ""
@@ -318,3 +319,19 @@ function setIdenitifier(uid) {
 
 
 
+
+function addFriend() {
+    var identifier = document.getElementById("friendbox").value;
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "../../api/friendrequest")
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+
+    xhr.send(`identifier=${identifier}`)
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+    
+            console.log(xhr.responseText);
+      }
+    }
+}
