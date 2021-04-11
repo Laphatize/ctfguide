@@ -1,9 +1,9 @@
 TODO 
 
 👩‍🎓 CTFLive Participant Perspective
-    - Create UI to submit challenge checkpoints.
-    - Make API endpoint to check, validate, award checkpoint completion.
-    - Make socket that tells client to update information for X user.
+    -/ Create UI to submit challenge checkpoints.
+    -/  Make API endpoint to check, validate, award checkpoint completion.
+    -/  Make socket that tells client to update information for X user.
     - (Optional) Have scoreboard table sort participants based of progress.
     - End game screen showing results.
     - (Optional) Timer
