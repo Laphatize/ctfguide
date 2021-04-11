@@ -372,7 +372,7 @@ function addFriend() {
     xhr.open("POST", "../../api/friendrequest")
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
 
-    xhr.send(`identifier=${identifier}`)
+    xhr.send(`identifier=${identifier}&uid=${userid}`)
 
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {

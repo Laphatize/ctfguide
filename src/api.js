@@ -46,7 +46,10 @@ router.post("/setidentifier", urlencodedParser, async (request, response) => {
 router.post("/friendrequest", urlencodedParser, async (request, response) => {
   const orginDoc = db.collection('users')
 
-  
+  const docRef = db.collection('users').doc(request.body.uid);
+  const doc = await docRef.get();
+  var issuer = doc.data().identifier;
+
   console.log(`Incoming Friend Request for ${request.body.identifier}`)
   const snapshot = await orginDoc.where('identifier', '==', request.body.identifier).get();
   if (snapshot.empty) {
@@ -57,7 +60,7 @@ router.post("/friendrequest", urlencodedParser, async (request, response) => {
   snapshot.forEach(async doc => {
     console.log(doc.id)
      db.collection('users').doc(doc.id).update({
-      friend_requests : admin.firestore.FieldValue.arrayUnion(doc.data().identifier)
+      friend_requests : admin.firestore.FieldValue.arrayUnion(issuer)
     })
     return response.send("okay");
   });
