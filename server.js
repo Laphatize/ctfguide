@@ -1,11 +1,16 @@
 // Copyright Pranav Ramesh 2021
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const admin = require('firebase-admin');
-if (args[2] != "gh") {
+const args = process.argv;
+
+if (args[2] == "gh") {
+  const serviceAccount = JSON.parse(process.env.firebase);
+} else {
 const serviceAccount = require('./other/cyberjags-8b081-116221a4ed05.json');
 }
+
 var bodyParser = require('body-parser');
-const args = process.argv;
+
 function makeid(length) {
   var result = '';
   var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -15,12 +20,9 @@ function makeid(length) {
   }
   return result;
 }
-
-if (args[2] != "gh") {
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
-}
 const db = admin.firestore();
 function updateLog(activity) {
   fs.readFile('/other/logs.txt', 'utf8', function (err, data) {

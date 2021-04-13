@@ -25,12 +25,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - env : 
+          firebase: " ${{ secrets.FIREBASE }}"
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
         
       - name: Install Dependencies
         run: npm install
-        
+
       - name: run it
         run:  node server.js gh
 
