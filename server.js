@@ -2,7 +2,7 @@
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const admin = require('firebase-admin');
 const args = process.argv;
-
+console.log([process.env.firebase])
 if (args[2] == "gh") {
   const serviceAccount = JSON.parse(process.env.firebase);
 } else {
