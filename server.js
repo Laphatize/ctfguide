@@ -15,9 +15,12 @@ function makeid(length) {
   }
   return result;
 }
+
+if (args[2] != "gh") {
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
+}
 const db = admin.firestore();
 function updateLog(activity) {
   fs.readFile('/other/logs.txt', 'utf8', function (err, data) {
