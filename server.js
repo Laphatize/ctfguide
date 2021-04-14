@@ -1,16 +1,9 @@
 // Copyright Pranav Ramesh 2021
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const admin = require('firebase-admin');
-const args = process.argv;
-console.log([process.env.firebase])
-if (args[2] == "gh") {
-  const serviceAccount = JSON.parse(process.env.firebase);
-} else {
 const serviceAccount = require('./other/cyberjags-8b081-116221a4ed05.json');
-}
-
 var bodyParser = require('body-parser');
-
+const args = process.argv;
 function makeid(length) {
   var result = '';
   var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
