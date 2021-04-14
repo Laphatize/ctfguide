@@ -207,7 +207,7 @@ docRef.get().then(function(doc) {
                
             })
 
-            if (doc.data().challenges){
+            if (doc.data().solved){
            var challenges = new Promise((resolve, reject) => {
             doc.data().solved.forEach(id => {
 
