@@ -198,8 +198,7 @@ router.get("/setusername", (request, response) => {
   }
 
   db.collection('users').doc(request.query.uid).update({
-    username: request.query.username,
-    identifier: request.query.username + "#" + result
+    username: request.query.username
   })
   response.send("okay")
 });
