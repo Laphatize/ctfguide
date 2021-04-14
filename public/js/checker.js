@@ -107,7 +107,7 @@ var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         // window.alert(xhttp.response)
-        if (xhttp.response == "good") {
+        if (xhttp.response == "okay") {
             return document.getElementById("goodjob").style.display = "block";
         } else {
             document.getElementById("notification").style.display = "block";
