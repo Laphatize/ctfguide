@@ -25,7 +25,6 @@ router.post("/setidentifier", urlencodedParser, async (request, response) => {
   }
   const docRef = db.collection('users').doc(request.body.uid);
 
-
   console.log(`Setting identifier for ${request.body.uid}`)
   const doc = await docRef.get();
   if (!doc.exists) {
@@ -64,12 +63,7 @@ router.post("/friendrequest", urlencodedParser, async (request, response) => {
     })
     return response.send("okay");
   });
-  
-
 });
-
-
-
 
 // Link STiBaRC accounts to CTFGuide
 router.get("/link-account", (request, response) => {
@@ -92,8 +86,7 @@ router.post("/deletechallenge", urlencodedParser, async (request, response) => {
       }
     }
     return response.send("OK")
-
-  });
+});
 
 // Sets last known viewed challenge
 router.post("/lastviewed", urlencodedParser, async (request, response) => {
@@ -102,7 +95,6 @@ router.post("/lastviewed", urlencodedParser, async (request, response) => {
   if (!doc.exists) {
     console.log('No such document!');
   } else {
-    // Checking if this user actually owns that challenge.
     console.log(request.body.id)
     db.collection("users").doc(request.body.uid).update({
      viewing: request.body.id,
@@ -110,7 +102,6 @@ router.post("/lastviewed", urlencodedParser, async (request, response) => {
     })
   }
   return response.send("OK")
-
 });
 
 
@@ -124,7 +115,6 @@ router.post("/editchallenge", urlencodedParser, async (request, response) => {
   } else {
     // Checking if this user actually owns that challenge.
     if (doc.data().challenges.includes(request.body.id)) {
-
       if (request.body.difficulty == "Do not change") {
         db.collection("challenges").doc(request.body.id).update({
           category: request.body.category,
@@ -148,15 +138,11 @@ router.post("/editchallenge", urlencodedParser, async (request, response) => {
           })
         })
       }
-
       return response.send("OK")
-
     } else {
       return response.send("unauthorized")
     }
-
   }
-
 });
 
 
@@ -189,14 +175,6 @@ router.post("/createchallenge", urlencodedParser, (request, response) => {
   });
 
 // Set user's username (This would be done via intial setup or settings page.)
-router.get("/setusername", (request, response) => {
-  var result = '';
-  var characters = '0123456789';
-  var charactersLength = characters.length;
-  for (var i = 0; i < 4; i++) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  }
-
   db.collection('users').doc(request.query.uid).update({
     username: request.query.username
   })
@@ -205,7 +183,6 @@ router.get("/setusername", (request, response) => {
 
 
 router.get("/beta", (request, response) => {
-
   db.collection('users').doc(request.query.uid).update({
     beta: request.query.join
   })
@@ -231,23 +208,18 @@ router.get("/checksolution", async (request, response) => {
       attempts: admin.firestore.FieldValue.increment(1),
     });
   
-  
     if (!doc.exists) {
       console.log('No such document!');
     } else {
       bcrypt.compare(request.query.solution, doc.data().solution).then(async function (result) {
         if (result == true) {
-  
           const docRef2 = db.collection('users').doc(request.query.uid);
           const doc2 = await docRef2.get();
-  
-  
+          
           if (doc2.data().solved && doc2.data().solved.includes(request.query.id)) {
             return response.send("good")
           }
-  
-  
-  
+          
           db.collection('users').doc(request.query.uid).update({
             points: admin.firestore.FieldValue.increment(50),
             solved: admin.firestore.FieldValue.arrayUnion(request.query.id)
@@ -255,7 +227,6 @@ router.get("/checksolution", async (request, response) => {
           const res = await db.collection('challenges').doc(request.query.id).update({
             gattempts: admin.firestore.FieldValue.increment(1),
           });
-  
   
           const docRef3 = db.collection('challenges').doc(request.query.id);
           const doc3 = await docRef3.get();
@@ -277,8 +248,7 @@ router.get("/checksolution", async (request, response) => {
             //
           }
   
-  
-  
+          
           var points = doc2.data().points
           // RANK MANAGER
           if (points < 200) {
@@ -286,20 +256,16 @@ router.get("/checksolution", async (request, response) => {
               rank: "Unrated"
             });
           }
-  
           if (points > 200 && points < 600) {
             const res = await db.collection('users').doc(request.query.uid).update({
               rank: "Bronze"
             });
           }
-  
-  
           if (points > 600 && points < 1200) {
             const res = await db.collection('users').doc(request.query.uid).update({
               rank: "Silver"
             });
           }
-  
           if (points > 1200) {
             const res = await db.collection('users').doc(request.query.uid).update({
               rank: "Gold"
@@ -311,18 +277,8 @@ router.get("/checksolution", async (request, response) => {
           return response.send("bad");
         }
       });
-  
     }
-  
-  
   })
-
-
-
-
-
-
-
 
 
 ////////////////////////////////////////////////////////
