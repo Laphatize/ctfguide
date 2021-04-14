@@ -85,7 +85,7 @@ router.post("/deletechallenge", urlencodedParser, async (request, response) => {
         const res = await db.collection("challenges").doc(request.body.id).delete();
       }
     }
-    return response.send("OK")
+    return response.send("okay")
 });
 
 // Sets last known viewed challenge
@@ -101,7 +101,7 @@ router.post("/lastviewed", urlencodedParser, async (request, response) => {
 
     })
   }
-  return response.send("OK")
+  return response.send("okay")
 });
 
 
@@ -138,7 +138,7 @@ router.post("/editchallenge", urlencodedParser, async (request, response) => {
           })
         })
       }
-      return response.send("OK")
+      return response.send("okay")
     } else {
       return response.send("unauthorized")
     }
@@ -192,12 +192,19 @@ router.get("/beta", (request, response) => {
 
 // Intialize a new user in our database.
 router.get("/inituser", (request, response) => {
-    db.collection('users').doc(request.query.id).set({
+  const docRef = db.collection('users').doc(request.query.uid);
+  const doc = await docRef.get();
+  if (doc.exists) {
+      console.log("User already exists!");
+	  response.send("Already exists");
+  } else {
+    docRef.set({
       points: "0",
       victories: "0",
       rank: "Unrated"
     })
-    response.send("ok")
+    response.send("okay")
+  }
 });
 
 // Verify solutions for challenges.
@@ -218,7 +225,7 @@ router.get("/checksolution", async (request, response) => {
           const doc2 = await docRef2.get();
           
           if (doc2.data().solved && doc2.data().solved.includes(request.query.id)) {
-            return response.send("good")
+            return response.send("okay")
           }
           
           db.collection('users').doc(request.query.uid).update({
@@ -273,7 +280,7 @@ router.get("/checksolution", async (request, response) => {
             });
           }
       
-          return response.send("good");
+          return response.send("okay");
         } else {
           return response.send("bad");
         }
