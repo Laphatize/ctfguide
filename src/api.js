@@ -175,6 +175,7 @@ router.post("/createchallenge", urlencodedParser, (request, response) => {
   });
 
 // Set user's username (This would be done via intial setup or settings page.)
+router.get("/setusername", (request, response) => {
   db.collection('users').doc(request.query.uid).update({
     username: request.query.username
   })
