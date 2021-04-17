@@ -1,7 +1,7 @@
 // Copyright Pranav Ramesh 2021
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const admin = require('firebase-admin');
-const serviceAccount = require('./other/cyberjags-8b081-116221a4ed05.json');
+const serviceAccount = require('./other/cyberjags-8b081-c2e825de631b.json');
 var bodyParser = require('body-parser');
 const args = process.argv;
 function makeid(length) {
@@ -128,6 +128,33 @@ io.on("connection", socket => {
 
 });
 
+
+
+fs.readFile('extracted.txt', 'utf8' , async (err, data) => {
+  if (err) {
+    console.error(err)
+    return
+  }
+
+  var user = ""
+  var oink = []
+  for (var i = 0; i < data.split("\n").length; i++) {
+  var user = data.split("\n")[i]
+  if (!oink.includes(user)) {
+  oink.push(user)
+  const cityRef = db.collection('users').doc(user);
+const doc = await cityRef.get();
+if (!doc.exists) {
+ console.log('No such document!');
+} else {
+  console.log((await admin.auth().getUser( doc.id)).toJSON().email);
+}
+
+  }
+
+
+  }
+});
 
 
 http.listen(88, () => {

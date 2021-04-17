@@ -79,6 +79,39 @@ router.get("/link-account", (request, response) => {
     return response.send("okay");
 });
 
+// Migrate user data to new account id
+router.get("/reauthorize", async (request, response) => {
+  const docRef = db.collection('users').doc(request.query.uid);
+    const doc = await docRef.get();
+    if (!doc.exists) {
+      console.log('No such document!');
+      return response.send("BAD")
+    }
+
+
+    admin.auth().updateUser(request.query.uid, {
+      disabled:true
+
+    })
+
+
+  db.collection('users').doc(request.query.newuid).update({
+    beta: doc.data().beta,
+    challenges: doc.data().challenges,
+    friend_requests: doc.data().friend_requests,
+    identifier: doc.data().identifier,
+    points: doc.data().points,
+    rank: doc.data().rank,
+    solved: doc.data().solved,
+    stibarc_username: doc.data().stibarc_username,
+    username: doc.data().username,
+    victories: doc.data().victories,
+    viewing: doc.data().viewing
+  });
+  return response.send("okay");
+});
+
+
 // Delete CTFGuide Challenges
 router.post("/deletechallenge", urlencodedParser, async (request, response) => {
     const docRef = db.collection('users').doc(request.body.uid);

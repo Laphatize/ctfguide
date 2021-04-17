@@ -97,6 +97,7 @@ router.get("/con", (request, response) => {
   
 
 router.get("/challenges/:id", async (request, response) => {
+  console.log("hit")
     const res = await db.collection('challenges').doc(request.params.id).update({
       views: admin.firestore.FieldValue.increment(1),
     });
@@ -124,7 +125,7 @@ router.get("/challenges/:id", async (request, response) => {
     if (doc3.data().leaderboards_bronze) data.bronze = doc3.data().leaderboards_bronze;
     if (doc3.data().leaderboards_silver) data.silver = doc3.data().leaderboards_silver;
   
-    response.render(__dirname + "/views/challenge-template.ejs", {
+    return response.render(__dirname + "/views/challenge-template.ejs", {
       CHALLENGE_NAME: doc3.data().title,
       CHALLENGE_DESCRIPTION: doc3.data().problem,
       CHALLENGE_AUTHOR: author,
@@ -133,7 +134,7 @@ router.get("/challenges/:id", async (request, response) => {
       BRONZE: data.bronze
     });
   
-    return;
+    //eturn;
   });
   
   

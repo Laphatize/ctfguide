@@ -204,9 +204,9 @@ We'll let you know when we find someone.            </p>
 
   <!-- Dashboard main-->
 
-  <div class="bg-gray-50">
+  <div class="bg-gray-800">
     <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-      <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+      <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
       
             Account Settings
       </h2>
@@ -299,9 +299,17 @@ We'll let you know when we find someone.            </p>
                  
       
                   <div class="col-span-6 sm:col-span-4">
-                    <button onclick="reset()"  id="resetbutton" type="submit" class="bg-gray-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                    <label for="email_address" class="block text-sm font-medium text-gray-700">Security</label>
+
+                    <button onclick="reset()"  id="resetbutton" type="submit" class="mt-2 bg-gray-600 border border-transparent rounded-md shadow-sm py-1   px-3 inline-flex justify-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                       Send Password Reset Email
                       </button>
+
+
+                      <button onclick="copyid()"  id="copy" type="submit" class="mt-2 bg-gray-600 border border-transparent rounded-md shadow-sm py-1   px-3 inline-flex justify-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                        Copy UID to Clipboard
+                        </button>
+                      
                     </div>
       
                 </div>
@@ -313,6 +321,18 @@ We'll let you know when we find someone.            </p>
 
                 <input id="beta" type="checkbox"> Enable experimental features?
                </div>
+
+               <div class="mt-0">
+                <label class="text-sm font-medium text-gray-700" >Move Account</label> <br>
+
+                <input type="text" id="newuid"  placeholder="UID of new account" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          
+                <button onclick="moveacc()" type="submit" class="mt-2 bg-red-400 border border-transparent rounded-md shadow-sm py-1 px-6 inline-flex justify-center text-sm font-medium text-white hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                  Move Account
+              </button>
+              
+              
+              </div>
                 
 
               </div>
@@ -461,131 +481,7 @@ We'll let you know when we find someone.            </p>
         firebase.initializeApp(firebaseConfig);
   </script>
 
-<script>
-const db = firebase.firestore();
-function account() {
-  document.getElementById("account").style.display = "block";
-    document.getElementById("integrations").style.display = "none";
-    document.getElementsByClassName("account")[0].classList.add("bg-gray-50");
-    document.getElementsByClassName("integrations")[0].classList.remove("bg-gray-50");
-}
-  function integrations() {
-    document.getElementById("account").style.display = "none";
-    document.getElementById("integrations").style.display = "block";
-    document.getElementsByClassName("account")[0].classList.remove("bg-gray-50");
-    document.getElementsByClassName("integrations")[0].classList.add("bg-gray-50");
-    document.getElementsByClassName("account")[0].classList.add("hover:bg-gray-50");
-
-
-  }
-
-
-  var userid = ""
-  var email = ""
-firebase.auth().onAuthStateChanged(function(user) {
-
-userid = user.uid
-email = user.email;
-var docRef = db.collection("users").doc(userid);
-
-docRef.get().then(function(doc) {
-    if (doc.exists) {
-
-          username = doc.data().username
-          if (doc.data().stibarc_username) {
-           
-            document.getElementById("stibarc_username").innerHTML = "Linked"
-            document.getElementById("stibarc_usernamebtn").style.display = "none";
-          } 
-
-          document.getElementById("username").value = username;
-          console.log(doc.data().beta)
-
-          if (doc.data().beta == "true") document.getElementById("beta").checked = true;
-
-          document.getElementById("loader").style.display = "none"
-          document.getElementById("account").style.display = "block"
-    } 
-}).catch(function(error) {
-    console.log("Error getting document:", error);
-    
-});
-});
-
-var open1 = false;
-
-
-function toggleMenu() {
-  // closem openm
-  if (open1 == false) {
-  document.getElementById("mobile").classList.add("block")
-  document.getElementById("mobile").classList.remove("hidden")
-  document.getElementById("closem").classList.remove("hidden")
-  document.getElementById("closem").classList.add("block")
-  document.getElementById("openm").classList.add("hidden")
-  document.getElementById("openm").classList.remove("block")
-
-
-    open1 = true;
-  } else {
-    document.getElementById("mobile").classList.add("hidden")
-  document.getElementById("mobile").classList.remove("block")
-  open1 = false;
-  document.getElementById("openm").classList.remove("hidden")
-  document.getElementById("openm").classList.add("block")
-  document.getElementById("closem").classList.add("hidden")
-  document.getElementById("closem").classList.remove("block")
-  }
-
-}
-document.getElementById("menubtn").addEventListener("click", toggleMenu);
-
-
-
-function go() {
-    
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      window.location.reload();
-    }
-  }
-  xhttp.open("GET", `./api/setusername?uid=${userid}&username=${document.getElementById("username").value}`, true);
-xhttp.send();
-
-    
-var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      window.location.reload();
-    }
-  }
-  xhttp.open("GET", `./api/beta?uid=${userid}&join=${document.getElementById('beta').checked}`, true);
-xhttp.send();
-
-
-}
-
-
-function reset() {
-var auth = firebase.auth();
-auth.sendPasswordResetEmail(email).then(function() {
-document.getElementById("resetbutton").innerHTML = "Check your email!"
-}).catch(function(error) {
-  // An error happened.
-  console.log(error)
-});
-}
-
-
-function logout() {
-    firebase.auth().signOut().then(function() {
-        window.location.href = "./login"
-    })
-}
-
-
-
+<script src="../../js/settings.js">
 </script>
 <style>
   .pointer {cursor: pointer;}
