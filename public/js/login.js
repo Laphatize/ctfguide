@@ -31,6 +31,13 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 });
 
+var input = document.getElementById("password");
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("loginButton").click();
+    }
+});
 
 function lws() {
     window.open("https://stibarc.github.io/stibarc_redesign/oauth-test", " ", "menubar=no,location=no,resizable=no,scrollbars=yes", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,width=400,height=400");

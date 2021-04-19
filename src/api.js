@@ -95,6 +95,7 @@ router.get("/reauthorize", async (request, response) => {
     })
 
 
+try {
   db.collection('users').doc(request.query.newuid).update({
     beta: doc.data().beta,
     challenges: doc.data().challenges,
@@ -108,6 +109,10 @@ router.get("/reauthorize", async (request, response) => {
     victories: doc.data().victories,
     viewing: doc.data().viewing
   });
+} catch(err) {
+  throw err;
+}
+
   return response.send("okay");
 });
 

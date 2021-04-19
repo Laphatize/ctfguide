@@ -17,6 +17,7 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
 const db = admin.firestore();
+db.settings({ ignoreUndefinedProperties: true })
 function updateLog(activity) {
   fs.readFile('/other/logs.txt', 'utf8', function (err, data) {
     if (err) {
@@ -70,8 +71,8 @@ io.on("connection", socket => {
       if (!tempJSONObj.participants.includes(doc.data().username)) {
         tempJSONObj.participants.push(doc.data().username)
       }
-      
-      
+
+
       console.log(tempJSONObj)
       localDocRef.update({
         'participants': JSON.stringify(tempJSONObj)
@@ -83,18 +84,18 @@ io.on("connection", socket => {
         gameID: player.gameID,
         participants: JSON.stringify(tempJSONObj),
         userID: "removed"
-      });     
+      });
 
     }
-    
+
 
   });
 
   socket.on("gamestart", async info => {
-    
+
     const docRef2 = db.collection('ctflive').doc(info.gameID);
     const doc2 = await docRef2.get();
-  
+
     if (!doc2.exists) {
       console.log('No such document!');
       return response.send("error")
@@ -108,65 +109,39 @@ io.on("connection", socket => {
       console.log(info)
 
       io.emit("gamestart", info);
-  
+
     }
   });
 
 
-    socket.on("ssbroadcast", async info => {
-    
-      const docRef2 = db.collection('ctflive').doc(info.gameid);
-      const doc2 = await docRef2.get();
-      io.emit("sstransit", {
-        
-       leaderboards: doc2.data().leaderboards,
-       participants: doc2.data().participants
-        
-      })
+  socket.on("ssbroadcast", async info => {
+
+    const docRef2 = db.collection('ctflive').doc(info.gameid);
+    const doc2 = await docRef2.get();
+    io.emit("sstransit", {
+
+      leaderboards: doc2.data().leaderboards,
+      participants: doc2.data().participants
+
+    })
 
   });
 
 });
 
 
-
-fs.readFile('extracted.txt', 'utf8' , async (err, data) => {
-  if (err) {
-    console.error(err)
-    return
-  }
-
-  var user = ""
-  var oink = []
-  for (var i = 0; i < data.split("\n").length; i++) {
-  var user = data.split("\n")[i]
-  if (!oink.includes(user)) {
-  oink.push(user)
-  const cityRef = db.collection('users').doc(user);
-const doc = await cityRef.get();
-if (!doc.exists) {
- console.log('No such document!');
-} else {
-  console.log((await admin.auth().getUser( doc.id)).toJSON().email);
-}
-
-  }
-
-
-  }
-});
 
 
 http.listen(88, () => {
   console.log('\x1b[36m%s\x1b[0m', "[SERVER] CTFGuide is deployed on port 88.");
   if (os.hostname() == "LAPTOP-S4BMA3PQ") {
     console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Locally | http://localhost:88")
-  }  else {
+  } else {
 
     if (args[2] == "gh") {
       // If github is running tests here.
-       console.log('\x1b[33m%s\x1b[0m', "[GITHUB] All tests passed");
-       process.exit(0);
+      console.log('\x1b[33m%s\x1b[0m', "[GITHUB] All tests passed");
+      process.exit(0);
     }
     console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Live | https://ctfguide.tech")
 
