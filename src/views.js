@@ -26,6 +26,11 @@ router.get("/con", (request, response) => {
     response.sendFile(__dirname + "/views/link-account.html");
   });
   
+
+  router.get("/admin", (request, response) => {
+    response.sendFile(__dirname + "/views/admin.html");
+  });
+  
   
   router.get("/auth/stibarc", (request, response2) => {
   
