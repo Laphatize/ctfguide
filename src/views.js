@@ -5,6 +5,7 @@ const admin = require('firebase-admin');
 const db = admin.firestore();
 let ejs = require('ejs');
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+const { response } = require('express');
 
 ////////////////////////////////////////////////////////
 
@@ -51,7 +52,11 @@ router.get("/con", (request, response) => {
               .auth()
               .createCustomToken(doc.id)
               .then((customToken) => {
-                response2.redirect("/con?ct=" + customToken + "&uid=" + doc.id)
+              
+              response2.redirect("/con?ct=" + customToken + "&uid=" + doc.id);
+            //  return;
+      //      response2.send(customToken)
+        //    console.log(customToken)
               })
               .catch((error) => {
                 console.log('Error creating custom token:', error);
