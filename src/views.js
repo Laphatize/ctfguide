@@ -130,7 +130,7 @@ router.get("/challenges/:id", async (request, response) => {
     if (doc3.data().leaderboards_bronze) data.bronze = doc3.data().leaderboards_bronze;
     if (doc3.data().leaderboards_silver) data.silver = doc3.data().leaderboards_silver;
   
-    return response.render(__dirname + "/views/challenge-template.ejs", {
+    response.render(__dirname + "/views/challenge-template.ejs", {
       CHALLENGE_NAME: doc3.data().title,
       CHALLENGE_DESCRIPTION: doc3.data().problem,
       CHALLENGE_AUTHOR: author,
@@ -214,6 +214,15 @@ router.get("/challenges/:id", async (request, response) => {
     response.render(__dirname + "/views/dashboard.ejs", {
 
     });
+  });
+
+  router.use(function (req, res, next) {
+    res.status(404).send("Sorry can't find that!");
+  });
+
+  router.use(function (err, req, res, next) {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
   });
 
 ////////////////////////////////////////////////////////
