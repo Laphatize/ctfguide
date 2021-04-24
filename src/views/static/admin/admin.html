@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<head>
+    <title>CTFGuide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://kit.fontawesome.com/13433183d5.js" crossorigin="anonymous"></script>
+    <script async src="https://arc.io/widget.min.js#7JTQkWpx"></script>
+    <script src="https://shoppy.gg/api/embed.js"></script>
+
+    <link rel="icon" 
+    type="image/ico" 
+    href="../../cdn/favicon.ico">
+</head>
+<body>
+  <style>
+
+    
+
+    .loader {
+      border: 14px solid rgb(153, 152, 152); /* Light grey */
+      border-top: 14px solid #575757; /* Blue */
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      animation: spin 2s linear infinite;
+    
+    }
+    
+    .loader-parent {
+      display: flex;
+      justify-content: center;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    
+        
+      </style>
+
+  <nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex justify-between h-16">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button -->
+          <button id="menubtn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Main menu" aria-expanded="false">
+            <!-- Icon when menu is closed. -->
+            <!--
+              Heroicon name: menu
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg  id="openm" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!-- Icon when menu is open. -->
+            <!--
+              Heroicon name: x
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg  id="closem"  class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex-shrink-0 flex items-center">
+            <img class="block lg:hidden h-8 w-auto" src="logo.svg">
+            <img class="hidden lg:block h-8 w-auto" src="logo.svg">
+          </div>
+        
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div class="hidden sm:ml-6 sm:flex">
+            <a href="/dashboard" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+               Dashboard
+              </a>
+            <a href="/challenges" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              Challenges
+            </a>
+            <a href="/ctflive/join" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+             CTFLive
+            </a>
+            <a href="/login" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              Duels
+            </a>
+        
+            <a onclick="logout()" style="cursor:pointer;" id="logout" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                Logout
+              </a>
+
+              <a href="/settings" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700  focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                <i class="fas fa-cog"></i>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!--
+      Mobile menu, toggle classes based on menu state.
+  
+      Menu open: "block", Menu closed: "hidden"
+    -->
+    <div id="mobile" class="hidden sm:hidden">
+      <div class="pt-2 pb-4">
+       
+        <a href="./dashboard" class="block pl-3 pr-4 py-2 border-l-4 border-gray-500 text-base font-medium text-gray-700 bg-gray-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-gray-700 transition duration-150 ease-in-out">Dashboard</a>
+        
+  
+        <a href="./challenges" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Challenges</a>
+        
+        <!--
+        <a href="#" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">CTFLive</a>
+        -->
+       
+        <a onclick="logout()" id="logout" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Logout</a>
+     </div>
+    </div>
+  </nav>
+
+
+
+
+<!-- GAME FOUND -->
+
+<div id="gameFound" class="hidden fixed z-10 inset-0 overflow-y-auto">
+  <div class=" flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+    <!--
+      Background overlay, show/hide based on modal state.
+
+      Entering: "ease-out duration-300"
+        From: "opacity-0"
+        To: "opacity-100"
+      Leaving: "ease-in duration-200"
+        From: "opacity-100"
+        To: "opacity-0"
+    -->
+    <div class="fixed inset-0 transition-opacity">
+      <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+    </div>
+
+    <!-- This element is to trick the browser into centering the modal contents. -->
+    <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span>&#8203;
+    <!--
+      Modal panel, show/hide based on modal state.
+
+      Entering: "ease-out duration-300"
+        From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+        To: "opacity-100 translate-y-0 sm:scale-100"
+      Leaving: "ease-in duration-200"
+        From: "opacity-100 translate-y-0 sm:scale-100"
+        To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+    -->
+    <div class="animate__bounceIn inline-block align-bottom bg-white  px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+      <div>
+        <div class="mx-auto flex items-center justify-center h-24 w-24 rounded-full bg-gray-600">
+          <!-- Heroicon name: check -->
+          <img width="90"  src="https://samherbert.net/svg-loaders/svg-loaders/rings.svg">
+        </div>
+        <div class="mt-3 text-center sm:mt-5">
+          <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
+       Looking for a game...
+          </h3>
+          <div class="mt-2">
+            <p class="text-sm leading-5 text-gray-500">
+We'll let you know when we find someone.            </p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <!-- Heroicon name: exclamation -->
+            <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="ml-3">
+            <p class="text-sm leading-5 text-yellow-700">
+            <B>stop.</B> this doesn't work yet. don't sit waiting there
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5 sm:mt-6">
+        <span class="flex w-full rounded-md shadow-sm">
+          <button id="cancelButton" type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-red-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-red-400 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+           Cancel
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- GAME FOUND-->
+
+  <!-- Dashboard main-->
+
+  <div class="bg-gray-800">
+    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+      <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
+      
+           Admin Panel
+      </h2>
+  
+    </div>
+  </div>
+
+
+
+<br>
+  <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+    <h1 class="text-2xl font-bold"><i class="fas fa-clipboard-list"></i> Reports</h1>
+    <hr>
+    <div class="flex flex-col mt-5">
+      <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+          <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead>
+                <tr>
+                  <th class="px-6 py-1 bg-gray-700 text-left text-xs leading-4 font-medium text-gray-100 uppercase tracking-wider">
+                   Time
+                  </th>
+                  <th class="px-6 py-1 bg-gray-700 text-left text-xs leading-4 font-medium text-gray-100 uppercase tracking-wider">
+                    Report ID
+                  </th>
+                  <th class="px-6 py-1 bg-gray-700 text-left text-xs leading-4 font-medium text-gray-100 uppercase tracking-wider">
+                   Challenge ID
+                  </th>
+                  <th class="px-6 py-1 bg-gray-700 text-left text-xs leading-4 font-medium text-gray-100 uppercase tracking-wider">
+                    Reason
+                  </th>
+                  <th class="px-6 py-1 bg-gray-700 text-left text-xs leading-4 font-medium text-gray-100 uppercase tracking-wider">
+                    User ID
+                  </th>
+                  <th class="px-6 py-1 bg-gray-700"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Odd row -->
+                <tr class="bg-white">
+                  <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                   3:50
+                  </td>
+                  <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                 1
+                  </td>
+                  <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                    3dueQxDhn1KJhVyvwnOd
+                  </td>
+                  <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                    Other
+                  </td>
+                  <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                    redacted
+                  </td>
+                  <td class="px-6 py-2 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Review Case</a>
+                  </td>
+                </tr>
+    
+        
+                <!-- More rows... -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="text-2xl font-bold mt-5"><i class="fas fa-tools"></i> Admin Tools</h1>
+    
+    <hr class="mb-3"> 
+<!--
+  Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
+  Read the documentation to get started: https://tailwindui.com/documentation
+-->
+<div>
+  <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Email</label>
+  <div class="mt-1 relative rounded-md shadow-sm">
+    <input id="email" class="form-input block w-full sm:text-sm sm:leading-5" placeholder="you@example.com">
+  </div>
+</div>
+
+</div>
+
+<footer class="bg-white">
+    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+      <div class="flex justify-center space-x-6 md:order-2">
+
+        <a href="https://twitter.com/laphatize2" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">Twitter</span>
+          <svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+          </svg>
+        </a>
+        <a href="https://github.com/laphatize" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">GitHub</span>
+          <svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      
+      </div>
+      <div class="mt-8 md:mt-0 md:order-1">
+        <p class="text-center text-base leading-6 text-gray-400">
+          &copy; 2021 Pranav Ramesh. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+  <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyBLAN84VP3jSA5dqhrU6Bjmfu5NiUDuNw4",
+          authDomain: "cyberjags-8b081.firebaseapp.com",
+          databaseURL: "https://cyberjags-8b081.firebaseio.com",
+          projectId: "cyberjags-8b081",
+          storageBucket: "cyberjags-8b081.appspot.com",
+          messagingSenderId: "166652277588",
+          appId: "1:166652277588:web:e08b9e19916451e14dcec1"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+  </script>
+
+</script>
+<style>
+  .pointer {cursor: pointer;}
+
+</style>
+</body>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<head>
+    <title>CTFGuide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/ico"  href="../../cdn/favicon.ico">
+<!-- Global site tag (gtag.js) - Google Ads: 724455503 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-724455503"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-724455503');
+</script>
+<!-- Event snippet for Website traffic conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-724455503/DDTWCOXF1-sBEM-gudkC'});
+</script>
+
+  </head>
+<body>
+
+
+  <nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex justify-between h-16">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button -->
+          <button id="menubtn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Main menu" aria-expanded="false">
+            <!-- Icon when menu is closed. -->
+            <!--
+              Heroicon name: menu
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg id="openm" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!-- Icon when menu is open. -->
+            <!--
+              Heroicon name: x
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg id="closem"  class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex-shrink-0 flex items-center">
+            <img class="block lg:hidden h-8 w-auto" src="logo.svg">
+            <img class="hidden lg:block h-8 w-auto" src="logo.svg">
+          </div>
+        
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div class="hidden sm:ml-6 sm:flex">
+            <a href="/challenges" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              Challenges
+            </a>
+            <a href="/ctflive/join" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+             CTFLive
+            </a>
+            <a href="/login" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              Login
+            </a>
+            <a href="/register" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              Create an account
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!--
+      Mobile menu, toggle classes based on menu state.
+  
+      Menu open: "block", Menu closed: "hidden"
+    -->
+    <div id="mobile" class="hidden sm:hidden">
+      <div class="pt-2 pb-4">
+        <a href="./" class="block pl-3 pr-4 py-2 border-l-4 border-gray-500 text-base font-medium text-gray-700 bg-gray-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-gray-700 transition duration-150 ease-in-out">Home</a>
+        
+        <!--
+        <a href="#" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">CTFLive</a>
+        -->
+        <a href="./login" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Challenges</a>
+
+        <a href="./login" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Login</a>
+        <a href="./register" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Create an account</a>
+      </div>
+    </div>
+  </nav>
+
+
+  
+<div class="bg-gray-800">
+  <div class="max-w-screen-xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:flex lg:justify-between">
+
+ 
+      <h2 class="text-4xl leading-10 font-extrabold text-white sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl">CTFGuide</h2>
+      <p class="mt-5 text-xl leading-7 text-gray-400">A community reliant platform that helps students conquer the glorious world of cybersecurity.</p>
+      
+   
+  </div>
+</div>
+
+
+  <!-- Features Section -->
+  <div class="bg-white">
+    <div class="max-w-screen-xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
+      <div>
+        <h2 class="text-base leading-6 font-semibold text-indigo-600 uppercase tracking-wide">Everything you need</h2>
+        <p class="mt-2 text-3xl leading-9 font-extrabold text-gray-900">All-in-one platform</p>
+        <p class="mt-4 text-lg leading-7 text-gray-500">You don't need to be an expert in cybersecurity to do CTF Challenges. From programming to forensics, we've got you covered.</p>
+      </div>
+      <div class="mt-12 lg:mt-0 lg:col-span-2">
+        <dl class="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
+          <div class="flex space-x-3">
+            <!-- Heroicon name: check -->
+            <svg class="flex-shrink-0 h-6 w-6 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div class="space-y-2">
+              <dt class="text-lg leading-6 font-medium text-gray-900">CTFLive</dt>
+              <dd class="flex space-x-3 lg:py-0 lg:pb-4">
+                <span class="text-base leading-6 text-gray-500">Pick a CTF challenge from our extensive database and start a live game. At the end you'll be able to see people's responses and time taken. Perfect for school clubs.</span>
+              </dd>
+            </div>
+          </div>
+          <div class="flex space-x-3">
+            <!-- Heroicon name: check -->
+            <svg class="flex-shrink-0 h-6 w-6 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div class="space-y-2">
+              <dt class="text-lg leading-6 font-medium text-gray-900">Events</dt>
+              <dd class="flex space-x-3">
+                <span class="text-base leading-6 text-gray-500">We run events where the entire CTFGuide community competes to make it onto the leaderboards.</span>
+              </dd>
+            </div>
+          </div>
+          <div class="flex space-x-3">
+            <!-- Heroicon name: check -->
+            <svg class="flex-shrink-0 h-6 w-6 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div class="space-y-2">
+              <dt class="text-lg leading-6 font-medium text-gray-900">Video Tutorials</dt>
+              <dd class="flex space-x-3">
+                <span class="text-base leading-6 text-gray-500">Stuck on a problem? We'll serve you up some Video Tutorials that walk through a similar problem.</span>
+              </dd>
+            </div>
+          </div>
+        
+          <div class="flex space-x-3">
+            <!-- Heroicon name: check -->
+            <svg class="flex-shrink-0 h-6 w-6 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div class="space-y-2">
+              <dt class="text-lg leading-6 font-medium text-gray-900">School LMS Compatibility</dt>
+              <dd class="flex space-x-3">
+                <span class="text-base leading-6 text-gray-500">If you're a teacher that wants to use CTFGuide to assign homework - we can automatically grade their work and allow easy export to popular grading systems such as Alma and Powerschool.</span>
+              </dd>
+            </div>
+          </div>
+          <div class="flex space-x-3">
+            <!-- Heroicon name: check -->
+            <svg class="flex-shrink-0 h-6 w-6 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div class="space-y-2">
+              <dt class="text-lg leading-6 font-medium text-gray-900">CTFDuels</dt>
+              <dd class="flex space-x-3 lg:border-t-0 lg:py-0 lg:pb-4">
+                <span class="text-base leading-6 text-gray-500">Form a CTF team and compete with other teams via our platform.</span>
+              </dd>
+            </div>
+          </div>
+          <div class="flex space-x-3">
+            <!-- Heroicon name: check -->
+            <svg class="flex-shrink-0 h-6 w-6 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <div class="space-y-2">
+              <dt class="text-lg leading-6 font-medium text-gray-900">AI Enhanced Cheating Detection</dt>
+              <dd class="flex space-x-3">
+                <span class="text-base leading-6 text-gray-500">We have multiple variations of problems stored in our databases. If we detect a problem solution online we automatically delete the problem and replace it with another alternative.</span>
+              </dd>
+            </div>
+          </div>
+   
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+<div>
+<footer>
+    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+      <div class="flex justify-center space-x-6 md:order-2">
+
+        <a href="https://twitter.com/laphatize2" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">Twitter</span>
+          <svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+          </svg>
+        </a>
+        <a href="https://github.com/laphatize" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">GitHub</span>
+          <svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      
+      </div>
+      <div class="mt-8 md:mt-0 md:order-1">
+        <p class="text-center te  xt-base leading-6">
+          &copy; 2021 Pranav Ramesh. All rights reserved.<br>
+          <a href="./tos">Terms of Service</a> -
+          <a href="./privacy"><b>Privacy Policy</b></a> -
+          <a href="https://status.ctfguide.tech">Service Status</a>
+
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+  <script>
+    var open = false;
+
+
+    function toggleMenu() {
+      // closem openm
+      if (open == false) {
+      document.getElementById("mobile").classList.add("block")
+      document.getElementById("mobile").classList.remove("hidden")
+      document.getElementById("closem").classList.remove("hidden")
+      document.getElementById("closem").classList.add("block")
+      document.getElementById("openm").classList.add("hidden")
+      document.getElementById("openm").classList.remove("block")
+
+
+        open = true;
+      } else {
+        document.getElementById("mobile").classList.add("hidden")
+      document.getElementById("mobile").classList.remove("block")
+      open = false;
+      document.getElementById("openm").classList.remove("hidden")
+      document.getElementById("openm").classList.add("block")
+      document.getElementById("closem").classList.add("hidden")
+      document.getElementById("closem").classList.remove("block")
+      }
+
+    }
+    document.getElementById("menubtn").addEventListener("click", toggleMenu);
+  </script>
+
+</body>

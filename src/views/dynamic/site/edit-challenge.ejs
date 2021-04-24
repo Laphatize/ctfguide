@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<head>
+    <title>CTFGuide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://kit.fontawesome.com/13433183d5.js" crossorigin="anonymous"></script>
+    <link rel="icon" 
+  type="image/ico" 
+  href="../../cdn/favicon.ico">
+
+</head>
+<body>
+
+
+
+  <nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex justify-between h-16">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button -->
+          <button id="menubtn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Main menu" aria-expanded="false">
+            <!-- Icon when menu is closed. -->
+            <!--
+              Heroicon name: menu
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg  id="openm" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!-- Icon when menu is open. -->
+            <!--
+              Heroicon name: x
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg  id="closem"  class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex-shrink-0 flex items-center">
+            <img class="block lg:hidden h-8 w-auto" src="../../logo.svg">
+            <img class="hidden lg:block h-8 w-auto" src="../../logo.svg">
+          </div>
+        
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div class="hidden sm:ml-6 sm:flex">
+            <a href="/dashboard" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+               Dashboard
+              </a>
+            <a href="/challenges" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              Challenges
+            </a>
+            <a href="/ctflive/join" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+             CTFLive
+            </a>
+            <a href="/login" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+              Duels
+            </a>
+        
+            <a  id="logout"  style="cursor:pointer;" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                Logout
+              </a>
+
+              <a href="/settings" class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700  focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                <i class="fas fa-cog"></i>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!--
+      Mobile menu, toggle classes based on menu state.
+  
+      Menu open: "block", Menu closed: "hidden"
+    -->
+    <div id="mobile" class="hidden sm:hidden">
+      <div class="pt-2 pb-4">
+       
+        <a href="./dashboard" class="block pl-3 pr-4 py-2 border-l-4 border-gray-500 text-base font-medium text-gray-700 bg-gray-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-gray-700 transition duration-150 ease-in-out">Dashboard</a>
+        
+  
+        <a href="./challenges" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Challenges</a>
+        
+        <!--
+        <a href="#" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">CTFLive</a>
+        -->
+       
+        <a onclick="logout()" id="logout" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Logout</a>
+     </div>
+    </div>
+  </nav>
+
+  
+
+  
+  <div id="notification" style="display:none;" class="fixed inset-0 flex items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
+
+    <div  class="max-w-sm w-full bg-red-100 shadow-lg rounded-lg pointer-events-auto">
+      <div class="rounded-lg shadow-xs overflow-hidden">
+        <div class="p-4">
+          <div class="flex items-center">
+            <div class="w-0 flex-1 flex justify-between">
+              <p class="w-0 flex-1 text-sm leading-5 font-medium text-gray-900">
+               Nope. Try again!
+              </p>
+             
+            </div>
+            <div class="ml-4 flex-shrink-0 flex">
+              <button onclick="document.getElementById('notification').style.display = 'none';" class="inline-flex text-gray-400 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150">
+                <!-- Heroicon name: x -->
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-8 bg-gray-800">
+    <div class="max-w-7xl mx-auto">
+      
+  <div class="md:flex md:items-center md:justify-between">
+    <div class="flex-1 min-w-0">
+      <h2 class="text-2xl font-bold leading-7 text-white sm:text-3xl sm:leading-9 sm:truncate">
+        <%= CHALLENGE_NAME %>
+      </h2>
+    </div>
+    <div class="mt-4 flex md:mt-0 md:ml-4">
+      <span class="ml-3 shadow-sm rounded-md">
+        <button type="button" class="inline-flex items-center px-2 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-black bg-white hover:bg-gray-100 focus:outline-none  transition duration-150 ease-in-out">
+          <i class="fas fa-heart"></i>
+        </button>
+
+    </span>
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+
+
+  
+<br>
+
+
+<div id="goodjob" style="display:none;" class="fixed z-10 inset-0 overflow-y-auto">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+      <!--
+        Background overlay, show/hide based on modal state.
+  
+        Entering: "ease-out duration-300"
+          From: "opacity-0"
+          To: "opacity-100"
+        Leaving: "ease-in duration-200"
+          From: "opacity-100"
+          To: "opacity-0"
+      -->
+      <div class="fixed inset-0 transition-opacity">
+
+        
+        <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+      </div>
+  
+      <!-- This element is to trick the browser into centering the modal contents. -->
+      <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span>&#8203;
+      <!--
+        Modal panel, show/hide based on modal state.
+  
+        Entering: "ease-out duration-300"
+          From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          To: "opacity-100 translate-y-0 sm:scale-100"
+        Leaving: "ease-in duration-200"
+          From: "opacity-100 translate-y-0 sm:scale-100"
+          To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      -->
+      <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+        <div>
+          <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+            <!-- Heroicon name: check -->
+            <svg class="h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div class="mt-3 text-center sm:mt-5">
+            <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
+             Nice Job!
+            </h3>
+            <div class="mt-2">
+              <p class="text-sm leading-5 text-gray-500">
+               You solved the challenge.<br> <span style="color:green;">+50</span> points
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5 sm:mt-6">
+          <span class="flex w-full rounded-md shadow-sm">
+            <a href="../challenges" type="button" style="cursor:select;" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-gray-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-gray-500 focus:outline-none focus:border-gray-700 focus:shadow-outline-indigo transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+              Back to Challenges
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto  px-1 py-4" >
+  <nav class="flex" aria-label="Breadcrumb">
+    <ol class="bg-white rounded-md shadow px-6 flex space-x-4">
+      <li class="flex">
+        <div class="flex items-center">
+          <a href="../../dashboard" class="text-gray-400 hover:text-gray-500">
+            <!-- Heroicon name: home -->
+            <svg class="flex-shrink-0 h-5 w-5 transition duration-150 ease-in-out" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+            </svg>
+          </a>
+          <span class="sr-only">Home</span>
+        </div>
+      </li>
+      <li class="flex">
+        <div class="flex items-center space-x-4">
+          <svg class="flex-shrink-0 w-6 h-full text-gray-200" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+          </svg>
+          <a href="../../challenges" class="text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 transition duration-150 ease-in-out">Challenges</a>
+        </div>
+      </li>
+      <li class="flex">
+        <div class="flex items-center space-x-4">
+          <svg class="flex-shrink-0 w-6 h-full text-gray-200" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+          </svg>
+          <a href="../<%= CHALLENGE_ID %>" aria-current="page" class="text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 transition duration-150 ease-in-out"><%= CHALLENGE_NAME %></a>
+        </div>
+      </li>
+      <li class="flex">
+        <div class="flex items-center space-x-4">
+          <svg class="flex-shrink-0 w-6 h-full text-gray-200" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+          </svg>
+          <a href="#" aria-current="page" class="text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 transition duration-150 ease-in-out">Admin Panel</a>
+        </div>
+      </li>
+    </ol>
+  </nav>
+</div>
+
+<div class="grid grid-cols-6 gap-4">
+    <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-5 xl:col-span-2...">
+
+
+
+    </div>
+    <div class="col-span-3 sm:col-span-2 md:col-span-3 lg:col-span-1 xl:col-span-4..."></div>
+    <div class="col-span-3 sm:col-span-2 md:col-span-3 lg:col-span-4 xl:col-span-2..."></div>
+    <div class="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 xl:col-span-4..."></div>
+
+    
+  </div>
+
+
+ 
+
+
+  <div class="max-w-7xl mx-auto bg-gray-100 px-6 py-4" >
+<div>
+    <h3 class="text-lg leading-6 font-medium text-gray-900">
+     Challenge Analytics
+    </h3>
+    <dl class="mt-5 grid grid-cols-1 rounded-lg bg-white overflow-hidden shadow divide-y divide-gray-200 md:grid-cols-3 md:divide-y-0 md:divide-x">
+      <div>
+        <div class="px-4 py-5 sm:p-6">
+          <dt class="text-base font-normal text-gray-900">
+            Challenge Views
+          </dt>
+          <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
+            <div class="flex items-baseline text-2xl font-semibold text-gray-600">
+              <%= VIEWS %>
+      
+            </div>
+  
+       
+          </dd>
+        </div>
+      </div>
+  
+      <div>
+        <div class="px-4 py-5 sm:p-6">
+          <dt class="text-base font-normal text-gray-900">
+            Challenge Attempts
+          </dt>
+          <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
+            <div class="flex items-baseline text-2xl font-semibold text-gray-600">
+              <%= ATTEMPTS %>
+        
+            </div>
+  
+          </dd>
+        </div>
+      </div>
+  
+      <div>
+        <div class="px-4 py-5 sm:p-6">
+          <dt class="text-base font-normal text-gray-900">
+           Successful Attempts
+          </dt>
+          <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
+            <div class="flex items-baseline text-2xl font-semibold text-gray-600">
+            <%= GATTEMPTS %>
+            </div>
+  
+          </dd>
+        </div>
+      </div>
+    </dl>
+  </div>
+  
+ <BR>
+
+
+  
+</div>
+<br>
+
+
+<div class="max-w-7xl mx-auto bg-gray-100 px-6 py-4" >
+<div>
+<h3 class="text-lg leading-6 font-medium text-gray-900">
+ Challenge Configuration
+</h3>
+<div class="mt-2">
+  <div class="relative rounded-md shadow-sm">
+   Challenge Name <input id="cname" value="<%= CHALLENGE_NAME %>" class="form-input block w-full sm:text-sm sm:leading-5" >
+  </div>
+
+       <br>
+  Challenge Instructions/Description<br>
+  <textarea  id="cid" class="resize  block w-full  sm:text-sm sm:leading-5 px-2 py-2 border rounded focus:outline-none focus:shadow-outline"><%= CHALLENGE_DESCRIPTION %></textarea>
+  <br>
+  <div class="relative rounded-md shadow-sm">
+    Solution <input id="solution" placeholder="Leave this as blank if you do not want it to change" id="solution" class="form-input block w-full sm:text-sm sm:leading-5" >
+   </div>
+  <br>
+  <div class="relative rounded-md shadow-sm">
+    Category <input value="<%= CHALLENGE_CATEGORY %>" id="category" class="form-input block w-full sm:text-sm sm:leading-5" >
+   </div>
+   <br>
+  Challenge Difficulty
+  <select id="cdifficulty" class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5">
+    <option>Do not change</option>
+
+    <option>Easy</option>
+    <option>Medium</option>
+    <option>Hard</option>
+  </select>
+</div>
+<br>
+<button id="schanges" class="bg-green-400 w-full hover:bg-green-500 text-white font-bold py-2 px-4 rounded">
+ Save Changes
+</button>
+
+</div>
+
+<BR>
+
+
+
+</div>
+
+
+
+<br>
+
+
+<div class="max-w-7xl mx-auto bg-gray-100 px-6 py-4" >
+  <div>
+      <h3 class="text-lg leading-6 font-medium text-gray-900">
+     CTFLive  <span style="font-size:1rem;background-color:gray;color:white;padding-left:10px;padding-right:10px;">ALPHA</span>
+      </h3>
+      
+      <div class="relative rounded-md shadow-sm mt-2 ">
+        Checkpoint 1 <input placeholder="Flag 1" id="f1" class="form-input block w-full sm:text-sm sm:leading-5" >
+       </div>
+
+       <div class="relative rounded-md shadow-sm mt-2 ">
+        Checkpoint 2 <input  placeholder="Flag 2" id="f2" class="form-input block w-full sm:text-sm sm:leading-5" >
+       </div>
+
+       <div class="relative rounded-md shadow-sm mt-2 ">
+        Checkpoint 3 <input  placeholder="Flag 3" id="f3" class="form-input block w-full sm:text-sm sm:leading-5" >
+       </div>
+
+       <br>
+
+    
+    </div>
+    
+<br>
+
+    <button id="ctflivechanges" class="bg-green-400 w-full hover:bg-green-500 text-white font-bold py-2 px-4 rounded">
+ Save Changes
+</button>
+   <BR>
+  
+  
+    
+  </div>
+
+  <BR>
+
+<div class="max-w-7xl mx-auto bg-red-100 px-6 py-4" >
+<div>
+<h3 class="text-lg leading-6 font-medium text-gray-900">
+ Danger Zone
+</h3>
+<div class="mt-2">
+
+  <button onclick="deleteChallenge()" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+    Delete Challenge
+  </button>
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+  </div>
+
+<div style="display:none;" id="success" class="fixed z-10 inset-0 overflow-y-auto">
+  <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+    <!--
+      Background overlay, show/hide based on modal state.
+
+      Entering: "ease-out duration-300"
+        From: "opacity-0"
+        To: "opacity-100"
+      Leaving: "ease-in duration-200"
+        From: "opacity-100"
+        To: "opacity-0"
+    -->
+    <div class="fixed inset-0 transition-opacity">
+      <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+    </div>
+
+    <!-- This element is to trick the browser into centering the modal contents. -->
+    <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span>&#8203;
+    <!--
+      Modal panel, show/hide based on modal state.
+
+      Entering: "ease-out duration-300"
+        From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+        To: "opacity-100 translate-y-0 sm:scale-100"
+      Leaving: "ease-in duration-200"
+        From: "opacity-100 translate-y-0 sm:scale-100"
+        To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+    -->
+    <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+      <div>
+        <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+          <!-- Heroicon name: check -->
+          <svg class="h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <div class="mt-3 text-center sm:mt-5">
+          <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
+           Succesfully Updated
+          </h3>
+         
+        </div>
+      </div>
+      <div class="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense">
+        <span class="flex w-full rounded-md shadow-sm sm:col-start-2">
+          <a href="./" type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-gray-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-gray-500 focus:outline-none focus:border-gray-700 focus:shadow-outline-gray transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+           View Challenge
+          </a>
+        </span>
+        <span class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:col-start-1">
+          <button onclick="document.getElementById('success').style.display = 'none'" type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+           Keep Editing
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <!-- FOOTER -->
+
+<footer class="bg-white">
+    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+      <div class="flex justify-center space-x-6 md:order-2">
+
+        <a href="https://twitter.com/laphatize2" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">Twitter</span>
+          <svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+          </svg>
+        </a>
+        <a href="https://github.com/laphatize" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">GitHub</span>
+          <svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      
+      </div>
+      <div class="mt-8 md:mt-0 md:order-1">
+        <p class="text-center text-base leading-6 text-gray-400">
+          &copy; 2021 Pranav Ramesh. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+  <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyBLAN84VP3jSA5dqhrU6Bjmfu5NiUDuNw4",
+          authDomain: "cyberjags-8b081.firebaseapp.com",
+          databaseURL: "https://cyberjags-8b081.firebaseio.com",
+          projectId: "cyberjags-8b081",
+          storageBucket: "cyberjags-8b081.appspot.com",
+          messagingSenderId: "166652277588",
+          appId: "1:166652277588:web:e08b9e19916451e14dcec1"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="../../js/edit-challenge.js">
+
+  </script>
+      <script src="../../js/guard.js">
+      </script>
+</body>

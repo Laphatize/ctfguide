@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>Connecting...</title>
+    <link rel="icon" 
+  type="image/ico" 
+  href="../../cdn/favicon.ico">
+</head>
+<body>
+    One moment please!
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script>
+          var firebaseConfig = {
+            apiKey: "AIzaSyBLAN84VP3jSA5dqhrU6Bjmfu5NiUDuNw4",
+            authDomain: "cyberjags-8b081.firebaseapp.com",
+            databaseURL: "https://cyberjags-8b081.firebaseio.com",
+            projectId: "cyberjags-8b081",
+            storageBucket: "cyberjags-8b081.appspot.com",
+            messagingSenderId: "166652277588",
+            appId: "1:166652277588:web:e08b9e19916451e14dcec1"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+    </script>
+    <script>
+
+var url_string = window.location.href; //window.location.href
+var url = new URL(url_string);
+var ct = url.searchParams.get("ct");
+
+        firebase.auth().signInWithCustomToken(ct)
+  .then((user) => {
+        window.location.href = "./dashboard"
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+   document.write("<b style='font-size:2rem;'>Something went wrong...</b><hr><br>Error Code: " + errorCode + "<br>Error Message: "+ errorMessage + "<br><br> Please report this issue to the developers. ")
+  })
+    </script>
+</body>
