@@ -220,7 +220,7 @@ router.get("/create-game", async (request, response) => {
   
   
   router.get("/join", (request, response) => {
-    response.status("200").sendFile(__dirname + "/views/static/ctflive/ctflive.html");
+    response.status("200").sendFile(__dirname + "/views/static/site/ctflive.html");
   
   });
   
