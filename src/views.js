@@ -115,6 +115,8 @@ router.get("/auth/stibarc", (request, response2) => {
       });
 
 
+    } else {
+      console.log(this.status)
     }
   };
   xhttp.open("GET", `https://api.stibarc.com/getusername.sjs?sess=${sessid}`, true);
