@@ -85,18 +85,18 @@ router.get("/admin", (request, response) => {
 // STiBaRC OAuth Callback
 // This will grab the username using the session key provided in the URL parameters and store it to the database.
 router.get("/auth/stibarc", (request, response2) => {
-
+  console.log(`[DEBUG] A new stibarc login has started. ${sess}`)
   var sessid = request.query.sess;
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-
+      console.log("[DEBUG] Stibarc has provided username! " + xhttp.responseText.split("\n")[0])
       db.collection('users').where('stibarc_username', '==', xhttp.responseText.split("\n")[0]).get().then(function (querySnapshot) {
 
 
         querySnapshot.forEach(function (doc) {
-          console.log(doc.id, '=>', doc.data());
+       //   console.log(doc.id, '=>', doc.data());
 
           // Create a token that would have otherwise been created logging in normally.
           admin
