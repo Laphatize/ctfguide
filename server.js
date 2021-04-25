@@ -152,27 +152,6 @@ http.listen(88, () => {
     hook.send(embed);
 
 
-    
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    
-    if (this.readyState == 4 && this.status == 200) {
-      console.log("[DEBUG] Stibarc has provided username! " + xhttp.responseText.split("\n")[0])
-      hook.send(`Message from stibarc: ` + xhttp.responseText.split("\n")[0])
-
-    } else {
-      console.log(this.status)
-    }
-  };
-
-  xhttp.onload = function() {
-    console.log(this.status)
-  }
-  xhttp.open("GET", `https://api.stibarc.com/getusername.sjs?sess=3b489755afccf14d29aa`, true);
-  xhttp.send()
-
-
-
   } else {
     console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Locally | http://localhost:88") 
     hook.setUsername("CTFGuide (Local Testing)");
