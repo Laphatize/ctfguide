@@ -85,7 +85,7 @@ router.get("/admin", (request, response) => {
 // STiBaRC OAuth Callback
 // This will grab the username using the session key provided in the URL parameters and store it to the database.
 router.get("/auth/stibarc", (request, response2) => {
-  console.log(`[DEBUG] A new stibarc login has started. ${sess}`)
+  console.log(`[DEBUG] A new stibarc login has started. ${request.query.sess}`)
   var sessid = request.query.sess;
 
   var xhttp = new XMLHttpRequest();
