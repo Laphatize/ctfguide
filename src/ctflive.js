@@ -76,7 +76,7 @@ router.get("/create-game", async (request, response) => {
     const docRef3 = db.collection('ctflive').doc(gamecode);
     const doc3 = await docRef3.get();
   
-    response.status("200").render(__dirname + "/views/dynamic/ctflivectflive-game.ejs", {
+    response.status("200").render(__dirname + "/views/dynamic/ctflive/ctflive-game.ejs", {
       creator: doc3.data().creator
     });
   
@@ -220,7 +220,7 @@ router.get("/create-game", async (request, response) => {
   
   
   router.get("/join", (request, response) => {
-    response.status("200").sendFile(__dirname + "/views/static/ctflive.html");
+    response.status("200").sendFile(__dirname + "/views/static/ctflive/ctflive.html");
   
   });
   
