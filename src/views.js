@@ -66,13 +66,13 @@ router.get("/tos", (request, response) => {
 
 // Page for client to authenticate with custom auth token.
 router.get("/con", (request, response) => {
-  response.status(200).sendFile(__dirname + "/views/authentication/connecting.html");
+  response.status(200).sendFile(__dirname + "/views/static/authentication/connecting.html");
 });
 
 
 // Confirmation page for linking STiBaRC to CTFGuide
 router.get("/link-account", (request, response) => {
-  response.status(200).sendFile(__dirname + "/views/authentication/link-account.html");
+  response.status(200).sendFile(__dirname + "/views/static/authentication/link-account.html");
 });
 
 
