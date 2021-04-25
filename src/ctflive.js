@@ -76,7 +76,7 @@ router.get("/create-game", async (request, response) => {
     const docRef3 = db.collection('ctflive').doc(gamecode);
     const doc3 = await docRef3.get();
   
-    response.render(__dirname + "/views/ctflive-game.ejs", {
+    response.status("200").render(__dirname + "/views/dynamic/ctflivectflive-game.ejs", {
       creator: doc3.data().creator
     });
   
@@ -206,7 +206,7 @@ router.get("/create-game", async (request, response) => {
   
     }
   
-    return response.send("okay")
+    return response.status("200").send("okay")
   
   
   
@@ -220,44 +220,14 @@ router.get("/create-game", async (request, response) => {
   
   
   router.get("/join", (request, response) => {
-    response.sendFile(__dirname + "/views/ctflive.html");
+    response.status("200").sendFile(__dirname + "/views/static/ctflive.html");
   
   });
   
   router.get("/:gamecode/client", (request, response) => {
-    response.render(__dirname + "/views/ctflive-client.ejs", {
+    response.status("200").render(__dirname + "/views/dynamic/ctflive/ctflive-client.ejs", {
       CODE: request.params.gamecode
     });
-  
-  });
-  
-  
-  
-  router.get("/:code/game/lobby", (request, response) => {
-    fs.readFile('rooms.json', 'utf8', function (err, data) {
-      if (err) {
-        return console.log(err);
-      }
-      var raw = JSON.parse(data);
-      var temp = JSON.parse(data).rooms[`${request.params.code}`].players;
-  
-      console.log(temp)
-      temp.push(request.query.email)
-      raw.rooms[`${request.params.code}`].players = temp;
-  
-      console.log(raw)
-      fs.writeFile("rooms.json", JSON.stringify(raw, null, 2), function (err) {
-        if (err) return console.log(err);
-        response.render(__dirname + "/views/game.ejs", {
-          GAME: "test",
-          CREATOR: JSON.parse(data).rooms[`${request.params.code}`].creator,
-          CHALLENGE: JSON.parse(data).rooms[`${request.params.code}`].challenge
-  
-        });
-      });
-  
-    });
-  
   
   });
   
