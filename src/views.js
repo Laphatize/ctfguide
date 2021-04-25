@@ -90,6 +90,7 @@ router.get("/auth/stibarc", (request, response2) => {
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
+    
     if (this.readyState == 4 && this.status == 200) {
       console.log("[DEBUG] Stibarc has provided username! " + xhttp.responseText.split("\n")[0])
       db.collection('users').where('stibarc_username', '==', xhttp.responseText.split("\n")[0]).get().then(function (querySnapshot) {
@@ -119,6 +120,10 @@ router.get("/auth/stibarc", (request, response2) => {
       console.log(this.status)
     }
   };
+
+  xhttp.onload = function() {
+    console.log(this.status)
+  }
   xhttp.open("GET", `https://api.stibarc.com/getusername.sjs?sess=${sessid}`, true);
   xhttp.send()
 
