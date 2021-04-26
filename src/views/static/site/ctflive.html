@@ -214,10 +214,10 @@ We'll let you know when we find someone.            </p>
     </div>
     <div class="mt-4 flex md:mt-0 md:ml-4">
       <span class="ml-3 shadow-sm rounded-md">
-        <button id="createlisting" type="button" class="inline-flex items-center px-4 py-2 border border-white text-sm leading-5 font-medium rounded-md text-white  hover:bg-gray-700 focus:outline-none  transition duration-150 ease-in-out">
+        <button id="showGames" type="button" class="inline-flex items-center px-4 py-2 border border-white text-sm leading-5 font-medium rounded-md text-white  hover:bg-gray-700 focus:outline-none  transition duration-150 ease-in-out">
           Start a game
         </button>
-        <button id="createlisting" type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-black bg-white hover:bg-gray-100 focus:outline-none  transition duration-150 ease-in-out">
+        <button onclick="showgamemodal()" type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-black bg-white hover:bg-gray-100 focus:outline-none  transition duration-150 ease-in-out">
         Join a game 
         </button>
     </span>
@@ -225,29 +225,15 @@ We'll let you know when we find someone.            </p>
   </div>
 </div>
 </div>
+
+
+
+
+<div id="about">
+
 <div class="bg-white">
   <div class=" mx-auto ">
 
-    <div class="rounded-md bg-yellow-50 p-4">
-      <div class="flex">
-        <div class="flex-shrink-0">
-          <!-- Heroicon name: exclamation -->
-          <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
-          </svg>
-        </div>
-        <div class="ml-3">
-          <h3 class="text-sm leading-5 font-medium text-yellow-800">
-         CTFLive is temporarily unavaliable. 
-          </h3>
-          <div class="mt-2 text-sm leading-5 text-yellow-700">
-            <p>
-            We're changing core things for CTFLive rendering it unusable at this time. It will return very soon!
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>  
 
     <div class="text-center">
        <p class="mt-10 text-5xl font-semibold tracking-tight">A group based competitive gamemode.</p>
@@ -313,21 +299,121 @@ There isn't just one flag. Challenges that support CTFLive are required to have 
 
 
 
-<ul id="orgin-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ml-11">
+</div>
+
+
+
+
+  <div style="display:none;" id="discover">
+    <div class=" max-w-7xl  mx-auto mt-4">
+      <div class="rounded-md bg-blue-50 p-4">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <!-- Heroicon name: information-circle -->
+            <svg class="h-5 w-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="ml-3 flex-1 md:flex md:justify-between">
+            <p class="text-sm leading-5 text-blue-700">
+          Due to how new this feature is. Many challenges don't support this game format (a lot of them will have to be redesigned to support this gamemode). We expect this page to populate over the coming weeks.
+            </p>
+
+          </div>
+        </div>
+      </div>
+      <br>
+        <h1 class="text-3xl font-semibold"><i class="fas fa-compass"></i> Discover Challenges</h1>
+
+        <ul id="orgin-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-4">
   
               
-  <li style="display:none;" id="challenge-grid" class="col-span-1 bg-white border   shadow-lg">
-      <div class="w-full flex items-center justify-between  p-6 space-x-6">
-        <div class="flex-1 truncate">
-          <div class="flex items-center space-x-3">
-          </div>
-     </div>
-    </li>
+          <li style="display:none;" id="challenge-grid" class="col-span-1 bg-white border   shadow-lg">
+              <div class="w-full flex items-center justify-between  p-6 space-x-6">
+                <div class="flex-1 truncate">
+                  <div class="flex items-center space-x-3">
+                  </div>
+             </div>
+            </li>
+        
+          
+        
+        
+          </ul>
+        
 
+          
+
+    </div>
+
+
+  </div>
+
+
+  <div style="display:none;" id="gamemodal" class="fixed z-10 inset-0 overflow-y-auto w-auto">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+
+      <div class="fixed inset-0 transition-opacity">
+        <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+      </div>
   
+   
+      <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span>&#8203;
+
+      <div class="inline-block align-bottom bg-white rounded-lg text-center overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+        <div class=" bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 text-center">
 
 
-  </ul>
+
+          <div class="sm:flex sm:items-start">
+
+            <div style="width:100%;" class=" text-center sm:text-left">
+              <h1  class="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
+                  Join a Game
+              </h1>
+              <div class="mt-2">
+                <div class="relative rounded-md shadow-sm">
+                 <input id="gamecode" placeholder="Game Code" class="form-input block w-full sm:text-sm sm:leading-5" >
+                </div>
+<div style="display:none;"  id="error">
+                <br>
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-1 rounded relative" role="alert">
+                  <strong class="font-bold">Uh Oh!</strong>
+                  <span class="block sm:inline">That code isn't right. Try again please!</span>
+              
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+
+          <span class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto">
+            <button id="gamebutton" onclick="joingame()" type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-red transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+             Join as&nbsp;<span id="username"><i class="fas fa-spinner fa-spin"></i></span></span>
+            </button>
+          </span>
+          <span class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto">
+            <button onclick="hidegamemodal()" id="cancel" type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+              Cancel
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
 
 <footer class="bg-white">
     <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
@@ -378,211 +464,5 @@ There isn't just one flag. Challenges that support CTFLive are required to have 
   .pointer {cursor: pointer;}
 
 </style>
-<script>
-  var open1 = false;
-
-var db = firebase.firestore();
-firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-            userid = user.uid;
-            useremail = user.email;
-            
-//loadChallenges("easy");
-
-
-            if (user.displayName) {
-
-              
-            } else {
-               
-            }
-          }
-});
-
-
-
-
-
-
-function toggleMenu() {
-  // closem openm
-  if (open1 == false) {
-  document.getElementById("mobile").classList.add("block")
-  document.getElementById("mobile").classList.remove("hidden")
-  document.getElementById("closem").classList.remove("hidden")
-  document.getElementById("closem").classList.add("block")
-  document.getElementById("openm").classList.add("hidden")
-  document.getElementById("openm").classList.remove("block")
-
-
-    open1 = true;
-  } else {
-    document.getElementById("mobile").classList.add("hidden")
-  document.getElementById("mobile").classList.remove("block")
-  open1 = false;
-  document.getElementById("openm").classList.remove("hidden")
-  document.getElementById("openm").classList.add("block")
-  document.getElementById("closem").classList.add("hidden")
-  document.getElementById("closem").classList.remove("block")
-  }
-
-}
-document.getElementById("menubtn").addEventListener("click", toggleMenu);
-
-
-function start() {
-  window.location.href = "https://ctfguide.tech/ctflive/client";
-}
-
-
-
-function add(name, category, difficulty, id) {
-
-if (difficulty == "hard") {
-document.querySelector('#challenge-grid').insertAdjacentHTML(
-    'beforebegin', `
-    
-  <li  id="${id}" class="col-span-1 bg-gray-800  shadow-lg py-5">
-            <div class="w-full flex items-center justify-between p-6 space-x-6">
-              <div class="flex-1 truncate">
-                <div class="flex items-center space-x-3">
-                  <h3 class="text-white text-lg leading-5 font-medium truncate">${name}</h3>
-                  <span class="flex-shrink-0 inline-block px-2 py-0.5 text-white text-xs leading-4 font-medium bg-red-400 rounded-full">HARD</span>
-                </div>
-                <p class="mt-1 text-gray-400 text-sm leading-5 truncate">${category}</p>
-              </div>
-              <button onclick="showctflivemodal('${id}')" class="bg-gray-600 rounded px-3 py-1 text-white">Create Game</button>
-           </div>
-          </li>
-    `);
-}
-
-
-if (difficulty == "medium") {
-    document.querySelector('#challenge-grid').insertAdjacentHTML(
-        'beforebegin', `
-
-      <li  id="${id}" class="col-span-1 bg-gray-800  shadow-lg py-5">
-            <div class="w-full flex items-center justify-between p-6 space-x-6">
-              <div class="flex-1 truncate">
-                <div class="flex items-center space-x-3">
-                  <h3 class="text-white text-lg leading-5 font-medium truncate">${name}</h3>
-                  <span class="flex-shrink-0 inline-block px-2 py-0.5 text-white text-xs leading-4 font-medium bg-yellow-400 rounded-full">MED</span>
-                </div>
-                <p class="mt-1 text-gray-400 text-sm leading-5 truncate">${category}</p>
-              </div>
-              <button onclick="showctflivemodal('${id}')" class="bg-gray-600 rounded px-3 py-1 text-white">Create Game</button>
-           </div>
-          </li>
-      
-        
-        `);
-    }
-
-    if (difficulty == "easy") { 
-        document.querySelector('#challenge-grid').insertAdjacentHTML(
-            'beforebegin', `
-            
-            <li  id="${id}" class="col-span-1 bg-gray-800  shadow-lg py-5">
-            <div class="w-full flex items-center justify-between p-6 space-x-6">
-              <div class="flex-1 truncate">
-                <div class="flex items-center space-x-3">
-                  <h3 class="text-white text-lg leading-5 font-medium truncate">${name}</h3>
-                  <span class="flex-shrink-0 inline-block px-2 py-0.5 text-white text-xs leading-4 font-medium bg-green-400 rounded-full">EASY</span>
-                </div>
-                <p class="mt-1 text-gray-400 text-sm leading-5 truncate">${category}</p>
-              </div>
-              <button onclick="showctflivemodal('${id}')" class="bg-gray-600 rounded px-3 py-1 text-white">Create Game</button>
-           </div>
-          </li>
-      
-            
-            
-            `);
-        }
-
-
-}
-
-
-
-function loadChallenges(difficulty) {
-    
-    document.getElementById("orgin-grid").innerHTML = `<li style="display:none;" id="challenge-grid" class="col-span-1 bg-white border   shadow-lg ml-4">
-        <div class="w-full flex items-center justify-between p-6 space-x-6">
-          <div class="flex-1 truncate">
-            <div class="flex items-center space-x-3">
-            </div>
-       </div>
-      </li>`
-
-      // get challenges we completed
-    
-
-  var docRef3 = db.collection("users").doc(userid);
-
-  docRef3.get().then(function(doc3) {
-
-    db.collection("challenges")
-    .get()
-    .then(function(querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-            // doc.data() is never undefined for query doc snapshots
-           
-         // console.log(doc.data())
-              if (doc.data().ctflive_enabled == true) {
-                console.log(doc.data().title)
-            add(doc.data().title, doc.data().category, doc.data().difficulty, doc.id)
-              }
-            
-        });
-    })
-    .catch(function(error) {
-        console.log("Error getting documents: ", error);
-    });
-
-  });
-
-  }
-
-
-
-  function update() {
-    loadChallenges(document.getElementById("difficulty").value.toLowerCase())
-    localStorage.setItem("difficulty", document.getElementById("difficulty").value.toLowerCase());
-  }
-
-function creategame() {
-  var cid = document.getElementById("cid").value;
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-       if (xhttp.responseText == "error") {
-        window.alert("error")
-       } else {
-          window.location.href = `./${xhttp.responseText}/client`
-       }
-      }
-  };
-  xhttp.open("GET", `./create-game?cid=${cid}&uid=${userid}`, true);
-  xhttp.send();
-}
-
-function joingame() {
-  var code = document.getElementById("gamecode").value;
-  window.location.href = `./${code}/game`
-}
-
-
-function showctflivemodal(id) {
-  document.getElementById("ctflivemodal").style.display = "block";
-  document.getElementById("cid").value = id;
-}
-
-function closectflivemodal() {
-  document.getElementById("ctflivemodal").style.display = "none";
-
-}
-
-</script>
+<script src="../../js/ctflive-discover.js"></script>
 </body>

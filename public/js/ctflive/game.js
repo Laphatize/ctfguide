@@ -217,6 +217,11 @@ function checkFlag(flag, flagFor) {
 }
 
 
+socket.on('kicked', function(data){
+  if (data.username == username) {
+    window.close()
+  } 
+})
 
    
 
@@ -275,5 +280,4 @@ ${participants[i]}
 
 console.log(participants.length)
 });
-
 

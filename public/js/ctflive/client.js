@@ -32,6 +32,13 @@ function start() {
   window.open("https://ctfguide.tech/ctflive/client", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=300,left=500,width=1000,height=400");
 }
 
+function kickPlayer(arg1) {
+  socket.emit("kickPlayer", {
+    admin: userid,
+    person: arg1,
+    gameid: window.location.href.split("/")[4]
+  })
+}
 
 function addPlayer(username) {
   document.querySelector('#egg').insertAdjacentHTML(

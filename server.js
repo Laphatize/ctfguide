@@ -22,19 +22,6 @@ admin.initializeApp({
 });
 const db = admin.firestore();
 db.settings({ ignoreUndefinedProperties: true })
-function updateLog(activity) {
-  fs.readFile('/other/logs.txt', 'utf8', function (err, data) {
-    if (err) {
-      return console.log(err);
-    }
-
-    fs.writeFile("/other/logs.txt", data + "\n" + activity, function (err) {
-      if (err) return console.log(err);
-    });
-
-  });
-
-}
 const os = require("os")
 const bcrypt = require('bcrypt');
 const express = require("express");
@@ -152,17 +139,6 @@ http.listen(88, () => {
     hook.send(embed);
 
 
-  } else {
-    console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Locally | http://localhost:88") 
-    hook.setUsername("CTFGuide (Local Testing)");
-    const embed = new MessageBuilder()
-      .setTitle('Server restarted succesfully.')
-      .setDescription('')
-      .setColor('#00FF00')
-      .setTimestamp();
-    hook.send(embed);
-  }
-
-
+  } 
 
 });

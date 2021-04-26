@@ -83,7 +83,17 @@ router.get("/create-game", async (request, response) => {
   });
   
   
+  router.get("/check/:gamecode", async (request, response) => {
+    var gamecode = request.params.gamecode;
   
+    const docRef3 = db.collection('ctflive').doc(gamecode);
+    const doc3 = await docRef3.get();
+    if (!doc3.exists) {
+      response.status("200").send("Game not found.");
+    } else {
+      response.status("200").send(gamecode)
+    }
+  });
   
   
   router.get("/initPlayer", async (request, response) => {
