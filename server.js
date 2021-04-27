@@ -82,6 +82,22 @@ io.on("connection", socket => {
 
   });
 
+  
+
+  socket.on("refresh", async player => {
+    const localDocRef = db.collection('ctflive').doc(player.gameID);
+    const localDoc = await localDocRef.get();
+    console.log(localDoc.data())
+    var tempJSONObj = JSON.parse(localDoc.data().participants);
+
+    io.emit("refreshed", {
+
+      gameID: player.gameID,
+      participants: JSON.stringify(tempJSONObj),
+      leaderboards: localDoc.data().leaderboards
+
+    });
+  })
   socket.on("gamestart", async info => {
 
     const docRef2 = db.collection('ctflive').doc(info.gameID);
@@ -99,7 +115,9 @@ io.on("connection", socket => {
       info.participants = doc2.data().participants;
       console.log(info)
 
+      if (doc2.data().authorID == info.uid) {
       io.emit("gamestart", info);
+      }
 
     }
   });
@@ -118,18 +136,38 @@ io.on("connection", socket => {
 
   });
 
+  
+  socket.on("kickPlayer", async info => {
+      var gameID = info.gameid;
+      var uid = info.admin;
+      var personToKick = info.person;
+
+      console.log(`[DEBUG] ${uid} wants to kick ${personToKick} in the game ${gameID}`)
+
+      
+      const docRef2 = db.collection('ctflive').doc(info.gameid);
+      const doc2 = await docRef2.get();
+
+      if (doc2.data().authorID == uid) {
+      io.emit("goodbye",  personToKick)
+      }
+
+      
+
+  });
+
 });
 
 
 
 
-http.listen(88, () => {
-  console.log('\x1b[36m%s\x1b[0m', "[SERVER] CTFGuide is deployed on port 88.");
+http.listen(89, () => {
+  console.log('\x1b[36m%s\x1b[0m', "[SERVER] CTFGuide is deployed on port 89.");
   if (os.hostname() == "laphvm") {
     console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Live | http://ctfguide.tech")
     
     
-    hook.setUsername("CTFGuide (Main Server)");
+    hook.setUsername("CTFGuide (Beta Server)");
 
     const embed = new MessageBuilder()
       .setTitle('Server restarted succesfully.')

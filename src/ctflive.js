@@ -56,7 +56,8 @@ router.get("/create-game", async (request, response) => {
             participants: `{"participants" : []}`,
             creator: doc.data().username,
             challengeid: cid,
-            leaderboards: `{"leaderboard": {}}`
+            leaderboards: `{"leaderboard": {}}`,
+            authorID: authorID
           })
   
           return response.send(gamecode);
@@ -91,7 +92,7 @@ router.get("/create-game", async (request, response) => {
     if (!doc3.exists) {
       response.status("200").send("Game not found.");
     } else {
-      response.status("200").send(gamecode)
+      response.status("200").send(gamecode  )
     }
   });
   

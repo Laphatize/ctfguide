@@ -100,6 +100,8 @@ socket.emit("connected", {
 }).catch(function(error) {
   console.log("Error getting document:", error);
 });
+  } else {
+    window.location.href = "./login"
   }
 
 });
@@ -217,9 +219,9 @@ function checkFlag(flag, flagFor) {
 }
 
 
-socket.on('kicked', function(data){
-  if (data.username == username) {
-    window.close()
+socket.on('goodbye', function(data){
+  if (data == username) {
+    window.location.href = "../../dashboard"
   } 
 })
 
