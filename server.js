@@ -161,7 +161,7 @@ io.on("connection", socket => {
 
 
 
-http.listen(89, () => {
+http.listen(93, () => {
   console.log('\x1b[36m%s\x1b[0m', "[SERVER] CTFGuide is deployed on port 89.");
   if (os.hostname() == "laphvm") {
     console.log('\x1b[33m%s\x1b[0m', "[SERVER] Deployed Live | http://ctfguide.tech")
