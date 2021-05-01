@@ -199,6 +199,10 @@ function checkFlag(flag, flagFor) {
             gameid: window.location.href.split("/")[4]
           });
 
+          socket.emit("refresh", {
+            gameid: window.location.href.split("/")[4]
+          })
+
         } else {
 
           function clearNotif() {
